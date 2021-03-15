@@ -93,27 +93,26 @@ h6 {
   font-size: 17px;
   line-height: 27px;
 }
+.container-hero,
+.container-main,
+.container-footer {
+  margin: 0 auto;
+  min-width: 1440px;
+}
 .container-hero {
   background-color: #02160b;
+  background-image: url("assets/images/fox.png");
+  background-repeat: no-repeat;
+  background-position: center;
 }
 .container-main {
   background-color: #ccc;
 }
 .container-footer {
   background-color: #181617;
-}
-.hero-bgi,
-.footer-bgi {
-  margin: 0 auto;
-  width: 1440px;
-  background-repeat: no-repeat;
-}
-.hero-bgi {
-  background-image: url("assets/images/fox.png");
-
-}
-.footer-bgi {
   background-image: url("assets/images/leaves.png");
+  background-repeat: no-repeat;
+  background-position: center;
 }
 header,
 .survival,
