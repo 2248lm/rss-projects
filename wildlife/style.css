@@ -1,42 +1,47 @@
 * {
-  box-sizing: border-box;
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
-.sh,
+.survival-h,
 h2,
 .sh2,
 h3,
 h4,
 .menu-UI,
-.regular,
-.small {
-  font-family: 'Open Sans', sans-serif;
+h5,
+h6
+ {
+  font-family: "Open Sans", sans-serif;
   font-weight: 400;
   font-style: normal;
 }
-.logo-text,
-.regular-UI {
-  font-family: 'Roboto', sans-serif;
+h1,
+p,
+.regular-UI,
+#btn-donate {
+  font-family: "Roboto", sans-serif;
   font-weight: 400;
   font-style: normal;
 }
-.sh,
+.survival-h,
 h2,
 .sh2,
 h3,
-.regular {
+h5 {
   line-height: 150%;
 }
+h1,
 h4,
-.logo-text,
+p,
 .menu-UI,
 .regular-UI,
-.regular,
-.small {
+h5,
+h6,
+#btn-donate {
   color: #f7f7f7;
 }
-.sh {
+.survival-h {
   font-size: 48px;
   letter-spacing: 2px;
   color: #cd6326;
@@ -51,36 +56,39 @@ h2 {
   color: #666;
 }
 h3 {
-  margin-top: 240px;
+  margin-top: 259px;
   font-size: 27px;
 }
 h4 {
   font-size: 22px;
   line-height: 36px;
 }
-.logo-text {
+h1,
+p {
   width: 155px;
   font-size: 32px;
   line-height: 60px;
   text-transform: uppercase;
 }
-.logo-text:hover {
+h1:hover,
+p:hover {
   color: #cd6326;
 }
 .menu-UI {
   font-size: 23px;
   line-height: 60px;
 }
-.regular-UI {
+.regular-UI,
+#btn-donate {
   font-size: 23px;
   line-height: 27px;
 }
-.regular {
+h5 {
   margin-top: 50px;
   width: 274px;
   font-size: 18px;
 }
-.small {
+h6 {
   margin-top: 10px;
   font-size: 17px;
   line-height: 27px;
@@ -100,26 +108,26 @@ h4 {
   background-color: #ccc;
 }
 .container-footer {
+  background-color: #181617;
   background-image: url("assets/images/leaves.png");
   background-repeat: no-repeat;
-  background-color: #181617;
 }
 header,
 .survival,
 main,
 footer {
   margin: 0 auto;
-  max-width: 1200px;
+  width: 1200px;
 }
 header {
-  display: flex;
-  justify-content: space-between;
   padding-top: 20px;
+  display: flex;
   height: 100px;
+  justify-content: space-between;
 }
 .survival {
+  padding-top: 101px;
   height: 680px;
-  padding-top: 100px;
 }
 main {
   padding-top: 120px;
@@ -128,18 +136,18 @@ main {
 }
 footer {
   display: flex;
+  height: 360px;
   justify-content: space-between;
   align-items: center;
-  height: 360px;
 }
 .logo {
   display: flex;
   width: 240px;
   height: 60px;
-  align-items: center;
   justify-content:space-between;
-  cursor: pointer;
+  align-items: center;
   text-decoration: none;
+  cursor: pointer;
 }
 .logo-img {
   width: 70px;
@@ -162,26 +170,26 @@ footer {
   text-decoration: none;
 }
 .btn-nav {
+  padding: 0 20px;
   display: flex;
   height: 50px;
-  border-radius: 5px;
   justify-content: center;
   align-items: center;
-  padding: 0 20px;
+  border-radius: 5px;
 }
 #btn-sign-in {
-  width: 120px;
-  border: 2px solid #cd6326;
   display: flex;
+  width: 120px;
   height: 50px;
-  border-radius: 5px;
   justify-content: center;
   align-items: center;
+  border: 2px solid #cd6326;
+  border-radius: 5px;
 }
 #btn-sign-in:hover,
 .btn-nav:hover {
   background-color: #cd6326;
-  border:none;
+  border: none;
 }
 #btn-sign-in:active,
 .btn-nav:active{
@@ -193,12 +201,12 @@ footer {
   outline: none;
 }
 #btn-donate {
-  margin-top: 50px;
+  margin-top: 49px;
   width: 160px;
   height: 60px;
   background-color: #cd6326;
-  border-radius: 5px;
   border: none;
+  border-radius: 5px;
   cursor: pointer;
 }
 #btn-donate:hover {
@@ -213,16 +221,16 @@ footer {
   outline: none;
 }
 .slider {
+  margin-top: 101px;
   display: flex;
-  margin-top: 120px;
   height: 360px;
   justify-content: space-between;
   align-items: center;
 }
 .arrow {
+  padding-top: 45px;
   width: 30px;
   cursor: pointer;
-  padding-top: 10px;
 }
 .arrow-negative {
   display: none;
@@ -237,10 +245,26 @@ a:hover .arrow-negative {
   position: relative;
   top: 19px;
   width: 300px;
+  height: 360px;
+}
+#sld-img-1 {
+  width: 100%;
+  height: 100%;
+  background-image: url(assets/images/deer.png);
+}
+#sld-img-2 {
+  width: 100%;
+  height: 100%;
+  background-image: url(assets/images/squirrel.png)
+}
+#sld-img-3 {
+  width: 100%;
+  height: 100%;
+  background-image: url(assets/images/bird.png);
 }
 .slider-text {
   position: relative;
-  bottom: 98px;
+  bottom: 113px;
 }
 .form-email {
   margin-top: 60px;
@@ -256,13 +280,13 @@ a:hover .arrow-negative {
 #email {
   position: relative;
   left: 2px;
+  padding: 0 15px;
   width: 540px;
   height: 60px;
-  border-radius: 0;
   color: #666;
-  padding: 0 15px;
   background-color: #ccc;
   border: 1px solid #666;
+  border-radius: 0;
 }
 #email::placeholder {
   opacity: 0.5;
@@ -273,11 +297,10 @@ a:hover .arrow-negative {
   left: -2px;
   width: 120px;
   height: 60px;
-  background-color: #cd6326;
-  border-radius: 0 5px 5px 0;
-  border: 1px solid #cd6326;
-  border: none;
   color: #f7f7f7;
+  background-color: #cd6326;
+  border: 1px solid #cd6326;
+  border-radius: 0 5px 5px 0;
   cursor: pointer;
 }
 #send:hover {
@@ -292,22 +315,22 @@ a:hover .arrow-negative {
   outline: none;
 }
 .nav-footer {
+  padding-right: 4px;
   display: flex;
   width: 520px;
   height: 60px;
   justify-content: space-between;
-  list-style: none;
-  padding-right: 4px;
   align-items: center;
+  list-style: none;
 }
 .nav-footer li a {
-  text-decoration: none;
+  padding: 0 20px;
   display: flex;
   height: 50px;
-  border-radius: 5px;
   justify-content: center;
-  align-items: center;
-  padding: 0 20px;
+  align-items: center;  
+  text-decoration: none;
+  border-radius: 5px;
 }
 .nav-footer li a:hover {
   background-color: #cd6326;
@@ -331,12 +354,12 @@ a:hover .arrow-negative {
   display: flex;
   width: 40px;
   height: 40px;
-  background-color: #f7f7f7;
-  border: none;
-  border-radius: 20px;
   text-decoration: none;
+  background-color: #f7f7f7;
   background-repeat: no-repeat;
   background-position: center;
+  border: none;
+  border-radius: 20px;
 }
 .social li a:hover {
   background-color:#e39128;

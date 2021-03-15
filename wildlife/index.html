@@ -1,103 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>wildlife</title>
-  <link type="text/css" rel="stylesheet" href="normalize.css">
-  <link type="text/css" rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-</head>
-<body>
-  <article class="container-hero">
-    <header>
-      <a class="logo" href="#">
-        <img class="logo-img" src="assets/icons/logo.svg" alt="Logo">
-        <h1 class="logo-text">wildlife</h1>
-      </a>
-      <nav>
-        <ul class="nav-header">
-          <li><a class="btn-nav" href="#"><h4 class="menu-UI">Blog</h4></a></li>
-          <li><a class="btn-nav" href="#"><h4 class="menu-UI">Contacts</h4></a></li>
-          <li><a class="btn-nav" href="#"><img src="assets/icons/search.svg" alt="Search"></a></li>
-          <li><a id="btn-sign-in" href="#"><h4 class="regular-UI">Sign in</h4></a></li>
-        </ul>
-      </nav>
-    </header>
-    <section class="survival">
-      <h2 class="sh">Survival</h2>
-      <h5 class="regular">
-        What this means is that we exist to help protect our environment and do in numbers of ways. You can save the planet by donation.
-      </h5>
-      <button id="btn-donate" type="button">
-        <h4 class="regular-UI">Donate</h4>
-      </button>
-    </section>
-  </article>
-  <article class="container-main">
-    <main>
-      <h2>Latest articles</h2>
-      <h2 class="sh2">Breaking news from the wild</h2>
-      <figure role="group" class="slider">
-        <a class="arrow" href="#">
-          <img class="arrow-positive" src="assets/icons/left.svg" alt="Slider left arrow">
-          <img class="arrow-negative" src="assets/icons/left-hover.svg" alt="Slider left arrow">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>wildlife</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap">
+  </head>
+  <body>
+    <div class="container-hero">
+      <header>
+        <a class="logo" href="#">
+          <img class="logo-img" src="assets/icons/logo.svg" alt="Logo">
+          <h1>wildlife</h1>
         </a>
-        <figure class="slider-img">
-          <img class="slider-img" src="assets/images/deer.png" alt="Deer">
-          <figcaption class="slider-text">
-            <h4>Deer</h4>
-            <h5 class="small">Naturalist investigation</h5>
-          </figcaption>
-        </figure>
-        <figure class="slider-img">
-          <img class="slider-img" src="assets/images/squirrel.png" alt="Squirrel">
-          <figcaption class="slider-text">
-            <h4>Squirrel</h4>
-            <h5 class="small">Kamikaze squirrels</h5>
-          </figcaption>
-        </figure>
-        <figure class="slider-img">
-          <img class="slider-img" src="assets/images/bird.png" alt="Bird">
-          <figcaption class="slider-text">
-            <h4>Bird</h4>
-            <h5 class="small">Birds Fight club</h5>
-          </figcaption>
-        </figure>
-        <a class="arrow" href="#">
-          <img class="arrow-positive" src="assets/icons/right.svg" alt="Slider left arrow">
-          <img class="arrow-negative" src="assets/icons/right-hover.svg" alt="Slider left arrow">
+        <nav>
+          <ul class="nav-header">
+            <li><a class="btn-nav" href="#"><h4 class="menu-UI">Blog</h4></a></li>
+            <li><a class="btn-nav" href="#"><h4 class="menu-UI">Contacts</h4></a></li>
+            <li><a class="btn-nav" href="#"><img src="assets/icons/search.svg" alt="Search"></a></li>
+            <li><a id="btn-sign-in" href="#"><h4 class="regular-UI">Sign in</h4></a></li>
+          </ul>
+        </nav>
+      </header>
+      <section class="survival">
+        <h2 class="survival-h">Survival</h2>
+        <h5>
+          What this means is that we exist to help protect our environment and do in numbers of ways. You can save the planet by donation.
+        </h5>
+        <button id="btn-donate">Donate</button>
+      </section>
+    </div>
+    <div class="container-main">
+      <main>
+        <h2>Latest articles</h2>
+        <h2 class="sh2">Breaking news from the wild</h2>
+        <div class="slider">
+          <a class="arrow" href="#">
+            <img class="arrow-positive" src="assets/icons/left.svg" alt="Slider left arrow">
+            <img class="arrow-negative" src="assets/icons/left-hover.svg" alt="Slider left arrow">
+          </a>
+          <div class="slider-img">
+            <div id="sld-img-1"></div>
+            <div class="slider-text">
+              <h4>Deer</h4>
+              <h6>Naturalist investigation</h6>
+            </div>
+          </div>
+          <div class="slider-img">
+            <div id="sld-img-2"></div>
+            <div class="slider-text">
+              <h4>Squirrel</h4>
+              <h6>Kamikaze squirrels</h6>
+            </div>
+          </div>
+          <div class="slider-img">
+            <div id="sld-img-3"></div>
+            <div class="slider-text">
+              <h4>Bird</h4>
+              <h6>Birds Fight club</h6>
+            </div>
+          </div>
+          <a class="arrow" href="#">
+            <img class="arrow-positive" src="assets/icons/right.svg" alt="Slider left arrow">
+            <img class="arrow-negative" src="assets/icons/right-hover.svg" alt="Slider left arrow">
+          </a>
+        </div>
+        <h3>Get notified about new amazing articles</h3>
+        <form class="form-email">
+          <input id="email" type="email" placeholder="Email">
+          <input id="send" type="submit" value="Send">
+        </form>
+      </main>
+    </div>
+    <div class="container-footer">
+      <footer>
+        <a class="logo" href="#">
+          <img class="logo-img" src="assets/icons/logo.svg" alt="Logo">
+          <p>wildlife</p>
         </a>
-      </figure>
-      <h3>Get notified about new amazing articles</h3>
-      <form class="form-email">
-        <input type="email" id="email" placeholder="Email">
-        <input type="submit" id="send" value="Send">
-      </form>
-    </main>
-  </article>
-  <article class="container-footer">
-    <footer>
-      <a class="logo" href="#">
-        <img class="logo-img" src="assets/icons/logo.svg" alt="Logo">
-        <p class="logo-text">wildlife</p>
-      </a>
-      <nav>
-        <ul class="nav-footer">
-          <li><a href="#"><h4 class="menu-UI">Articles</h4></a></li>
-          <li><a href="#"><h4 class="menu-UI">About us</h4></a></li>
-          <li><a href="#"><h4 class="menu-UI">Learn more</h4></a></li>
+        <nav>
+          <ul class="nav-footer">
+            <li><a href="#"><h4 class="menu-UI">Articles</h4></a></li>
+            <li><a href="#"><h4 class="menu-UI">About us</h4></a></li>
+            <li><a href="#"><h4 class="menu-UI">Learn more</h4></a></li>
+          </ul>
+        </nav>
+        <ul class="social">
+          <li><a href="#" id="facebook"></a></li>
+          <li><a href="#" id="instagram"></a></li>
+          <li><a href="#" id="pinterest"></a></li>
+          <li><a href="#" id="telegram"></a></li>
         </ul>
-      </nav>
-      <ul class="social">
-        <li><a href="#" id="facebook"></a></li>
-        <li><a href="#" id="instagram" href="#"></a></li>
-        <li><a href="#" id="pinterest" href="#"></a></li>
-        <li><a href="#" id="telegram" href="#"></a></li>
-      </ul>
-    </footer>
-  </article>
-</body>
+      </footer>
+    </div>
+  </body>
 </html>
