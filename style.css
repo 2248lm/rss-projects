@@ -52,7 +52,7 @@ a:focus {
 	cursor: pointer;
 }
 .fullscreen:hover {
-	background-color: #fff8dc;
+	transform: scale(1.2);
 }
 :-webkit-full-screen .fullscreen {
 	background-image: url("assets/icons/fs-exit.svg");
@@ -65,9 +65,9 @@ a:focus {
 	font-family: 'Rajdhani', sans-serif;
   font-size: 24px;
   letter-spacing: 2px;
-  text-transform: uppercase;
-  background-color: #454c53;
-  border: none;
+	text-transform: uppercase;
+	background-color: #454c53;
+  border: 0;
   border-radius: 5px;
 	outline: none;
 	transition: 0.3s;
@@ -75,6 +75,7 @@ a:focus {
 }
 .btn:not(.btn-active):hover {
 	background-color: #515961;
+	transform: scale(1.2);
 }
 .btn:active {
 	background-color: #00c9b7;
@@ -84,6 +85,7 @@ a:focus {
 }
 .btn-active:hover {
 	background-color: #00c9b7;
+	transform: scale(1.2);
 }
 .piano {
   margin: 0 auto;
@@ -96,17 +98,18 @@ a:focus {
 	justify-content: space-between;
 }
 .piano-key {
+	margin: 4px;
 	position: relative;
 	width: 80px;
 	height: 270px;
 	background-color: #fff;
-	border: 4px solid #313940;
+	border: 2px solid #313940;
 	border-radius: 0px 0px 12px 12px;
 	transition: 0.3s;
 	cursor: pointer;
 }
 .piano-key:hover {
-	background-color: #ffffe0;
+	background-color: #f0e68c;
 }
 .keys-sharp {
 	position: absolute;
@@ -119,6 +122,7 @@ a:focus {
 	pointer-events: none;
 }
 .piano-key.sharp {
+	margin: 0;
   top: 0;
   z-index: 3;
   width: 54px;
@@ -128,6 +132,9 @@ a:focus {
 	border-radius: 0px 0px 9px 9px;
   pointer-events: auto;
 	transform-origin: center top;
+}
+.piano-key.sharp:hover {
+	background-color: #000;
 }
 .piano-key.piano-key-active,
 .piano-key.sharp.piano-key-active {
@@ -147,10 +154,12 @@ a:focus {
 	left: 20px;
 	width: 40px;
 	height: 40px;
+	color: #a2abb3;
 	font-size: 26px;
 	line-height: 40px;
 	text-align: center;
 	transition: 0.3s;
+	pointer-events: none;
 }
 .piano-key::after {
 	display: none;
@@ -159,6 +168,10 @@ a:focus {
 .piano-key:hover::before,
 .piano-key:hover::after {
 	color: #800000;
+}
+.piano-key-active:hover::before,
+.piano-key-active:hover::after {
+	color: #00b4a4;
 }
 .sharp:active {
 	border-top: 0;
