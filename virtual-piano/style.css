@@ -75,7 +75,7 @@ a:focus {
 }
 .btn:not(.btn-active):hover {
 	background-color: #515961;
-	transform: scale(1.2);
+	transform: scale(1.1);
 }
 .btn:active {
 	background-color: #00c9b7;
@@ -85,7 +85,7 @@ a:focus {
 }
 .btn-active:hover {
 	background-color: #00c9b7;
-	transform: scale(1.2);
+	transform: scale(1.1);
 }
 .piano {
   margin: 0 auto;
