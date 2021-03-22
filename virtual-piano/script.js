@@ -24,14 +24,14 @@ const stopSoundKeyboard = (event) => {
 //Mouse
 const startSound = (event) => {
   const key = event.target;
-  const noteAudio = document.getElementById(key.dataset.note);
-  noteAudio.currentTime = 0;
-  noteAudio.play();
   key.classList.add("active");
+  const audio = document.getElementById(key.dataset.note);
+  audio.currentTime = 0;
+  audio.play();
 }
 const stopSound = (event) => {
-  if (event.repeat) return;
   event.target.classList.remove("active");
+  if (event.repeat) return;
 }
 const startCorrespondOver = (event) => {
   const key = event.target;
