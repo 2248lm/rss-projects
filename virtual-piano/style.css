@@ -73,19 +73,15 @@ a:focus {
 	transition: 0.3s;
   cursor: pointer;
 }
-.btn:not(.btn-active):hover {
+.btn:hover {
 	background-color: #515961;
 	transform: scale(1.1);
 }
-.btn:active {
-	background-color: #00c9b7;
-}
-.btn-active {
+.btn.active {
 	background-color: #00b4a4;
 }
-.btn-active:hover {
-	background-color: #00c9b7;
-	transform: scale(1.1);
+.btn.active:hover {
+	background-color: #4ed3c8;
 }
 .piano {
   margin: 0 auto;
@@ -171,10 +167,10 @@ a:focus {
 }
 .piano-key:hover::before,
 .piano-key:hover::after {
-	color: #800000;
+	color: #000;
 }
-.piano-key:active:hover::before,
-.piano-key:active:hover::after {
+.piano-key.active:hover::before,
+.piano-key.active:hover::after {
 	color: #00b4a4;
 }
 .sharp.active {
