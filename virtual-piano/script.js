@@ -3,7 +3,7 @@ document.querySelector(".fullscreen").addEventListener("click", toggleScreen);
 function toggleScreen () {
   if (!document.fullscreenElement) {document.documentElement.requestFullscreen();} else {if (document.fullscreenEnabled) {document.exitFullscreen();}}
 }
-//Keys and Buttons
+//Piano keys
 const piano = document.querySelector(".piano");
 const keys = document.querySelectorAll(".piano-key");
 //Keybord
@@ -21,16 +21,7 @@ const stopSoundKeyboard = (event) => {
   if (!key) return;
   key.classList.remove("active");
 }
-//On Click
-const playSound = (event) => {
-  const key = event.target;
-  const noteAudio = document.getElementById(key.dataset.note);
-  noteAudio.currentTime = 0;
-  noteAudio.play();
-  key.classList.add("active");
-  key.classList.remove("active");
-}
-//Mouse Over
+//Mouse
 const startSound = (event) => {
   const key = event.target;
   const noteAudio = document.getElementById(key.dataset.note);
@@ -39,14 +30,18 @@ const startSound = (event) => {
   key.classList.add("active");
 }
 const stopSound = (event) => {
+  if (event.repeat) return;
   event.target.classList.remove("active");
 }
 const startCorrespondOver = (event) => {
-  if (event.target.classList.contains("piano-key")) {
-    event.target.classList.add("active");
+  const key = event.target;
+  if (key.classList.contains("piano-key")) {
+    key.classList.add("active");
+    const noteAudio = document.getElementById(key.dataset.note);
+    noteAudio.currentTime = 0;
+    noteAudio.play();
   }
   keys.forEach((elem) => {
-    elem.addEventListener("click", playSound);
     elem.addEventListener("mouseover", startSound);
     elem.addEventListener("mouseout", stopSound);
   });
