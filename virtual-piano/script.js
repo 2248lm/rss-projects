@@ -54,7 +54,7 @@ const stopCorrespondOver = () => {
   });
 }
 piano.addEventListener("mousedown", startCorrespondOver, false);
-piano.addEventListener("mouseup", stopCorrespondOver);
+window.addEventListener("mouseup", stopCorrespondOver);
 window.addEventListener("keydown", playSoundKeyboard);
 window.addEventListener("keyup", stopSoundKeyboard);
 //Notes-Letters Buttons
