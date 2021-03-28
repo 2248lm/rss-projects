@@ -6,7 +6,6 @@
 body {
   font-family: "Montserrat", sans-serif;
   font-style: normal;
-  overflow: hidden;
 }
 h1 {
   position: absolute;
@@ -29,6 +28,7 @@ h1 {
   text-transform: uppercase;
 }
 h2 {
+  color: #00a092;
   font-size: 54px;
   font-weight: 600;
   line-height: 66px;
@@ -79,6 +79,9 @@ header {
   flex: 3;
   padding-top: 5px;
 }
+.header-logo {
+  cursor: pointer;
+}
 nav {
   flex: 3;
 }
@@ -90,9 +93,15 @@ nav {
 }
 .menu li .p-btn{
   color: #000;
+  cursor: pointer;
+}
+.menu li .p-btn:hover,
+.menu li .p-btn:active {
+  color: #00a092;
 }
 .menu li .activ{
   color: #00a092;
+  cursor: auto;
 }
 .social-nets {
   flex: 1;
@@ -107,12 +116,15 @@ nav {
   justify-self: right;
   list-style: none;
 }
+.social a {
+  cursor: pointer;
+}
 .social li:first-child {
   padding-top: 2px;
 }
 .hero-container {
   background-image: url(../assets/images/background.png);
-  background-position: left -41px;
+  background-position: -8px -41px;
   background-repeat: no-repeat;
 }
 .hero-content {
@@ -135,4 +147,70 @@ nav {
   background-image: url(../assets/icons/union.svg);
   background-position: 185px center;
   background-repeat: no-repeat;
+}
+.org-btn:focus {
+  outline: none;
+}
+.org-btn:hover,
+.org-btn:active {
+  background-color: #d26004;
+  cursor: pointer;
+}
+.welcome-content {
+  height: 1362px;
+}
+.welcome {
+  display: flex;
+  margin-top: 150px;
+  height: 531px;
+}
+.welcome-photo {
+  flex: 4;
+}
+.aim {
+  position: relative;
+  top: -63.8%;
+  left: 49.8%;
+}
+.welcome-img,
+.how-work-img {
+  width: 100%;
+}
+.welcome-text {
+  flex: 3;
+  padding-top: 68px;
+}
+.how-work-text {
+  flex: 3;
+  padding-top: 113px;
+}
+.welcome-text p,
+.how-work-text p {
+  margin-top: 51px;
+  max-width: 560px;
+}
+.how-work-text h2,
+.how-work-text p {
+  margin-left: 40px;
+}
+.donation-main {
+  background-color: #20113d;
+}
+.donation-content {
+  display: flex;
+  padding-top: 51px;
+  height: 221px;
+  color: #fff;
+}
+.donation-descr {
+  flex: 3;
+}
+.donation-descr p {
+  margin-top: 20px;
+  padding-left: 1px;
+  width: 609px;
+}
+.quick-donation {
+  flex: 1;
+  background-color: lightcoral;
 }
