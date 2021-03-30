@@ -752,4 +752,85 @@ nav {
 .feed-3::before {
   content: url(../assets/icons/fruits.svg);
 }
+
+.users-main {
+  background-color: #20113d;
+  background-image: url(../assets/images/dark-bg-panda.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center 16px;
+}
+
+.users-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 1776px;
+  width: 1660px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.users-text {
+  padding-top: 100px;
+  width: 560px;
+  color: #fff;
+}
+
+.users-title {
+  width: 440px;
+}
+
+.users-subtitle {
+  margin-top: 38px;
+  width: 560px;
+}
+
+.users-cards {
+  padding-top: 100px;
+  width: 1060px;
+}
+
+.users-line {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.users-line-2 {
+  margin-top: 30px;
+}
+
+.users-card {
+  padding: 98px 50px 0;
+  width: 515px;
+  height: 463px;
+  background-color: #fff;
+  border-radius: 5px;
+  color: #000;
+}
+
+.users-card h4 {
+  margin-top: -13px;
+  max-width: 560px;
+}
+
+.users-card .p-body {
+  margin-top: 21px;
+}
+
+.users-card .p-btn {
+  margin-top: 45px;
+}
+
+.users-card::before {
+  content: url(../assets/icons/quote.svg);
+  position: relative;
+  top: -52px;
+  left: 3px;
+}
 /*# sourceMappingURL=styles.css.map */
