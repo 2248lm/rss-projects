@@ -1,0 +1,431 @@
+*
+  margin: 0
+  padding: 0
+  box-sizing: border-box
+
+$white: #fff
+$black: #000
+$navy: #20113d
+$orange: #f58021
+$turquoise: #00a092
+$orange-active: #d26004
+
+body
+  font-family: "Montserrat", sans-serif
+  font-style: normal
+
+h1 
+  position: absolute
+  padding: 0
+  width: 1px
+  height: 1px
+  border: 0
+  clip: rect(1px, 1px, 1px, 1px)
+  -webkit-clip-path: inset(0px 0px 99.9% 99.9%)
+  clip-path: inset(0px 0px 99.9% 99.9%)
+  overflow: hidden
+
+.hero-title 
+  width: 890px
+  color: $turquoise
+  font-size: 82px
+  font-weight: 800
+  letter-spacing: 0.8px
+  line-height: 100px
+  text-transform: uppercase
+
+h2 
+  color: $turquoise
+  font-size: 54px
+  font-weight: 600
+  line-height: 66px
+  text-transform: uppercase
+
+h3 
+  font-size: 42px
+  font-weight: 500
+  line-height: 51px
+  text-transform: uppercase
+
+h4 
+  font-size: 26px
+  font-weight: 500
+  line-height: 34px
+
+p 
+  font-size: 18px
+  font-weight: 400
+  line-height: 27px
+
+.p-btn 
+  font-size: 18px
+  font-weight: 600
+  line-height: 22px
+  text-transform: uppercase
+
+a 
+  text-decoration: none
+
+header 
+  background-color: $orange
+
+.container 
+  margin: 0 auto
+  max-width: 1920px
+
+.content 
+  margin: 0 auto
+  max-width: 1400px
+
+.header-content 
+  display: flex
+  height: 110px
+  align-items: center
+
+.logo 
+  flex: 3
+  padding-top: 5px
+
+.header-logo 
+  cursor: pointer
+
+nav 
+  flex: 3
+
+.menu 
+  display: flex
+  width: 553px
+  justify-content: space-between
+  list-style: none
+
+.menu li .p-btn
+  color: $black
+  cursor: pointer
+
+.menu li .p-btn:hover,
+.menu li .p-btn:active
+  color: $turquoise
+
+.menu li .activ
+  color: $turquoise
+  cursor: auto
+
+.social-nets 
+  flex: 1
+  display: flex
+  justify-content: flex-end
+
+.social
+  display: flex
+  padding-top: 7px
+  width: 180px
+  justify-content: space-between
+  justify-self: right
+  list-style: none
+
+.social a
+  cursor: pointer
+
+.social li:first-child
+  padding-top: 2px
+
+.hero-container
+  background-image: url(../assets/images/background.png)
+  background-position: -8px -41px
+  background-repeat: no-repeat
+
+.hero-content
+  padding-top: 129px
+  height: 790px
+
+.hero-descr
+  margin-top: 31px
+  width: 430px
+
+.org-btn
+  margin-top: 44px
+  padding-right: 34px
+  width: 240px
+  height: 74px
+  color: $white
+  background-color: $orange
+  background-image: url(../assets/icons/arrow-r-w.svg)
+  background-position: 185px center
+  background-repeat: no-repeat
+  border: none
+  border-radius: 5px
+
+.org-btn:focus
+  outline: none
+
+.org-btn:hover,
+.org-btn:active
+  background-color: $orange-active
+  cursor: pointer
+
+.welcome-content
+  height: 1362px
+
+.welcome
+  display: flex
+  margin-top: 150px
+  height: 531px
+
+.welcome-photo,
+.how-work-photo
+  flex: 4
+
+.welcome-img,
+.how-work-img
+  width: 100%
+
+.welcome-photo::after
+  position: relative
+  top: -63.8%
+  left: 49.8%
+  content: url(../assets/icons/aim.svg)
+
+.welcome-text
+  flex: 3
+  padding-top: 68px
+
+.how-work-text
+  flex: 3
+  padding-top: 113px
+
+.welcome-text p,
+.how-work-text p
+  margin-top: 51px
+  max-width: 560px
+
+.how-work-text h2,
+.how-work-text p
+  margin-left: 40px
+
+.donation-main 
+  background-color: $navy
+
+.donation-content
+  display: flex
+  padding-top: 51px
+  height: 221px
+  color: $white
+
+.donation-descr
+  flex: 3
+
+.donation-descr p
+  margin-top: 20px
+  padding-left: 1px
+  width: 609px
+
+.quick-donation
+  flex: 1
+  display: flex
+  align-items: flex-end
+  flex-direction: column
+
+.donation-title
+  padding-top: 2px
+  padding-right: 138px
+
+.donation-form::before
+  content: "$"
+  position: relative
+  top: 26px
+  left: 14px
+  color: $white
+  font-size: 18px
+  font-weight: 600
+  line-height: 22px
+
+.donation-form
+  display: flex
+  margin-top: 10px
+  width: 320px
+  height: 74px
+  border: 1px solid $white
+  border-radius: 5px
+
+#donation-input
+  padding-left: 19px
+  width: 228px
+  height: 100%
+  color: $white
+  font-size: 18px
+  font-weight: 600
+  line-height: 22px
+  text-transform: uppercase
+  background-color: $navy
+  border: none
+  outline: none
+  vertical-align: middle
+  -moz-appearance: textfield
+  -webkit-appearance: none
+
+#donation-input::-webkit-outer-spin-button,
+#donation-input::-webkit-inner-spin-button
+  -webkit-appearance: none
+  margin: 0
+
+#donation-submit
+  width: 80px
+  height: 100%
+  background-color: $orange
+  background-image: url(../assets/icons/arrow-r-w.svg)
+  background-repeat: no-repeat
+  background-position: center
+  border: none
+  border-radius: 5px
+  cursor: pointer
+
+#donation-submit:focus
+  outline: none
+
+#donation-submit:hover,
+#donation-submit:active
+  background-color: $orange-active
+
+.friends-content
+  padding-top: 136px
+  height: 2422px
+  text-align: center
+
+.friends-content h2
+  color: $turquoise
+  margin-left: calc((51.4%-640px)/2)
+  margin-right: calc((48.6%-640px)/2)
+
+.friends-content h4
+  margin: 50px auto 0
+  width: 920px
+  color: $black
+
+.slider-btn-container
+  display: flex
+  margin: 100px auto 0
+  width: 175px
+  justify-content: space-between
+
+.slider-btn
+  width: 60px
+  height: 60px
+  background-color: $white
+  background-position: center
+  background-repeat: no-repeat
+  border: 1px solid $navy
+  border-radius: 5px
+  cursor: pointer
+
+.slider-btn:focus
+  outline: none
+
+.slider-btn-left
+  background-image: url(../assets/icons/arrow-l.svg)
+
+.slider-btn-left:hover,
+.slider-btn-left:active
+  background-color: $navy
+  background-image: url(../assets/icons/arrow-l-w.svg)
+
+.slider-btn-right
+  background-image: url(../assets/icons/arrow-r.svg)
+
+.slider-btn-right:hover,
+.slider-btn-right:active
+  background-color: $navy
+  background-image: url(../assets/icons/arrow-r-w.svg)
+
+.slider-line
+  display: flex
+  margin-top: 50px
+  width: 1880px
+  justify-content: space-between
+
+.slider-card
+  width: 440px
+  height: 747px
+  color: $white
+  background-color: $navy
+  border-radius: 5px
+  cursor: pointer
+
+.slider-card img
+  z-index: 1
+  position: relative
+  top: -34px
+  border-radius: 5px 0 0 5px
+
+.panda-card::before
+  content: "Lucas"
+  z-index: 3
+  position: relative
+  top: 12px
+  left: -152px
+  padding: 13px 27px 16px 32px
+  font-size: 26px
+  font-weight: 500
+  background-color: $navy
+  border: none
+  border-radius: 5px 0 5px 0
+  line-height: 34px
+
+.slider-card-type
+  margin: -9px 4px 0 0
+  font-size: 26px
+  font-weight: 500
+  line-height: 34px
+
+.slider-card-descr
+  margin: 18px 30px 0
+  font-size: 18px
+  font-weight: 400
+  line-height: 27px
+
+.trp-btn
+  margin-top: 24.5px
+  padding-right: 38px
+  width: 240px
+  height: 74px
+  color: $orange
+  background-color: $navy
+  background-image: url(../assets/icons/arrow-r-o.svg)
+  background-position: 195px center
+  background-repeat: no-repeat
+  border: none
+  cursor: pointer
+  letter-spacing: 1.4px
+  z-index: 2
+
+.trp-btn:focus
+  outline: none
+
+.trp-btn:hover,
+.trp-btn:active
+  margin-top: 24.5px
+  padding-right: 38px
+  width: 240px
+  height: 74px
+  color: $white
+  background-color: $orange
+  background-image: url(../assets/icons/arrow-r-w.svg)
+  background-position: 195px center
+  background-repeat: no-repeat
+  border: none
+  border-radius: 5px
+  cursor: pointer
+  letter-spacing: 1.4px
+  z-index: 2
+
+
+
+
+
+
+
+
+.pay-main
+  background-color: $navy
+
+.pay-content
+  height: 2205px

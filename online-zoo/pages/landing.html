@@ -14,8 +14,8 @@
 
 <body>
   <header>
-    <section class="content header-content">
-      <a class="logo">
+    <div class="content header-content">
+      <a class="logo" href="#">
         <img class="header-logo" src="../assets/icons/logo.svg" alt="Online Zoo Logo">
       </a>
       <nav>
@@ -38,7 +38,7 @@
                 alt="Facebook"></a></li>
         </ul>
       </div>
-    </section>
+    </div>
   </header>
   <main>
     <div class="container hero-container">
@@ -47,27 +47,35 @@
         <h2 class="hero-title">Watch your favorite animal online</h2>
         <p class="hero-descr">Explore the exciting and mysterious world of wild animals in a natural setting without
           leaving your home.</p>
-        <button class="org-btn p-btn">View live cam</button>
+        <form action="#" target="_blank">
+          <button class="org-btn p-btn">View live cam</button>
+        </form>
       </section>
     </div>
     <section class="content welcome-content">
       <article class="welcome">
         <div class="welcome-text">
           <h2>Welcome to the Online Zoo!</h2>
-          <p>On our website, using live webcams, fans of all ages can observe various animals. Among them, are Giant pandas, eagles, alligators, forest gorillas, African lions, and others. It is the whole natural world in real-time in front of our cameras. We hope you will enjoy watching closely and explore animals’ behavior and habitats! Note: animals are not always on view on cameras, so please check back if you don't see anything.</p>
+          <p>On our website, using live webcams, fans of all ages can observe various animals. Among them, are Giant
+            pandas, eagles, alligators, forest gorillas, African lions, and others. It is the whole natural world in
+            real-time in front of our cameras. We hope you will enjoy watching closely and explore animals’ behavior and
+            habitats! Note: animals are not always on view on cameras, so please check back if you don't see anything.
+          </p>
         </div>
         <div class="welcome-photo">
-          <img class="welcome-img" src="../assets/images/Group 11.png" alt="Welcome sign">
-          <img class="aim" src="../assets/icons/aim.svg" alt="Aim sign">
+          <img class="welcome-img" src="../assets/images/welcome.png" alt="Welcome sign">
         </div>
       </article>
       <article class="welcome">
-        <div class="welcome-photo">
-          <img class="how-work-img" src="../assets/images/Group 12.png" alt="Two eagles">
+        <div class="how-work-photo">
+          <img class="how-work-img" src="../assets/images/eagles.png" alt="Two eagles">
         </div>
         <div class="how-work-text">
           <h2>How we work</h2>
-          <p>Online Zoo is a nonprofit committed to inspiring awareness and preservation of nature and wild animals in our zoo and worldwide. Every day, our experts work to safeguard the health and wellness of the animals. To continue these efforts, we need your help. We're so grateful to our numerous supporters. All donations, large and small, go a long way to the conservation efforts of our pets.</p>
+          <p>Online Zoo is a nonprofit committed to inspiring awareness and preservation of nature and wild animals in
+            our zoo and worldwide. Every day, our experts work to safeguard the health and wellness of the animals. To
+            continue these efforts, we need your help. We're so grateful to our numerous supporters. All donations,
+            large and small, go a long way to the conservation efforts of our pets.</p>
         </div>
       </article>
     </section>
@@ -76,9 +84,51 @@
     <section class="content donation-content">
       <div class="donation-descr">
         <h3>Your donation makes a difference!</h3>
-        <p>The Online Zoo's animal webcams are some of the most famous on the internet. Tune in to watch your favourite animals — live, 24/7!</p>
+        <p>The Online Zoo's animal webcams are some of the most famous on the internet. Tune in to watch your favourite
+          animals — live, 24/7!</p>
       </div>
-      <div class="quick-donation"></div>
+      <div class="quick-donation">
+        <h4 class="donation-title">Quick Donate</h4>
+        <form class="donation-form">
+          <input id="donation-input" name="input" type="number" placeholder="Donation amount" min="0" max="9999"
+            onKeyPress="if (this.value.length === 4) {return false;}">
+          <input id="donation-submit" name="submit" type="submit" value="">
+        </form>
+      </div>
+    </section>
+  </main>
+  <main>
+    <section class="content friends-content">
+      <h2>Meet some our pets</h2>
+      <h4>Do you have a special place in your heart for animals? Who are your favorites? Perhaps you'd like to donate to
+        special ones or all our pets? We think it's important for you to choose how your donation is used.</h4>
+      <figure class="slider-group" role="group">
+        <figure class="slider-btn-container">
+          <button class="slider-btn slider-btn-left"></button>
+          <button class="slider-btn slider-btn-right"></button>
+        </figure>
+        <figure class="slider-line" role="group">
+          <a class="slider-card panda-card" href="#">
+            <figure>
+              <img class="slider-card-img" src="../assets/images/lucas.png">
+            </figure>
+            <figcaption class="slider-card-type">Giant Panda</figcaption>
+            <figcaption class="slider-card-descr">Native to central China, giant pandas have come to symbolize
+              vulnerable species.</figcaption>
+            <form action="#" target="_blank">
+              <button class="trp-btn p-btn">View live cam</button>
+            </form>
+          </a>
+          <a class="slider-card" href="#"></a>
+          <a class="slider-card" href="#"></a>
+          <a class="slider-card" href="#"></a>
+        </figure>
+      </figure>
+    </section>
+  </main>
+  <main class="pay-main">
+    <section class="content pay-content">
+
     </section>
   </main>
 </body>
