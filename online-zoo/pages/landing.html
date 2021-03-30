@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,7 +10,6 @@
   <link rel="stylesheet" href="normalize.css">
   <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
   <header>
     <div class="content header-content">
@@ -45,10 +43,9 @@
       <section class="content hero-content">
         <h1 class="visuallyhidden">Online Zoo</h1>
         <h2 class="hero-title">Watch your favorite animal online</h2>
-        <p class="p-body hero-descr">Explore the exciting and mysterious world of wild animals in a natural setting without
-          leaving your home.</p>
+        <p class="p-body hero-descr">Explore the exciting and mysterious world of wild animals in a natural setting without leaving your home.</p>
         <form action="#" target="_blank">
-          <button class="p-btn org-btn">View live cam</button>
+          <button class="p-btn org-btn hero-btn">View live cam</button>
         </form>
       </section>
     </div>
@@ -56,25 +53,19 @@
       <article class="welcome">
         <div class="welcome-text">
           <h2>Welcome to the Online Zoo!</h2>
-          <p class="p-body">On our website, using live webcams, fans of all ages can observe various animals. Among them, are Giant
-            pandas, eagles, alligators, forest gorillas, African lions, and others. It is the whole natural world in
-            real-time in front of our cameras. We hope you will enjoy watching closely and explore animals’ behavior and
-            habitats! Note: animals are not always on view on cameras, so please check back if you don't see anything.</p>
+          <p class="p-body">On our website, using live webcams, fans of all ages can observe various animals. Among them, are Giant pandas, eagles, alligators, forest gorillas, African lions, and others. It is the whole natural world in real-time in front of our cameras. We hope you will enjoy watching closely and explore animals’ behavior and habitats! Note: animals are not always on view on cameras, so please check back if you don't see anything.</p>
         </div>
-        <div class="welcome-photo">
+        <figure class="welcome-photo">
           <img class="welcome-img" src="../assets/images/welcome.png" alt="Welcome sign">
-        </div>
+        </figure>
       </article>
-      <article class="welcome">
-        <div class="how-work-photo">
+      <article class="how-work">
+        <figure class="how-work-photo">
           <img class="how-work-img" src="../assets/images/eagles.png" alt="Two eagles">
-        </div>
+        </figure>
         <div class="how-work-text">
           <h2>How we work</h2>
-          <p class="p-body">Online Zoo is a nonprofit committed to inspiring awareness and preservation of nature and wild animals in
-            our zoo and worldwide. Every day, our experts work to safeguard the health and wellness of the animals. To
-            continue these efforts, we need your help. We're so grateful to our numerous supporters. All donations,
-            large and small, go a long way to the conservation efforts of our pets.</p>
+          <p class="p-body">Online Zoo is a nonprofit committed to inspiring awareness and preservation of nature and wild animals in our zoo and worldwide. Every day, our experts work to safeguard the health and wellness of the animals. To continue these efforts, we need your help. We're so grateful to our numerous supporters. All donations, large and small, go a long way to the conservation efforts of our pets.</p>
         </div>
       </article>
     </section>
@@ -83,125 +74,164 @@
     <section class="content donation-content">
       <div class="donation-descr">
         <h3>Your donation makes a difference!</h3>
-        <p class="p-body">The Online Zoo's animal webcams are some of the most famous on the internet. Tune in to watch your favourite
-          animals — live, 24/7!</p>
+        <p class="p-body">The Online Zoo's animal webcams are some of the most famous on the internet. Tune in to watch your favourite animals — live, 24/7!</p>
       </div>
       <div class="quick-donation">
         <h4 class="subheader donation-title">Quick Donate</h4>
         <form class="donation-form">
-          <input id="donation-input" name="input" type="number" placeholder="Donation amount" min="0" max="9999"
-            onKeyPress="if (this.value.length === 4) {return false;}">
+          <input id="donation-input" name="input" type="number" placeholder="Donation amount" min="0" max="9999" onKeyPress="if (this.value.length === 4) {return false;}">
           <input id="donation-submit" name="submit" type="submit" value="">
         </form>
       </div>
     </section>
   </main>
   <main>
-    <section class="content friends-content">
-      <h2>Meet some our pets</h2>
-      <h4 class="subheader">Do you have a special place in your heart for animals? Who are your favorites? Perhaps you'd like to donate to
-        special ones or all our pets? We think it's important for you to choose how your donation is used.</h4>
-      <figure class="slider-group" role="group">
-        <figure class="slider-btn-container">
-          <button class="slider-btn slider-btn-left"></button>
-          <button class="slider-btn slider-btn-right"></button>
+    <div class="container friends-container">
+      <section class="content friends-content">
+        <h2>Meet some our pets</h2>
+        <h4 class="subheader">Do you have a special place in your heart for animals? Who are your favorites? Perhaps you'd like to donate to special ones or all our pets? We think it's important for you to choose how your donation is used.</h4>
+        <figure class="slider-group" role="group">
+          <figure class="slider-btn-container">
+            <button class="slider-btn slider-btn-left"></button>
+            <button class="slider-btn slider-btn-right"></button>
+          </figure>
+          <figure class="slider-line slider-line-1" role="group">
+            <a class="slider-card lucas-card" href="#">
+              <figure>
+                <img class="slider-card-img" src="../assets/images/lucas.png">
+              </figure>
+              <figcaption class="subheader slider-card-type">Giant Panda</figcaption>
+              <figcaption class="p-body slider-card-descr">Native to central China, giant pandas have come to symbolize vulnerable species.</figcaption>
+              <form class="trp-btn-form" action="#" target="_blank">
+                <button class="trp-btn p-btn">View live cam</button>
+              </form>
+            </a>
+            <a class="slider-card andy-card" href="#">
+              <figure>
+                <img class="slider-card-img" src="../assets/images/andy.png">
+              </figure>
+              <figcaption class="subheader slider-card-type">Madagascarian Lemur</figcaption>
+              <figcaption class="p-body slider-card-descr">Lemurs are considered the world’s most endangered group of mammals.</figcaption>
+              <form action="#" target="_blank">
+                <button class="trp-btn p-btn">View live cam</button>
+              </form>
+            </a>
+            <a class="slider-card glen-card" href="#">
+              <figure>
+                <img class="slider-card-img" src="../assets/images/glen.png">
+              </figure>
+              <figcaption class="subheader slider-card-type">Gorilla in Congo</figcaption>
+              <figcaption class="p-body slider-card-descr">Variety of snacks very important for the healthy life of gorillas and his plenty of babies.</figcaption>
+              <form class="trp-btn-form" action="#" target="_blank">
+                <button class="trp-btn p-btn">View live cam</button>
+              </form>
+            </a>
+            <a class="slider-card mike-card" href="#">
+              <figure>
+                <img class="slider-card-img" src="../assets/images/mike.png">
+              </figure>
+              <figcaption class="subheader slider-card-type">Chinese Alligator</figcaption>
+              <figcaption class="p-body slider-card-descr mike-descr">From nose to tail, belly to back, hard scales protect this petite alligator.</figcaption>
+              <form class="trp-btn-form" action="#" target="_blank">
+                <button class="trp-btn p-btn">View live cam</button>
+              </form>
+            </a>
+          </figure>
+          <figure class="slider-line slider-line-2" role="group">
+            <a class="slider-card sam-lora-card" href="#">
+              <figure>
+                <img class="slider-card-img" src="../assets/images/sam-lora.png">
+              </figure>
+              <figcaption class="subheader slider-card-type">West End Bald Eagles</figcaption>
+              <figcaption class="p-body slider-card-descr sam-lora-descr">Pair of eagle parents lay and protect eggs, feed their chicks and teach them to hunt and fly.</figcaption>
+              <form class="trp-btn-form" action="#" target="_blank">
+                <button class="trp-btn p-btn">View live cam</button>
+              </form>
+            </a>
+            <a class="slider-card liz-card" href="#">
+              <figure>
+                <img class="slider-card-img" src="../assets/images/liz.png">
+              </figure>
+              <figcaption class="subheader slider-card-type">Australian Koala</figcaption>
+              <figcaption class="p-body slider-card-descr">The elevated walkways bring you to eye level with the koalas as they perch in their forest.</figcaption>
+              <form class="trp-btn-form" action="#" target="_blank">
+                <button class="trp-btn p-btn">View live cam</button>
+              </form>
+            </a>
+            <a class="slider-card shake-card" href="#">
+              <figure>
+                <img class="slider-card-img" src="../assets/images/shake.png">
+              </figure>
+              <figcaption class="subheader slider-card-type">African Lion</figcaption>
+              <figcaption class="p-body slider-card-descr shake-descr">Lions roam the savannas and grasslands of Africa, hunting and raising cubs in the pride.</figcaption>
+              <form class="trp-btn-form" action="#" target="_blank">
+                <button class="trp-btn p-btn">View live cam</button>
+              </form>
+            </a>
+            <a class="slider-card senja-card" href="#">
+              <figure>
+                <img class="slider-card-img" src="../assets/images/senja.png">
+              </figure>
+              <figcaption class="subheader slider-card-type">Sumatran Tiger</figcaption>
+              <figcaption class="p-body slider-card-descr">Sumatran Tigers are the smallest of the five sub-species, and are found in Indonesia.</figcaption>
+              <form class="trp-btn-form" action="#" target="_blank">
+                <button class="trp-btn p-btn">View live cam</button>
+              </form>
+            </a>
+          </figure>
+          <form action="#" target="_blank">
+            <button class="p-btn friends-btn">Choose your favourite</button>
+          </form>
         </figure>
-        <figure class="slider-line slider-line-1" role="group">
-          <a class="slider-card lucas-card" href="#">
-            <figure>
-              <img class="slider-card-img" src="../assets/images/lucas.png">
-            </figure>
-            <figcaption class="subheader slider-card-type">Giant Panda</figcaption>
-            <figcaption class="p-body slider-card-descr">Native to central China, giant pandas have come to symbolize
-              vulnerable species.</figcaption>
-            <form class="trp-btn-form" action="#" target="_blank">
-              <button class="trp-btn p-btn">View live cam</button>
-            </form>
-          </a>
-          <a class="slider-card andy-card" href="#">
-            <figure>
-              <img class="slider-card-img" src="../assets/images/andy.png">
-            </figure>
-            <figcaption class="subheader slider-card-type">Madagascarian Lemur</figcaption>
-            <figcaption class="p-body slider-card-descr">Lemurs are considered the world’s most endangered group of mammals.</figcaption>
-            <form action="#" target="_blank">
-              <button class="trp-btn p-btn">View live cam</button>
-            </form>
-          </a>
-          <a class="slider-card glen-card" href="#">
-            <figure>
-              <img class="slider-card-img" src="../assets/images/glen.png">
-            </figure>
-            <figcaption class="subheader slider-card-type">Gorilla in Congo</figcaption>
-            <figcaption class="p-body slider-card-descr">Variety of snacks very important for the healthy life of gorillas and his plenty of babies.</figcaption>
-            <form class="trp-btn-form" action="#" target="_blank">
-              <button class="trp-btn p-btn">View live cam</button>
-            </form>
-          </a>
-          <a class="slider-card mike-card" href="#">
-            <figure>
-              <img class="slider-card-img" src="../assets/images/mike.png">
-            </figure>
-            <figcaption class="subheader slider-card-type">Chinese Alligator</figcaption>
-            <figcaption class="p-body slider-card-descr mike-descr">From nose to tail, belly to back, hard scales protect this petite alligator.</figcaption>
-            <form class="trp-btn-form" action="#" target="_blank">
-              <button class="trp-btn p-btn">View live cam</button>
-            </form>
-          </a>
-        </figure>
-        <figure class="slider-line slider-line-2" role="group">
-          <a class="slider-card sam-lora-card" href="#">
-            <figure>
-              <img class="slider-card-img" src="../assets/images/sam-lora.png">
-            </figure>
-            <figcaption class="subheader slider-card-type">West End Bald Eagles</figcaption>
-            <figcaption class="p-body slider-card-descr sam-lora-descr">Pair of eagle parents lay and protect eggs, feed their chicks and teach them to hunt and fly.</figcaption>
-            <form class="trp-btn-form" action="#" target="_blank">
-              <button class="trp-btn p-btn">View live cam</button>
-            </form>
-          </a>
-          <a class="slider-card liz-card" href="#">
-            <figure>
-              <img class="slider-card-img" src="../assets/images/liz.png">
-            </figure>
-            <figcaption class="subheader slider-card-type">Australian Koala</figcaption>
-            <figcaption class="p-body slider-card-descr">The elevated walkways bring you to eye level with the koalas as they perch in their forest.</figcaption>
-            <form class="trp-btn-form" action="#" target="_blank">
-              <button class="trp-btn p-btn">View live cam</button>
-            </form>
-          </a>
-          <a class="slider-card shake-card" href="#">
-            <figure>
-              <img class="slider-card-img" src="../assets/images/shake.png">
-            </figure>
-            <figcaption class="subheader slider-card-type">African Lion</figcaption>
-            <figcaption class="p-body slider-card-descr shake-descr">Lions roam the savannas and grasslands of Africa, hunting and raising cubs in the pride.</figcaption>
-            <form class="trp-btn-form" action="#" target="_blank">
-              <button class="trp-btn p-btn">View live cam</button>
-            </form>
-          </a>
-          <a class="slider-card senja-card" href="#">
-            <figure>
-              <img class="slider-card-img" src="../assets/images/senja.png">
-            </figure>
-            <figcaption class="subheader slider-card-type">Sumatran Tiger</figcaption>
-            <figcaption class="p-body slider-card-descr">Sumatran Tigers are the smallest of the five sub-species, and are found in Indonesia.</figcaption>
-            <form class="trp-btn-form" action="#" target="_blank">
-              <button class="trp-btn p-btn">View live cam</button>
-            </form>
-          </a>
-        </figure>
-        <form action="#" target="_blank">
-          <button class="p-btn friends-btn">Choose your favourite</button>
-        </form>
-      </figure>
-    </section>
+      </section>
+    </div>
   </main>
   <main class="pay-main">
     <section class="content pay-content">
-
+      <h2>Pay and feed</h2>
+      <div class="pay-line pay-line-1">
+        <h4 class="subheader">01</h4>
+        <hr class="line">
+      </div>
+      <article class="pay-feed">
+        <figure class="pay-feed-photo">
+          <img class="pay-feed-img" src="../assets/images/monkey.png" alt="Monkey seating">
+        </figure>
+        <div class="pay-feed-text feed-1">
+          <h4 class="subheader pay-feed-title">Your donation has an impact</h4>
+          <p class="p-body pay-feed-descr">Providing our animals with high-quality nutritious diets is just one element of animal care at our Zoo. We do all the best so that our animals can eat food similar to what they might find in their natural habitats while making sure they get the right mix of nutrients, proteins, and vitamins to be happy and healthy. Please help us provide nutritious food for our animals by donating. The generosity of people like you can help us make sure that our animals enjoy good food that keeps them in great condition.</p>
+        </div>
+      </article>
+      <div class="pay-line pay-line-2">
+        <h4 class="subheader">02</h4>
+        <hr class="line">
+      </div>
+      <article class="pay-feed">
+        <figure class="pay-feed-photo">
+          <img class="pay-feed-img" src="../assets/images/banana.png" alt="Banana">
+        </figure>
+        <div class="pay-feed-text feed-2">
+          <h4 class="subheader pay-feed-title">Make a donation</h4>
+          <p class="p-body pay-feed-descr">You can donate through your credit card without any fees. It is easy and safe. We do not keep donors' personal information on an online network. Choose an amount to give and the pet's name if needed. One of the most effective ways you can give is by making regular donations.</p>
+        </div>
+      </article>
+      <div class="pay-line pay-line-3">
+        <h4 class="subheader">03</h4>
+        <hr class="line">
+      </div>
+      <article class="pay-feed">
+        <figure class="pay-feed-photo">
+          <img class="pay-feed-img" src="../assets/images/monkey2.png" alt="Monkey eating">
+        </figure>
+        <div class="pay-feed-text feed-3">
+          <h4 class="subheader pay-feed-title pay-title-3">Bring your food charity — straight to your favorites pets.</h4>
+          <p class="p-body pay-feed-descr feed-descr-3">After your donation, the animal receives its favorite foods. You can support your favorite animals or any animal you care about and make a real personal impact. Never doubt that your donation can make a difference even if it is small.</p>
+          <form action="#" target="_blank">
+            <button class="p-btn org-btn donate-btn">Donate now</button>
+          </form>
+        </div>
+      </article>
     </section>
   </main>
 </body>
-
 </html>
