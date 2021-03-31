@@ -114,26 +114,29 @@ nav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 553px;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
   list-style: none;
 }
 
-.menu li .p-btn {
+.h-menu li .p-btn {
   color: #000;
   cursor: pointer;
 }
 
-.menu li .p-btn:hover,
-.menu li .p-btn:active {
+.h-menu li .p-btn:hover,
+.h-menu li .p-btn:active {
   color: #00a092;
 }
 
 .menu li .activ {
   color: #00a092;
   cursor: auto;
+}
+
+.h-menu {
+  width: 553px;
 }
 
 .social-nets {
@@ -742,6 +745,19 @@ nav {
   background-color: #00a092;
 }
 
+.footer-btn {
+  padding-right: 32px;
+  color: #fff;
+  background-image: url(../assets/icons/arrow-r-w.svg);
+  background-position: 300px center;
+  border: 1px solid #fff;
+}
+
+.footer-btn:hover,
+.footer-btn:active {
+  background-color: #00a092;
+}
+
 .care-btn {
   margin-top: 100px;
   padding-right: 32px;
@@ -954,7 +970,8 @@ nav {
 }
 
 .care-title {
-  margin: 136px auto 0;
+  margin: 0 auto;
+  padding-top: 136px;
   max-width: 655px;
   color: #00a092;
 }
@@ -1041,5 +1058,81 @@ nav {
 .care-end-img {
   margin-top: 150px;
   min-width: 1400px;
+}
+
+footer {
+  margin-top: 0px;
+  color: #fff;
+  background-color: #20113d;
+}
+
+.footer-content {
+  height: 329px;
+}
+
+.footer-line {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.f-line-1 {
+  min-height: 214px;
+  border-bottom: 1px solid #fff;
+}
+
+.f-line-2 {
+  min-height: 115px;
+}
+
+.footer-logos {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 415px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.f-logo-zoo {
+  padding-top: 5px;
+}
+
+.f-menu {
+  margin: -4px 100px 0;
+  width: 425px;
+}
+
+.f-menu li .p-btn {
+  color: #fff;
+  cursor: pointer;
+}
+
+.f-menu li .p-btn:hover,
+.f-menu li .p-btn:active {
+  text-decoration: underline;
+}
+
+.list-company {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-top: 1px;
+  width: 447px;
+  list-style: none;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.f-social {
+  width: 200px;
 }
 /*# sourceMappingURL=styles.css.map */
