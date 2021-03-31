@@ -497,10 +497,22 @@ nav {
   background-image: url(../assets/icons/arrow-r.svg);
 }
 
+.slider-gradient {
+  position: relative;
+  z-index: 3;
+  left: 1600px;
+  width: 300px;
+  height: 1650px;
+  background-image: -webkit-gradient(linear, left top, right top, from(transparent), color-stop(16%, #fff), to(#fff));
+  background-image: linear-gradient(to right, transparent, #fff 16%, #fff 100%);
+}
+
 .slider-line {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  position: relative;
+  top: -1650px;
   width: 1880px;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
@@ -677,6 +689,7 @@ nav {
   background-color: transparent;
   background-repeat: no-repeat;
   border-radius: 5px;
+  cursor: pointer;
 }
 
 .long-btn:focus {
@@ -689,6 +702,8 @@ nav {
 }
 
 .friends-btn {
+  position: relative;
+  top: -1650px;
   margin-top: 100px;
   padding-right: 36px;
   color: #20113d;
