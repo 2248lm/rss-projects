@@ -70,7 +70,7 @@ a {
   text-decoration: none;
 }
 
-header {
+.header {
   background-color: #f58021;
 }
 
@@ -1007,6 +1007,7 @@ nav {
   height: 658px;
   background-color: #20113d;
   border-radius: 5px;
+  cursor: pointer;
   -webkit-transition: all 1s ease-in-out;
   transition: all 1s ease-in-out;
 }
@@ -1061,7 +1062,7 @@ nav {
   min-width: 1400px;
 }
 
-footer {
+.footer {
   margin-top: 0px;
   color: #fff;
   background-color: #20113d;
