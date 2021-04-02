@@ -4,13 +4,6 @@
   display: flex;
 }
 
-.zoos-content {
-  margin-left: 2.1%;
-  margin-right: 0.1%;
-  width: 100%;
-  color: #fff;
-}
-
 .sidebar {
   margin: 0;
   position: -webkit-sticky;
@@ -94,11 +87,15 @@
   background-position: center;
   background-repeat: no-repeat;
   border-radius: 50%;
+  -webkit-box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+          box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
   cursor: pointer;
 }
 
 .animal-sign.active {
   background-color: #fff;
+  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   -webkit-box-shadow: 0 0 0 4px #20113d, 0 0 0 8px #fff;
           box-shadow: 0 0 0 4px #20113d, 0 0 0 8px #fff;
   cursor: auto;
@@ -130,6 +127,13 @@
   cursor: pointer;
 }
 
+.zoos-content {
+  margin-left: 2.1%;
+  margin-right: 0.1%;
+  width: 100%;
+  color: #fff;
+}
+
 .zoos-title-line {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -156,14 +160,6 @@
   height: 787px;
 }
 
-.live-video-container {
-  width: 100%;
-  height: 100%;
-  background-image: url(../../assets/images/panda-cam1.png);
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
 .p-main-video {
   position: absolute;
   z-index: 3;
@@ -178,7 +174,18 @@
           box-shadow: -10px 0 0 rgba(0, 0, 0, 0.5), 10px 0 0 rgba(0, 0, 0, 0.5);
 }
 
-#live-video {
+.live-video-container {
+  width: 100%;
+  height: 100%;
+  background-image: url(../../assets/images/panda-cam1.png);
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+#live-video,
+#live-video-1,
+#live-video-2,
+#live-video-3 {
   display: none;
 }
 
@@ -195,77 +202,11 @@
   cursor: pointer;
 }
 
-.zoos-live-button:hover {
+.zoos-live-button:hover,
+.zoos-live-button:active,
+.slider-v-button:hover,
+.slider-v-button:active {
   background-image: url(../../assets/icons/play-button-o.svg);
-}
-
-.main-video-logo {
-  position: relative;
-  z-index: 3;
-  top: -172px;
-  left: 91%;
-  right: 2%;
-  right: 10%;
-  width: 105px;
-  height: 54.69px;
-  background-color: rgba(0, 0, 0, 0.5);
-  background-image: url(../../assets/icons/logo-w.svg);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
-  -webkit-box-shadow: -10px 0 0 rgba(0, 0, 0, 0.5), 10px 0 0 rgba(0, 0, 0, 0.5);
-          box-shadow: -10px 0 0 rgba(0, 0, 0, 0.5), 10px 0 0 rgba(0, 0, 0, 0.5);
-}
-
-.zoos-subtitle-line {
-  margin-top: 101px;
-  text-align: center;
-}
-
-.zoos-slider {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin-top: 28px;
-  margin-right: 2.7%;
-  margin-left: calc( 2.7% + 120px);
-  max-width: 1205px;
-  height: 209px;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-.zoos-slider-btn {
-  border: none;
-}
-
-.zoos-video-line {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  width: 1040px;
-  height: 100%;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-.zoos-slider-video {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  width: 320px;
-  height: 100%;
-  background-color: yellow;
-  border-radius: 5px;
-}
-
-.zoos-slider-video.active {
-  border: 3px solid #f58021;
 }
 
 .zoos-btn-l {
@@ -292,6 +233,135 @@
   background-image: url(../../assets/icons/arrow-r-w.svg);
 }
 
+.main-video-logo {
+  position: relative;
+  z-index: 3;
+  top: -172px;
+  left: 91%;
+  right: 12%;
+  width: 105px;
+  height: 54.69px;
+  background-color: rgba(0, 0, 0, 0.5);
+  background-image: url(../../assets/icons/logo-w.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  -webkit-box-shadow: -10px 0 0 rgba(0, 0, 0, 0.5), 10px 0 0 rgba(0, 0, 0, 0.5);
+          box-shadow: -10px 0 0 rgba(0, 0, 0, 0.5), 10px 0 0 rgba(0, 0, 0, 0.5);
+}
+
+.zoos-subtitle-line {
+  margin-top: 101px;
+  text-align: center;
+  color: #000;
+}
+
+.zoos-slider {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 29px;
+  margin-right: 2.7%;
+  margin-left: calc( 2.7% + 120px);
+  max-width: 1205px;
+  height: 209px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.zoos-slider-btn {
+  margin-top: -1px;
+  border: none;
+}
+
+.zoos-video-line {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 1040px;
+  height: 100%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.zoos-slider-video {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 320px;
+  height: 100%;
+  border-radius: 5px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.zoos-slider-video.active {
+  border: 3px solid #f58021;
+}
+
+.camera-num {
+  position: absolute;
+  margin-top: -3px;
+  margin-left: -3px;
+  padding-top: 4px;
+  padding-left: 39px;
+  width: 189px;
+  height: 44px;
+  color: #fff;
+  background-color: transparent;
+  background-image: url(../../assets/icons/camera-w.svg);
+  background-position: 128px center;
+  background-repeat: no-repeat;
+  border-right: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+  border-radius: 5px 0;
+  text-transform: uppercase;
+}
+
+.slider-v-container {
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.slider-v-1 {
+  background-image: url(../../assets/images/panda-cam1-prev.png);
+  background-position: center -3px;
+  border-radius: 5px;
+}
+
+.slider-v-2 {
+  background-image: url(../../assets/images/panda-cam2-prev.png);
+  background-position: center 0.2px;
+  border-radius: 5px;
+}
+
+.slider-v-3 {
+  background-image: url(../../assets/images/panda-cam3-prev.png);
+  background-position: center -0.2px;
+  border-radius: 5px;
+}
+
+.slider-v-button {
+  position: absolute;
+  margin-top: 86px;
+  margin-left: 133px;
+  z-index: 1;
+  width: 46px;
+  height: 32px;
+  background-image: url(../../assets/icons/play-button.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  cursor: pointer;
+}
+
 .bamboo-main {
   background-color: #20113d;
 }
@@ -300,7 +370,7 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-top: 151px;
+  margin-top: 150px;
   padding-top: 48px;
   padding-left: 1px;
   color: #fff;

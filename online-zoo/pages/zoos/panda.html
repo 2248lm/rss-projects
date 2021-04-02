@@ -91,9 +91,42 @@
         <div class="zoos-slider" role="group">
           <button class="square-btn zoos-slider-btn zoos-btn-l"></button>
           <div class="zoos-video-line">
-            <div class="zoos-slider-video zoos-video-1 active"></div>
-            <div class="zoos-slider-video  zoos-video-2"></div>
-            <div class="zoos-slider-video zoos-video-3"></div>
+            <div class="zoos-slider-video zoos-video-1 active">
+              <div class="subheader camera-num cam-1">cam 1</div>
+              <div class="slider-v-container slider-v-1">
+                <iframe id="live-video-1" width="100%" height="100%"
+                  src="https://www.youtube.com/embed/OObOQ2GElhA?autoplay=1" title="YouTube video player"
+                  frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen></iframe>
+              </div>
+              <div class="slider-v-button"
+                onclick="liveVideo=document.getElementById('live-video-1'); liveVideo.style.display='block'; this.style.display='none'">
+              </div>
+            </div>
+            <div class="zoos-slider-video zoos-video-2">
+              <div class="subheader camera-num cam-2">cam 2</div>
+              <div class="slider-v-container slider-v-2">
+                <iframe id="live-video-2" width="100%" height="100%"
+                  src="https://www.youtube.com/embed/OObOQ2GElhA?autoplay=1" title="YouTube video player"
+                  frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen></iframe>
+              </div>
+              <div class="slider-v-button"
+                onclick="liveVideo=document.getElementById('live-video-2'); liveVideo.style.display='block'; this.style.display='none'">
+              </div>
+            </div>
+            <div class="zoos-slider-video zoos-video-3">
+              <div class="subheader camera-num cam-3">cam 3</div>
+              <div class="slider-v-container slider-v-3">
+                <iframe id="live-video-3" width="100%" height="100%"
+                  src="https://www.youtube.com/embed/OObOQ2GElhA?autoplay=1" title="YouTube video player"
+                  frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen></iframe>
+              </div>
+              <div class="slider-v-button"
+                onclick="liveVideo=document.getElementById('live-video-3'); liveVideo.style.display='block'; this.style.display='none'">
+              </div>
+            </div>
           </div>
           <button class="square-btn zoos-slider-btn zoos-btn-r"></button>
         </div>
