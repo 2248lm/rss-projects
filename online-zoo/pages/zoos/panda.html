@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,6 +12,7 @@
   <link rel="stylesheet" href="../style-main.css">
   <link rel="stylesheet" href="style-zoos.css">
 </head>
+
 <body>
   <header class="header">
     <h1 class="visuallyhidden">Online Zoo</h1>
@@ -44,7 +46,7 @@
     <div class="container zooz-container">
       <aside class="sidebar">
         <div class="live-frame">
-          <button class="p-btn live-btn">Live</button>
+          <div class="p-btn live-sign-cam">Live</div>
           <div class="double-arrow-right"></div>
         </div>
         <div class="animal-container">
@@ -73,16 +75,17 @@
           </form>
         </div>
         <div class="zoos-live-main">
-          <div class="zoos-live-button"
-            onclick="liveVideo=document.getElementById('live-video'); liveCover=document.getElementById('live-cover'); liveVideo.style.display='block'; this.style.display='none'; liveCover.style.display='none'">
-          </div>
-          <div id="live-video" style="display: none">
-            <iframe width="100%" height="787px" src="https://www.youtube.com/embed/OObOQ2GElhA?autoplay=1"
-              title="YouTube video player" frameborder="0"
+          <p class="p-main-video">Lucas, the Giant Panda cam 1</p>
+          <div class="live-video-container">
+            <iframe id="live-video" width="100%" height="100%"
+              src="https://www.youtube.com/embed/OObOQ2GElhA?autoplay=1" title="YouTube video player" frameborder="0"
               allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowfullscreen></iframe>
           </div>
-          <img id="live-cover" img src="../../assets/images/panda-video.png" style="cursor:pointer">
+          <div class="zoos-live-button"
+            onclick="liveVideo=document.getElementById('live-video'); liveVideo.style.display='block'; this.style.display='none'">
+          </div>
+          <div class="main-video-logo"></div>
         </div>
         <h3 class="zoos-subtitle-line">More live views</h3>
         <div class="zoos-slider" role="group">
@@ -215,4 +218,5 @@
     </div>
   </footer>
 </body>
+
 </html>
