@@ -102,6 +102,7 @@ a {
 }
 
 .header-logo {
+  height: 50px;
   cursor: pointer;
 }
 
@@ -206,7 +207,7 @@ nav {
   background-position: 185px center;
 }
 
-.donate-btn {
+.donate-btn-main {
   margin-top: 55px;
   margin-left: -1px;
   background-position: 180px center;
@@ -308,7 +309,7 @@ nav {
           flex: 3;
 }
 
-.donation-descr p {
+.donation-descr-subtitle {
   margin-top: 20px;
   padding-left: 1px;
   width: 609px;
@@ -670,19 +671,22 @@ nav {
 .trp-btn {
   position: relative;
   z-index: 2;
-  margin-top: 27px;
   padding-right: 38px;
   width: 240px;
   height: 74px;
   color: #f58021;
-  background-color: #20113d;
+  background-color:transparent;
   background-image: url(../assets/icons/arrow-r-o.svg);
-  background-position: 195px center;
   background-repeat: no-repeat;
   border: none;
   border-radius: 5px;
   cursor: pointer;
   letter-spacing: 1.4px;
+}
+
+.trp-btn-main {
+  margin-top: 27px;
+  background-position: 195px center;
 }
 
 .trp-btn:focus {
