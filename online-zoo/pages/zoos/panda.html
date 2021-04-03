@@ -43,7 +43,8 @@
     </div>
   </header>
   <main>
-    <div class="container zooz-container">
+    <div class="bamboo-main"></div>
+    <div class="wrapper">
       <aside class="sidebar">
         <div class="live-frame">
           <div class="p-btn live-sign-cam">Live</div>
@@ -63,153 +64,169 @@
             <div class="animal-sign panda-icon active" title="Giant Panda, Eastern Asia"></div>
           </div>
         </div>
-        <div>
+        <div class="down-btn-frame">
           <div class="arrow-down-btn"></div>
         </div>
       </aside>
-      <section class="content zoos-content">
-        <div class="zoos-title-line">
-          <h2 class="zoos-title">Live panda cams</h2>
-          <form action="#" target="_blank">
-            <button class="p-btn org-btn donate-btn-zoos">Donate now</button>
-          </form>
-        </div>
-        <div class="zoos-live-main">
-          <p class="p-main-video">Lucas, the Giant Panda cam 1</p>
-          <div class="live-video-container">
-            <iframe id="live-video" width="100%" height="100%"
-              src="https://www.youtube.com/embed/OObOQ2GElhA?autoplay=1" title="YouTube video player" frameborder="0"
-              allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen></iframe>
-          </div>
-          <div class="zoos-live-button"
-            onclick="liveVideo=document.getElementById('live-video'); liveVideo.style.display='block'; this.style.display='none'">
-          </div>
-          <div class="main-video-logo"></div>
-        </div>
-        <h3 class="zoos-subtitle-line">More live views</h3>
-        <div class="zoos-slider" role="group">
-          <button class="square-btn zoos-slider-btn zoos-btn-l"></button>
-          <div class="zoos-video-line">
-            <div class="zoos-slider-video zoos-video-1 active">
-              <div class="subheader camera-num cam-1">cam 1</div>
-              <div class="slider-v-container slider-v-1">
-                <iframe id="live-video-1" width="100%" height="100%"
-                  src="https://www.youtube.com/embed/OObOQ2GElhA?autoplay=1" title="YouTube video player"
-                  frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowfullscreen></iframe>
-              </div>
-              <div class="slider-v-button"
-                onclick="liveVideo=document.getElementById('live-video-1'); liveVideo.style.display='block'; this.style.display='none'">
-              </div>
-            </div>
-            <div class="zoos-slider-video zoos-video-2">
-              <div class="subheader camera-num cam-2">cam 2</div>
-              <div class="slider-v-container slider-v-2">
-                <iframe id="live-video-2" width="100%" height="100%"
-                  src="https://www.youtube.com/embed/OObOQ2GElhA?autoplay=1" title="YouTube video player"
-                  frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowfullscreen></iframe>
-              </div>
-              <div class="slider-v-button"
-                onclick="liveVideo=document.getElementById('live-video-2'); liveVideo.style.display='block'; this.style.display='none'">
-              </div>
-            </div>
-            <div class="zoos-slider-video zoos-video-3">
-              <div class="subheader camera-num cam-3">cam 3</div>
-              <div class="slider-v-container slider-v-3">
-                <iframe id="live-video-3" width="100%" height="100%"
-                  src="https://www.youtube.com/embed/OObOQ2GElhA?autoplay=1" title="YouTube video player"
-                  frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowfullscreen></iframe>
-              </div>
-              <div class="slider-v-button"
-                onclick="liveVideo=document.getElementById('live-video-3'); liveVideo.style.display='block'; this.style.display='none'">
-              </div>
-            </div>
-          </div>
-          <button class="square-btn zoos-slider-btn zoos-btn-r"></button>
-        </div>
-      </section>
-    </div>
-  </main>
-  <main class="bamboo-main">
-    <section class="content bamboo-content">
-      <div class="donation-descr">
-        <h3 class="bamboo-descr-title">Make the bamboo donation!</h3>
-        <p class="p-body bamboo-descr-subtitle">Our process for bamboo donations first starts with a site evaluation. It
-          is important that
-          our team sees where the bamboo is growing, then determining if the bamboo is a species that our animals are
-          currently eating. Thank you for your interest in donating bamboo for our pandas.</p>
-      </div>
-      <div class="quick-donation">
-        <h4 class="subheader donation-title">Quick Donate</h4>
-        <form class="donation-form">
-          <input id="donation-input" name="input" type="number" placeholder="Donation amount" min="0" max="9999"
-            onKeyPress="if (this.value.length === 4) {return false;}">
-          <input id="donation-submit" name="submit" type="submit" value="">
-        </form>
-      </div>
-    </section>
-  </main>
-  <main>
-    <section class="content bio-content">
-      <div class="you-know">
-        <h3>Did you know?</h3>
-        <h4 class="subheader">Pandas are often seen eating in a relaxed sitting posture, with their hind legs stretched
-          out before them. They may appear sedentary, but they are skilled tree-climbers and efficient swimmers.</h4>
-      </div>
-      <div class="animal-bio">
-        <div class="bio-card">
-          <ul>
-            <li class="bio-card-line-1">
-              <h4 class="subheader">Common name:</h4>
-              <p class="p-body">Giant Panda</p>
-            </li>
-            <li class="bio-card-line-1">
-              <h4 class="subheader">Scientific name:</h4>
-              <p class="p-body">Ailuropoda melanoleuca</p>
-            </li>
-            <li class="bio-card-line-2">
-              <h4 class="subheader">Type:</h4>
-              <p class="p-body">Herbivore</p>
-            </li>
-            <li class="bio-card-line-2">
-              <h4 class="subheader">Size:</h4>
-              <p class="p-body">4 to 5 feet</p>
-            </li>
-            <li class="bio-card-line-2">
-              <h4 class="subheader">Diet:</h4>
-              <p class="p-body">Omnivore</p>
-            </li>
-            <li class="bio-card-line-2">
-              <h4 class="subheader">Habitat:</h4>
-              <p class="p-body">Forests</p>
-            </li>
-            <li class="bio-card-line-2">
-              <h4 class="subheader">Range:</h4>
-              <p class="p-body">Eastern Asia</p>
-              <form class="trp-btn-form" action="#" target="_blank">
-                <button class="trp-btn p-btn bio-btn">View map</button>
+      <div class="zoos-container">
+        <div class="zoos-content-general">
+          <section class="zoos-content">
+            <div class="zoos-title-line">
+              <h2 class="zoos-title">Live panda cams</h2>
+              <form action="#" target="_blank">
+                <button class="p-btn org-btn donate-btn-zoos">Donate now</button>
               </form>
-            </li>
-          </ul>
-        </div>
-        <div class="bio-photo">
-          <img class="bio-img" src="../../assets/images/little-panda.png" alt="Little Panda">
+            </div>
+            <div class="zoos-live-main">
+              <p class="p-main-video">Lucas, the Giant Panda cam 1</p>
+              <div class="live-video-container">
+                <iframe id="live-video" width="100%" height="100%"
+                  src="https://www.youtube.com/embed/OObOQ2GElhA?autoplay=1" title="YouTube video player"
+                  frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen></iframe>
+              </div>
+              <div class="zoos-live-button"
+                onclick="liveVideo=document.getElementById('live-video'); liveVideo.style.display='block'; this.style.display='none'">
+              </div>
+              <div class="main-video-logo"></div>
+            </div>
+            <h3 class="zoos-subtitle-line">More live views</h3>
+            <div class="zoos-slider" role="group">
+              <button class="square-btn zoos-slider-btn zoos-btn-l"></button>
+              <div class="zoos-video-line">
+                <div class="zoos-slider-video zoos-video-1 active">
+                  <div class="subheader camera-num cam-1">cam 1</div>
+                  <div class="slider-v-container slider-v-1">
+                    <iframe id="live-video-1" width="100%" height="100%"
+                      src="https://www.youtube.com/embed/OObOQ2GElhA?autoplay=1" title="YouTube video player"
+                      frameborder="0"
+                      allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowfullscreen></iframe>
+                  </div>
+                  <div class="slider-v-button sl-btn-1"
+                    onclick="liveVideo=document.getElementById('live-video-1'); liveVideo.style.display='block'; this.style.display='none'">
+                  </div>
+                </div>
+                <div class="zoos-slider-video zoos-video-2">
+                  <div class="subheader camera-num cam-2">cam 2</div>
+                  <div class="slider-v-container slider-v-2">
+                    <iframe id="live-video-2" width="100%" height="100%"
+                      src="https://www.youtube.com/embed/OObOQ2GElhA?autoplay=1" title="YouTube video player"
+                      frameborder="0"
+                      allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowfullscreen></iframe>
+                  </div>
+                  <div class="slider-v-button sl-btn-2"
+                    onclick="liveVideo=document.getElementById('live-video-2'); liveVideo.style.display='block'; this.style.display='none'">
+                  </div>
+                </div>
+                <div class="zoos-slider-video zoos-video-3">
+                  <div class="subheader camera-num cam-2">cam 3</div>
+                  <div class="slider-v-container slider-v-3">
+                    <iframe id="live-video-3" width="100%" height="100%"
+                      src="https://www.youtube.com/embed/OObOQ2GElhA?autoplay=1" title="YouTube video player"
+                      frameborder="0"
+                      allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowfullscreen></iframe>
+                  </div>
+                  <div class="slider-v-button sl-btn-2"
+                    onclick="liveVideo=document.getElementById('live-video-3'); liveVideo.style.display='block'; this.style.display='none'">
+                  </div>
+                </div>
+              </div>
+              <button class="square-btn zoos-slider-btn zoos-btn-r"></button>
+            </div>
+          </section>
+          <section class="content bamboo-content">
+            <div class="donation-descr">
+              <h3 class="bamboo-descr-title">Make the bamboo donation!</h3>
+              <p class="p-body bamboo-descr-subtitle">Our process for bamboo donations first starts with a site
+                evaluation.
+                It
+                is important that
+                our team sees where the bamboo is growing, then determining if the bamboo is a species that our animals
+                are
+                currently eating. Thank you for your interest in donating bamboo for our pandas.</p>
+            </div>
+            <div class="quick-donation">
+              <h4 class="subheader donation-title">Quick Donate</h4>
+              <form class="donation-form">
+                <input id="donation-input" name="input" type="number" placeholder="Donation amount" min="0" max="9999"
+                  onKeyPress="if (this.value.length === 4) {return false;}">
+                <input id="donation-submit" name="submit" type="submit" value="">
+              </form>
+            </div>
+          </section>
+          <section class="content bio-content">
+            <div class="you-know">
+              <h3>Did you know?</h3>
+              <h4 class="subheader">Pandas are often seen eating in a relaxed sitting posture, with their hind legs
+                stretched
+                out before them. They may appear sedentary, but they are skilled tree-climbers and efficient swimmers.
+              </h4>
+            </div>
+            <div class="animal-bio">
+              <div class="bio-card">
+                <ul>
+                  <li class="bio-card-line-1">
+                    <h4 class="subheader">Common name:</h4>
+                    <p class="p-body">Giant Panda</p>
+                  </li>
+                  <li class="bio-card-line-1">
+                    <h4 class="subheader">Scientific name:</h4>
+                    <p class="p-body">Ailuropoda melanoleuca</p>
+                  </li>
+                  <li class="bio-card-line-2">
+                    <h4 class="subheader">Type:</h4>
+                    <p class="p-body">Herbivore</p>
+                  </li>
+                  <li class="bio-card-line-2">
+                    <h4 class="subheader">Size:</h4>
+                    <p class="p-body">4 to 5 feet</p>
+                  </li>
+                  <li class="bio-card-line-2">
+                    <h4 class="subheader">Diet:</h4>
+                    <p class="p-body">Omnivore</p>
+                  </li>
+                  <li class="bio-card-line-2">
+                    <h4 class="subheader">Habitat:</h4>
+                    <p class="p-body">Forests</p>
+                  </li>
+                  <li class="bio-card-line-2">
+                    <h4 class="subheader">Range:</h4>
+                    <p class="p-body">Eastern Asia</p>
+                    <form class="trp-btn-form" action="#" target="_blank">
+                      <button class="trp-btn p-btn bio-btn">View map</button>
+                    </form>
+                  </li>
+                </ul>
+              </div>
+              <div class="bio-photo">
+                <img class="bio-img" src="../../assets/images/little-panda.png" alt="Little Panda">
+              </div>
+            </div>
+            <div class="bio-descr">
+              <p class="p-body">Giant pandas are very unusual animals that eat almost exclusively bamboo, which is very
+                low in
+                nutrients. Because of this, they have many unique adaptations for their low-energy lifestyle. Giant
+                pandas
+                are
+                solitary. They have a highly developed sense of smell that males use to avoid each other and to find
+                females
+                for mating in the spring. After a five-month pregnancy, females give birth to a cub or two, though they
+                cannot
+                care for both twins. The blind infants weigh only 5 ounces at birth and cannot crawl until they reach
+                three
+                months of age. They are born white, and develop their much loved coloring later. Habitat loss is the
+                primary
+                threat to this species. Its popularity around the world has helped the giant panda become the focus of
+                successful conservation programs.</p>
+            </div>
+          </section>
         </div>
       </div>
-      <div class="bio-descr">
-        <p class="p-body">Giant pandas are very unusual animals that eat almost exclusively bamboo, which is very low in
-          nutrients. Because of this, they have many unique adaptations for their low-energy lifestyle. Giant pandas are
-          solitary. They have a highly developed sense of smell that males use to avoid each other and to find females
-          for mating in the spring. After a five-month pregnancy, females give birth to a cub or two, though they cannot
-          care for both twins. The blind infants weigh only 5 ounces at birth and cannot crawl until they reach three
-          months of age. They are born white, and develop their much loved coloring later. Habitat loss is the primary
-          threat to this species. Its popularity around the world has helped the giant panda become the focus of
-          successful conservation programs.</p>
-      </div>
-    </section>
+
+    </div>
   </main>
   <footer class="footer">
     <div class="content footer-content">
