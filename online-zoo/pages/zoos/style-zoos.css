@@ -12,9 +12,9 @@
   z-index: 5;
   top: 0;
   margin: 0 0 0 -8px;
+  padding-bottom: 20px;
   width: 220px;
   height: 846px;
-  max-height: 990px;
   background-color: #20113d;
 }
 
@@ -148,26 +148,23 @@
 }
 
 .zoos-title-line {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+  text-align: center;
 }
 
 .zoos-title {
   margin-top: 4px;
-  margin-right: 198px;
   color: #00a092;
 }
 
 .donate-btn-zoos {
+  position: absolute;
+  margin-top: -70px;
+  margin-left: 460px;
   background-position: 180px center;
 }
 
 .zoos-live-main {
-  margin-top: 46px;
+  margin-top: 50px;
   max-width: 1400px;
   height: 787px;
 }
@@ -183,17 +180,30 @@
   font-weight: 500;
   line-height: 130%;
   background-color: rgba(0, 0, 0, 0.5);
-  -webkit-box-shadow: -10px 0 0 rgba(0, 0, 0, 0.5), 10px 0 0 rgba(0, 0, 0, 0.5);
-          box-shadow: -10px 0 0 rgba(0, 0, 0, 0.5), 10px 0 0 rgba(0, 0, 0, 0.5);
 }
 
 .live-video-container {
   margin-top: -49px;
   width: 100%;
   height: 100%;
-  background-image: url(../../assets/images/panda-cam1.png);
   background-position: center;
   background-repeat: no-repeat;
+}
+
+.video-container-panda {
+  background-image: url(../../assets/images/panda-live-main.png);
+}
+
+.video-container-eagle {
+  background-image: url(../../assets/images/eagles-live-main.png);
+}
+
+.video-container-gorilla {
+  background-image: url(../../assets/images/gorilla-live-main.png);
+}
+
+.video-container-lemur {
+  background-image: url(../../assets/images/lemur-live-main.png);
 }
 
 #live-video,
@@ -316,10 +326,11 @@
 
 .cap {
   position: absolute;
-  z-index: 10;
-  width: 322px;
+  z-index: 7;
+  width: 318px;
   height: 209px;
-  background-color: transparent;
+  background-image: linear-gradient(169.43deg, #000000 2.91%, rgba(0, 0, 0, 0) 31.31%);
+  border-radius: 5px;
 }
 
 .zoos-slider-video.active {
@@ -328,6 +339,7 @@
 
 .camera-num {
   position: absolute;
+  z-index: 9;
   padding-top: 4px;
   padding-left: 38px;
   width: 189px;
@@ -344,7 +356,7 @@
 
 .cam-1 {
   margin-top: -3px;
-  margin-left: -3px;
+  margin-left: -2px;
   background-position: 128px center;
 }
 
@@ -360,21 +372,42 @@
 }
 
 .slider-v-1 {
-  background-image: url(../../assets/images/panda-cam1-prev.png);
   background-position: center -3px;
   border-radius: 5px;
 }
 
 .slider-v-2 {
-  background-image: url(../../assets/images/panda-cam2-prev.png);
   background-position: center 0.2px;
   border-radius: 5px;
 }
 
 .slider-v-3 {
-  background-image: url(../../assets/images/panda-cam3-prev.png);
   background-position: center -0.2px;
   border-radius: 5px;
+}
+
+.v-1-panda {
+  background-image: url(../../assets/images/panda-cam1-prev.png);
+}
+
+.v-2-panda {
+  background-image: url(../../assets/images/panda-cam2-prev.png);
+}
+
+.v-3-panda {
+  background-image: url(../../assets/images/panda-cam3-prev.png);
+}
+
+.v-1-eagle {
+  background-image: url(../../assets/images/eagle-cam1-prev.png);
+}
+
+.v-2-eagle {
+  background-image: url(../../assets/images/eagle-cam2-prev.png);
+}
+
+.v-3-eagle {
+  background-image: url(../../assets/images/eagle-cam3-prev.png);
 }
 
 .slider-v-button {
@@ -425,21 +458,26 @@
 
 .bamboo-descr-subtitle {
   margin-top: 20px;
+}
+
+.b-d-s-panda {
   max-width: 875px;
 }
 
+.b-d-s-eagle {
+  max-width: 900px;
+}
+
 .bio-content {
-  padding-top: 150px;
-  min-height: 1396px;
+  padding-bottom: 150px;
   width: 100%;
 }
 
 .you-know {
-  margin-left: 17.1%;
-  margin-right: 0.1%;
-  padding-top: 47px;
-  max-width: 1040px;
-  height: 269px;
+  margin-top: 148px;
+  margin-left: 240px;
+  margin-right: 120px;
+  padding: 50px 60px;
   background: #fff;
   border-radius: 5px;
   -webkit-box-shadow: 0px 4px 50px rgba(0, 0, 0, 0.25);
@@ -458,12 +496,15 @@
   color: #000;
 }
 
+.ykt-eagle {
+  margin-top: 3px;
+}
+
 .animal-bio {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-top: 147px;
-  height: 440px;
+  margin-top: 145px;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -472,6 +513,14 @@
 .bio-card {
   width: 720px;
   padding-left: 1px;
+}
+
+.bio-panda {
+  padding-top: 1px;
+}
+
+.bio-eagle {
+  padding-top: 5px;
 }
 
 .bio-card ul li {
@@ -498,10 +547,17 @@
 
 .bio-btn {
   position: relative;
-  z-index: 1;
-  top: -52px;
-  left: 239px;
   background-position: 168px center;
+}
+
+.btn-panda {
+  top: -51px;
+  left: 238px;
+}
+
+.btn-eagle {
+  top: -49px;
+  left: 359px;
 }
 
 .bio-photo {
@@ -519,7 +575,7 @@
 }
 
 .bio-descr {
-  margin-top: 52px;
+  margin-top: 40px;
   max-width: 1160px;
 }
 /*# sourceMappingURL=style-zoos.css.map */
