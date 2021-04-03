@@ -314,6 +314,14 @@
           box-sizing: border-box;
 }
 
+.cap {
+  position: absolute;
+  z-index: 10;
+  width: 322px;
+  height: 209px;
+  background-color: transparent;
+}
+
 .zoos-slider-video.active {
   border: 3px solid #f58021;
 }
