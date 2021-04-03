@@ -406,6 +406,18 @@
   background-image: url(../../assets/images/gorilla-cam3-prev.png);
 }
 
+.v-1-lemur {
+  background-image: url(../../assets/images/lemur-cam1-prev.png);
+}
+
+.v-2-lemur {
+  background-image: url(../../assets/images/lemur-cam2-prev.png);
+}
+
+.v-3-lemur {
+  background-image: url(../../assets/images/lemur-cam3-prev.png);
+}
+
 .slider-v-button {
   position: absolute;
   z-index: 1;
@@ -492,6 +504,10 @@
   padding: 50px 60px 42px;
 }
 
+.you-know-lemur {
+  padding: 54px 60px 42px;
+}
+
 .you-know h3 {
   color: #00a092;
 }
@@ -508,6 +524,10 @@
 }
 
 .ykst-gorilla {
+  margin-left: -10px;
+}
+
+.ykst-lemur {
   margin-left: -10px;
 }
 
@@ -532,6 +552,10 @@
 
 .bio-eagle {
   padding-top: 5px;
+}
+
+.bio-lemur {
+  padding-top: 4px;
 }
 
 .bio-card ul li {
