@@ -323,7 +323,7 @@
   z-index: 7;
   width: 318px;
   height: 209px;
-  background-color: transperent;
+  background: linear-gradient(169.43deg, #000000 2.91%, rgba(0, 0, 0, 0) 31.31%);
   border-radius: 5px;
 }
 
