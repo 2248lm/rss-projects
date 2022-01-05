@@ -91,7 +91,7 @@ a {
 }
 
 .hero,
-.hero-button:hover {
+.golden-button:hover {
   color: #ffffff;
 }
 
@@ -100,17 +100,17 @@ h1 {
   font-family: "Merriweather", serif;
   font-size: 60px;
   font-weight: 700;
-  line-height: 120px;
+  line-height: 200%;
 }
 
 .hero-text {
   margin-top: 10px;
   font-family: "Inter", sans-serif;
   font-size: 20px;
-  line-height: 40px;
+  line-height: 200%;
 }
 
-.hero-button {
+.golden-button {
   width: 220px;
   height: 55px;
   margin-top: 25px;
@@ -121,7 +121,8 @@ h1 {
   cursor: pointer;
 }
 
-.skills {
+.skills,
+.portfolio {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -135,7 +136,7 @@ h2 {
   font-size: 40px;
   font-weight: 700;
   color: #bdae82;
-  line-height: 80px;
+  line-height: 200%;
 }
 
 .section-title {
@@ -169,9 +170,9 @@ h2 {
 
 .skills-list {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   width: 100%;
-  flex-wrap: wrap;
   text-align: center;
 }
 
@@ -207,12 +208,58 @@ h2 {
 .skills-title {
   font-size: 20px;
   font-weight: 700;
-  line-height: 40px;
+  line-height: 200%;
 }
 
 .skills-description {
-  margin-top: 20px;
-  padding: 0 20px;
+  padding: 20px 20px 10px;
   font-size: 18px;
-  line-height: 36px;
+  line-height: 200%;
+}
+
+.portfolio-list {
+  display: flex;
+  gap: 5px;
+  padding-bottom: 35px;
+}
+
+.transparent-button,
+.active-button {
+  width: 220px;
+  height: 55px;
+  font-family: "Inter", sans-serif;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.transparent-button {
+  color: #bdae82;
+  background-color: transparent;
+  border: solid 2px #bdae82;
+}
+
+.active-button {
+  color: #000000;
+  background-color: #bdae82;
+  border: none;
+}
+
+.transparent-button:hover {
+  color: #ffffff;
+}
+
+.transparent-button:active {
+  color: #000000;
+  background-color: #bdae82;
+  border: none;
+}
+
+.portfolio-images {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.portfolio-images img {
+  margin-top: 25px;
 }
