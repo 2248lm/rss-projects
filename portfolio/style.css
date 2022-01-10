@@ -320,3 +320,54 @@ h2 {
   line-height: 200%;
   text-align: center;
 }
+
+.contacts-container {
+  padding: 60px 20px 195px 970px;
+  background-image: url("./assets/img/contacts.jpg");
+  background-position: center 0;
+  background-repeat: no-repeat;
+}
+
+.contacts {
+  color: #bdae82;
+}
+
+.contacts-title {
+  line-height: 80px;
+}
+
+.contacts-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 450px;
+  height: 325px;
+  margin-top: 40px;
+}
+
+::placeholder,
+.form-line {
+  font-family: "Inter", sans-serif;
+  font-size: 20px;
+  color: #bdae82;
+  line-height: 40px;
+}
+
+.form-line {
+  padding: 5px 18px;
+  background-color: transparent;
+  border: solid 2px #bdae82
+}
+
+input {
+  height: 50px;
+}
+
+textarea {
+  height: 100px;
+  overflow: hidden;
+}
+
+.form-button {
+  margin-top: 10px;
+}
