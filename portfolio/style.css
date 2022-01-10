@@ -121,7 +121,10 @@ h1 {
   cursor: pointer;
 }
 
-.section {
+.skills,
+.portfolio,
+.video,
+.price {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -273,6 +276,13 @@ h2 {
 
 .play {
   position: absolute;
+  width: 130px;
+  height: 130px;
+  background-image: url("./assets/svg/Play_hover.svg");
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-position: center;
+  border: none;
 }
 
 .price {
