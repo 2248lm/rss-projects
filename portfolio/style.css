@@ -67,7 +67,7 @@ a {
   background-position: center;
   background-repeat: no-repeat;
   cursor: pointer;
-  transition: 0.3s;
+  transition: 0.5s;
 }
 
 .logo:hover,
@@ -84,6 +84,12 @@ a {
   display: flex;
   justify-content: space-evenly;
   width: 500px;
+}
+
+.nav-item a,
+.lang a {
+  cursor: pointer;
+  transition: 0.5s;
 }
 
 .nav-item a,
@@ -138,12 +144,13 @@ h1 {
   background-color: var(--color-gold);
   border: none;
   cursor: pointer;
+  transition: 0.5s;
 }
 
-.skills,
-.portfolio,
-.video,
-.price {
+#skills,
+#portfolio,
+#video,
+#price {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -251,6 +258,7 @@ h2 {
   font-family: var(--regular-font-family);
   font-size: var(--regular-font-size);
   cursor: pointer;
+  transition: 0.5s;
 }
 
 .transparent-button {
@@ -259,15 +267,16 @@ h2 {
   border: solid 2px var(--color-gold);
 }
 
+.transparent-button:hover,
+.active-button:hover {
+  color: var(--color-white);
+}
+
 .active-button,
 .transparent-button:active {
   color: var(--color-black);
   background-color: var(--color-gold);
   border: none;
-}
-
-.transparent-button:hover {
-  color: var(--color-white);
 }
 
 .portfolio-images {
@@ -298,9 +307,10 @@ h2 {
   background-position: center;
   border: none;
   cursor: pointer;
+  transition: 0.5s;
 }
 
-.price {
+#price {
   padding-bottom: 100px;
 }
 
@@ -357,7 +367,7 @@ h2 {
   background-repeat: no-repeat;
 }
 
-.contacts {
+#contacts {
   width: 450px;
   color: var(--color-gold);
 }
@@ -413,6 +423,7 @@ textarea {
 
 .footer a {
   cursor: pointer;
+  transition: 0.5s;
 }
 
 .footer a:hover {
@@ -431,7 +442,8 @@ textarea {
 }
 
 .author {
-  width: 190px;
+  width: 188px;
+  padding-right: 19px;
   height: 50px;
 }
 
@@ -447,6 +459,7 @@ textarea {
   background-size: 100%;
   background-position: center;
   cursor: pointer;
+  transition: 0.5s;
 }
 
 .social-item:nth-child(1) {
