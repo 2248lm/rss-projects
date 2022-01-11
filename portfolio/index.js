@@ -1,4 +1,5 @@
 console.log(`
+  Максимальная оценка за задание 100 баллов.\n\n
   1 Вёрстка валидная +10:\n
     + валидной вёрстке соответствует надпись "Document checking completed. No errors or warnings to show."\n
   2 Вёрстка семантическая +20.\n
