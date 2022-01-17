@@ -286,6 +286,8 @@ h2 {
 }
 
 .portfolio-images img {
+  width: 450px;
+  height: 560px;
   margin-top: 25px;
 }
 
