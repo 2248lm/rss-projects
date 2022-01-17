@@ -463,10 +463,12 @@ textarea {
   height: 50px;
 }
 
-.social-item {
+.social-item a{
+  display: block;
   width: 32px;
   height: 32px;
   background-size: 100%;
+  background-repeat: no-repeat;
   background-position: center;
   cursor: pointer;
   transition: 0.5s;
