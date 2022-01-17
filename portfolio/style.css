@@ -289,16 +289,24 @@ h2 {
   margin-top: 25px;
 }
 
-.video-player {
-  position: relative;
+.video-container {
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 100%;
+  background-image: url("./assets/img/video-player.jpg");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: top center;
+}
+
+.video {
   width: 100%;
 }
 
 .play {
   position: absolute;
+  z-index: 2;
   width: 130px;
   height: 130px;
   background-image: url("./assets/svg/Play_hover.svg");
