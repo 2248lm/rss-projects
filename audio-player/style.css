@@ -1,3 +1,19 @@
+@font-face {
+  font-family: 'Rosa Marena';
+  src: url("./assets/fonts/rosa-marena/rosa-marena.eot");
+  src: url("./assets/fonts/rosa-marena/rosa-marena.eot") format("embedded-opentype"), url("./assets/fonts/rosa-marena/rosa-marena.otf") format("opentype"), url("./assets/fonts/rosa-marena/rosa-marena.svg") format("svg"), url("./assets/fonts/rosa-marena/rosa-marena.ttf") format("truetype"), url("./assets/fonts/rosa-marena/rosa-marena.woff") format("woff"), url("./assets/fonts/rosa-marena/rosa-marena.woff2") format("woff2");
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "Champagne &amp; Limousines";
+  src: url("./assets/fonts/champagne-limousines/champagne-limousines.eot");
+  src: url("./assets/fonts/champagne-limousines/champagne-limousines.eot") format("embedded-opentype"), url("./assets/fonts/champagne-limousines/champagne-limousines.otf") format("opentype"), url("./assets/fonts/champagne-limousines/champagne-limousines.svg") format("svg"), url("./assets/fonts/champagne-limousines/champagne-limousines.ttf") format("truetype"), url("./assets/fonts/champagne-limousines/champagne-limousines.woff") format("woff"), url("./assets/fonts/champagne-limousines/champagne-limousines.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
