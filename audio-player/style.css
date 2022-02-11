@@ -46,6 +46,12 @@
           animation: sky-change 15s infinite linear;
 }
 
+.header,
+.main,
+.footer {
+  padding: 20px;
+}
+
 .sun {
   position: absolute;
   left: 0;
@@ -227,5 +233,11 @@
   .player__wrapper {
     width: 320px;
     border-radius: 0;
+  }
+
+  .header,
+  .main,
+  .footer {
+    padding: 8px;
   }
 }
