@@ -1,47 +1,45 @@
 const songs = [
-    {
-      album: "Ten Summoner's Tales (1993)",
-      singer: 'Sting',
-      song: 'Shape of My Heart',
-      cover: './assets/img/track1.png',
-      genre: 'pop rock',
-    },
-    {
-      album: 'So Far So Good (1993)',
-      singer: 'Bryan Adams',
-      song: 'Please Forgive Me',
-      cover: './assets/img/track2.png',
-      genre: 'soft rock',
-    },
-    {
-      album: 'The Marshall Mathers LP (2000)',
-      singer: 'Eminem & Dido',
-      song: 'Stan',
-      cover: './assets/img/track3.png',
-      genre: 'horrorcore',
-    },
-    {
-      album: 'Tragic Kingdom (1996)',
-      singer: 'No Doubt',
-      song: "Don't Speak",
-      cover: './assets/img/track4.png',
-      gere: 'alternative rock',
-    },
-    {
-      album: 'All the Right Reasons (2006)',
-      singer: 'Nickelback',
-      song: 'If Everyone Cared',
-      cover: './assets/img/track5.png',
-      genre: 'alternative rock',
-    },
-  ],
-  tracksList = [
-    './assets/audio/track1.mp3',
-    './assets/audio/track2.mp3',
-    './assets/audio/track3.mp3',
-    './assets/audio/track4.mp3',
-    './assets/audio/track5.mp3',
-  ];
+  {
+    track: './assets/audio/track1.mp3',
+    album: "Ten Summoner's Tales (1993)",
+    singer: 'Sting',
+    song: 'Shape of My Heart',
+    cover: './assets/img/track1.png',
+    genre: 'pop rock',
+  },
+  {
+    track: './assets/audio/track2.mp3',
+    album: 'So Far So Good (1993)',
+    singer: 'Bryan Adams',
+    song: 'Please Forgive Me',
+    cover: './assets/img/track2.png',
+    genre: 'soft rock',
+  },
+  {
+    track: './assets/audio/track3.mp3',
+    album: 'The Marshall Mathers LP (2000)',
+    singer: 'Eminem & Dido',
+    song: 'Stan',
+    cover: './assets/img/track3.png',
+    genre: 'horrorcore',
+  },
+  {
+    track: './assets/audio/track4.mp3',
+    album: 'Tragic Kingdom (1996)',
+    singer: 'No Doubt',
+    song: "Don't Speak",
+    cover: './assets/img/track4.png',
+    gere: 'alternative rock',
+  },
+  {
+    track: './assets/audio/track5.mp3',
+    album: 'All the Right Reasons (2006)',
+    singer: 'Nickelback',
+    song: 'If Everyone Cared',
+    cover: './assets/img/track5.png',
+    genre: 'alternative rock',
+  },
+];
 
 const player = document.querySelector('.player'),
   playBtn = document.querySelector('#play__btn'),
@@ -72,7 +70,7 @@ function loadSong(song) {
   audio.src = song;
 }
 
-loadSong(tracksList[songIndex]);
+loadSong(songs[songIndex].track);
 
 playBtn.addEventListener('click', () => {
   if (player.classList.contains('play')) {
@@ -85,10 +83,10 @@ playBtn.addEventListener('click', () => {
 function nextSong() {
   audio.currentTime = 0;
   songIndex++;
-  if (songIndex > tracksList.length - 1) {
+  if (songIndex > songs.length - 1) {
     songIndex = 0;
   }
-  loadSong(tracksList[songIndex]);
+  loadSong(songs[songIndex].track);
   playSong();
 }
 nextBtn.addEventListener('click', nextSong);
@@ -97,9 +95,9 @@ function prevSong() {
   audio.currentTime = 0;
   songIndex--;
   if (songIndex < 0) {
-    songIndex = tracksList.length - 1;
+    songIndex = songs.length - 1;
   }
-  loadSong(tracksList[songIndex]);
+  loadSong(songs[songIndex].track);
   playSong();
 }
 prevBtn.addEventListener('click', prevSong);
