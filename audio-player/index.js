@@ -37,10 +37,10 @@ const songs = {
   },
   tracksList = [
     './assets/audio/track1.mp3',
-    './assets/audio/track1.mp3',
-    './assets/audio/track1.mp3',
-    './assets/audio/track1.mp3',
-    './assets/audio/track1.mp3',
+    './assets/audio/track2.mp3',
+    './assets/audio/track3.mp3',
+    './assets/audio/track4.mp3',
+    './assets/audio/track5.mp3',
   ];
 
 const player = document.querySelector('.player'),
