@@ -41,7 +41,6 @@
       -ms-flex-direction: column;
           flex-direction: column;
   width: 400px;
-  height: 500px;
   background-color: #4682b4;
   border-radius: 5px;
   -webkit-box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.5);
@@ -54,6 +53,7 @@
 .header,
 .main,
 .footer {
+  position: relative;
   z-index: 2;
   padding: 10px 20px;
 }
@@ -62,6 +62,19 @@
   color: #ffa500;
   text-transform: uppercase;
   text-align: right;
+}
+
+.main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: end;
 }
 
 .footer {
