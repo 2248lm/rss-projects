@@ -48,7 +48,19 @@ const player = document.querySelector('.player'),
 let trackIndex = 1;
 
 function playSong() {
+  player.classList.add('play');
+  player.classList.remove('pause');
+  playBtn.classList.remove('play__btn');
+  playBtn.classList.add('pause__btn');
   audio.play();
+}
+
+function pauseSong() {
+  player.classList.remove('play');
+  player.classList.add('pause');
+  playBtn.classList.remove('pause__btn');
+  playBtn.classList.add('play__btn');
+  audio.pause();
 }
 
 function loadSong(song) {
@@ -59,5 +71,9 @@ function loadSong(song) {
 loadSong(songs[`track${trackIndex}`].track);
 
 playBtn.addEventListener('click', () => {
-  playSong();
+  if (player.classList.contains('play')) {
+    pauseSong();
+  } else {
+    playSong();
+  }
 });
