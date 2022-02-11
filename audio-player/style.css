@@ -58,6 +58,12 @@
   padding: 10px 20px;
 }
 
+.header {
+  color: #ffa500;
+  text-transform: uppercase;
+  text-align: right;
+}
+
 .footer {
   display: -webkit-box;
   display: -ms-flexbox;
