@@ -56,6 +56,7 @@ const player = document.querySelector('.player'),
   album = document.querySelector('.album'),
   release = document.querySelector('.release'),
   genre = document.querySelector('.genre'),
+  background = document.querySelector('.background'),
   audio = new Audio();
 
 let songIndex = 0;
@@ -85,6 +86,7 @@ function loadSong(song) {
   album.innerHTML = songs[songIndex].album;
   release.innerHTML = songs[songIndex].release;
   genre.innerHTML = songs[songIndex].genre;
+  background.style.backgroundImage = `url(${songs[songIndex].cover})`;
 }
 
 loadSong(songs[songIndex].track);
