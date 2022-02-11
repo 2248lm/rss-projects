@@ -32,9 +32,14 @@
 
 .player__wrapper {
   position: absolute;
+  z-index: 1;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   width: 400px;
   height: 500px;
   background-color: #4682b4;
@@ -49,7 +54,32 @@
 .header,
 .main,
 .footer {
-  padding: 20px;
+  z-index: 2;
+  padding: 10px 20px;
+}
+
+.footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #ffffff;
+  font-size: 30px;
+  background-color: #000000;
+}
+
+.footer a {
+  cursor: pointer;
+}
+
+.footer a:hover {
+  -webkit-filter: invert(30%) sepia(34%) saturate(5589%) hue-rotate(359deg) brightness(101%) contrast(105%);
+          filter: invert(30%) sepia(34%) saturate(5589%) hue-rotate(359deg) brightness(101%) contrast(105%);
 }
 
 .sun {
@@ -234,10 +264,10 @@
     width: 320px;
     border-radius: 0;
   }
-
   .header,
   .main,
   .footer {
     padding: 8px;
   }
 }
+/*# sourceMappingURL=style.css.map */
