@@ -141,9 +141,7 @@ body {
   font-weight: 700;
 }
 
-.controls,
-.timeline,
-.time {
+.controls, .timeline, .time {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -155,8 +153,7 @@ body {
           align-items: center;
 }
 
-.controls,
-.timeline {
+.controls, .timeline {
   width: 100%;
   padding: 12px 0;
 }
@@ -165,8 +162,13 @@ body {
   gap: 12px;
 }
 
-.control__btn,
-.sound__btn {
+.control__btn, .sound__btn, .footer a {
+  cursor: pointer;
+  -webkit-transition: 0.3s ease-out;
+  transition: 0.3s ease-out;
+}
+
+.control__btn, .sound__btn {
   width: 30px;
   height: 30px;
   background-color: transparent;
@@ -174,9 +176,6 @@ body {
   background-size: cover;
   background-position: center;
   border: none;
-  cursor: pointer;
-  -webkit-transition: 0.3s ease-out;
-          transition: 0.3s ease-out;
 }
 
 .control__btn:hover {
@@ -241,16 +240,13 @@ body {
           align-items: center;
   color: #ffffff;
   font-size: 30px;
+  font-weight: 700;
   background-color: #000000;
 }
 
-.footer a {
-  cursor: pointer;
-}
-
 .footer a:hover {
-  -webkit-filter: invert(30%) sepia(34%) saturate(5589%) hue-rotate(359deg) brightness(101%) contrast(105%);
-          filter: invert(30%) sepia(34%) saturate(5589%) hue-rotate(359deg) brightness(101%) contrast(105%);
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
 }
 
 .sun {
