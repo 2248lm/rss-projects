@@ -45,6 +45,9 @@ const player = document.querySelector('.player'),
   playBtn = document.querySelector('#play__btn'),
   nextBtn = document.querySelector('#next__btn'),
   prevBtn = document.querySelector('#prev__btn'),
+  singer = document.querySelector('.singer'),
+  title = document.querySelector('.song'),
+  cover = document.querySelector('.cover'),
   audio = new Audio();
 
 let songIndex = 0;
@@ -68,6 +71,9 @@ function pauseSong() {
 function loadSong(song) {
   audio.currentTime = 0;
   audio.src = song;
+  singer.innerHTML = songs[songIndex].singer;
+  title.innerHTML = songs[songIndex].song;
+  cover.src = songs[songIndex].cover;
 }
 
 loadSong(songs[songIndex].track);
