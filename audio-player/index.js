@@ -45,6 +45,7 @@ const songs = {
 
 const player = document.querySelector('.player'),
   playBtn = document.querySelector('#play__btn'),
+  nextBtn = document.querySelector('#next__btn'),
   audio = new Audio();
 
 let songIndex = 0;
@@ -79,3 +80,14 @@ playBtn.addEventListener('click', () => {
     playSong();
   }
 });
+
+function nextSong() {
+  audio.currentTime = 0;
+  songIndex++;
+  if (songIndex > tracksList.length - 1) {
+    songIndex = 0;
+  }
+  loadSong(tracksList[songIndex]);
+  playSong();
+}
+nextBtn.addEventListener('click', nextSong);
