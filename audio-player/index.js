@@ -1,40 +1,40 @@
-const songs = {
-    track1: {
+const songs = [
+    {
       album: "Ten Summoner's Tales (1993)",
       singer: 'Sting',
       song: 'Shape of My Heart',
       cover: './assets/img/track1.png',
       genre: 'pop rock',
     },
-    track2: {
+    {
       album: 'So Far So Good (1993)',
       singer: 'Bryan Adams',
       song: 'Please Forgive Me',
       cover: './assets/img/track2.png',
       genre: 'soft rock',
     },
-    track3: {
+    {
       album: 'The Marshall Mathers LP (2000)',
       singer: 'Eminem & Dido',
       song: 'Stan',
       cover: './assets/img/track3.png',
       genre: 'horrorcore',
     },
-    track4: {
+    {
       album: 'Tragic Kingdom (1996)',
       singer: 'No Doubt',
       song: "Don't Speak",
       cover: './assets/img/track4.png',
       gere: 'alternative rock',
     },
-    track5: {
+    {
       album: 'All the Right Reasons (2006)',
       singer: 'Nickelback',
       song: 'If Everyone Cared',
       cover: './assets/img/track5.png',
       genre: 'alternative rock',
     },
-  },
+  ],
   tracksList = [
     './assets/audio/track1.mp3',
     './assets/audio/track2.mp3',
