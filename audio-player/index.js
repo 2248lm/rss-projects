@@ -1,7 +1,8 @@
 const songs = [
   {
     track: './assets/audio/track1.mp3',
-    album: "Ten Summoner's Tales (1993)",
+    album: "Ten Summoner's Tales",
+    release: 'August 1, 1993',
     singer: 'Sting',
     song: 'Shape of My Heart',
     cover: './assets/img/track1.png',
@@ -9,7 +10,8 @@ const songs = [
   },
   {
     track: './assets/audio/track2.mp3',
-    album: 'So Far So Good (1993)',
+    album: 'So Far So Good',
+    release: 'October 15, 1993',
     singer: 'Bryan Adams',
     song: 'Please Forgive Me',
     cover: './assets/img/track2.png',
@@ -17,7 +19,8 @@ const songs = [
   },
   {
     track: './assets/audio/track3.mp3',
-    album: 'The Marshall Mathers LP (2000)',
+    album: 'The Marshall Mathers LP',
+    release: 'November 20, 2000',
     singer: 'Eminem & Dido',
     song: 'Stan',
     cover: './assets/img/track3.png',
@@ -25,15 +28,17 @@ const songs = [
   },
   {
     track: './assets/audio/track4.mp3',
-    album: 'Tragic Kingdom (1996)',
+    album: 'Tragic Kingdom',
+    release: 'April 15, 1996',
     singer: 'No Doubt',
     song: "Don't Speak",
     cover: './assets/img/track4.png',
-    gere: 'alternative rock',
+    genre: 'alternative rock',
   },
   {
     track: './assets/audio/track5.mp3',
-    album: 'All the Right Reasons (2006)',
+    album: 'All the Right Reasons',
+    release: 'November 13, 2006',
     singer: 'Nickelback',
     song: 'If Everyone Cared',
     cover: './assets/img/track5.png',
@@ -48,6 +53,9 @@ const player = document.querySelector('.player'),
   singer = document.querySelector('.singer'),
   title = document.querySelector('.song'),
   cover = document.querySelector('.cover'),
+  album = document.querySelector('.album'),
+  release = document.querySelector('.release'),
+  genre = document.querySelector('.genre'),
   audio = new Audio();
 
 let songIndex = 0;
@@ -74,6 +82,9 @@ function loadSong(song) {
   singer.innerHTML = songs[songIndex].singer;
   title.innerHTML = songs[songIndex].song;
   cover.src = songs[songIndex].cover;
+  album.innerHTML = songs[songIndex].album;
+  release.innerHTML = songs[songIndex].release;
+  genre.innerHTML = songs[songIndex].genre;
 }
 
 loadSong(songs[songIndex].track);
