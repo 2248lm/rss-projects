@@ -40,3 +40,24 @@ const songs = {
     genre: 'alternative rock',
   },
 };
+
+const player = document.querySelector('.player'),
+  playBtn = document.querySelector('#play__btn'),
+  audio = new Audio();
+
+let trackIndex = 1;
+
+function playSong() {
+  audio.play();
+}
+
+function loadSong(song) {
+  audio.currentTime = 0;
+  audio.src = song;
+}
+
+loadSong(songs[`track${trackIndex}`].track);
+
+playBtn.addEventListener('click', () => {
+  playSong();
+});
