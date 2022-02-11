@@ -7,7 +7,7 @@
 }
 
 @font-face {
-  font-family: "Champagne &amp; Limousines";
+  font-family: 'Champagne &amp; Limousines';
   src: url("./assets/fonts/champagne-limousines/champagne-limousines.eot");
   src: url("./assets/fonts/champagne-limousines/champagne-limousines.eot") format("embedded-opentype"), url("./assets/fonts/champagne-limousines/champagne-limousines.otf") format("opentype"), url("./assets/fonts/champagne-limousines/champagne-limousines.svg") format("svg"), url("./assets/fonts/champagne-limousines/champagne-limousines.ttf") format("truetype"), url("./assets/fonts/champagne-limousines/champagne-limousines.woff") format("woff"), url("./assets/fonts/champagne-limousines/champagne-limousines.woff2") format("woff2");
   font-weight: normal;
@@ -19,6 +19,10 @@
           box-sizing: border-box;
   margin: 0;
   padding: 0;
+}
+
+body {
+  font-family: "Champagne &amp; Limousines", sans-serif;
 }
 
 .wrapper {
@@ -76,6 +80,7 @@
 
 .header {
   color: #ffa500;
+  letter-spacing: 2px;
   text-align: right;
   text-transform: uppercase;
 }
@@ -125,8 +130,10 @@
 
 .singer {
   color: #520000;
+  font-family: "Rosa Marena", cursive;
   font-size: 42px;
-  letter-spacing: 5px;
+  font-weight: 700;
+  letter-spacing: 3px;
 }
 
 .song {
