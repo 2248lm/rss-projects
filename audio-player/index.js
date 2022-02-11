@@ -47,7 +47,7 @@ const player = document.querySelector('.player'),
   playBtn = document.querySelector('#play__btn'),
   audio = new Audio();
 
-let trackIndex = 1;
+let songsIndex = 0;
 
 function playSong() {
   player.classList.add('play');
@@ -70,7 +70,7 @@ function loadSong(song) {
   audio.src = song;
 }
 
-loadSong(songs[`track${trackIndex}`].track);
+loadSong(tracksList[songsIndex]);
 
 playBtn.addEventListener('click', () => {
   if (player.classList.contains('play')) {
