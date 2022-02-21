@@ -234,6 +234,32 @@ h1 {
   cursor: pointer;
 }
 
+.progress {
+  position: relative;
+  height: inherit;
+  width: 20%;
+  background-color: #ffa500;
+}
+
+.progress::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: -4px;
+  width: 8px;
+  height: inherit;
+  background-color: #520000;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  opacity: 0;
+  -webkit-transition: opacity 0.2s ease;
+  transition: opacity 0.2s ease;
+}
+
+.progress__container:hover .progress::before {
+  opacity: 1;
+}
+
 .sound__btn {
   background-color: #520000;
   background-image: url("./assets/svg/mute.svg");
