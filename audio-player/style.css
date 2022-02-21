@@ -86,7 +86,7 @@ body {
   padding: 10px 20px;
 }
 
-.header {
+h1 {
   color: #ffa500;
   letter-spacing: 2px;
   text-align: right;
@@ -450,6 +450,13 @@ body {
   .main,
   .footer {
     padding: 8px;
+  }
+  h1 {
+    font-size: 23px;
+  }
+  .cover {
+    width: 150px;
+    height: 150px;
   }
 }
 /*# sourceMappingURL=style.css.map */
