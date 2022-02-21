@@ -1,64 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Audio player</title>
-    <link rel="icon" type="image/x-icon" href="./assets/svg/favicon.ico" />
-    <link rel="stylesheet" href="./style.css" />
-  </head>
-  <body>
-    <div class="wrapper">
-      <div class="background"></div>
-      <div class="player__wrapper">
-        <header class="header">
-          <h1>Audio-player</h1>
-        </header>
-        <main class="main">
-          <div class="player">
-            <img class="cover" src="./assets/img/track1.png" alt="song cover" />
-            <div class="info">
-              <p>Album: <span class="album">"Ten Summoner's Tales"</span></p>
-              <p>Released: <span class="release">August 1, 1993</span></p>
-              <p>Genre: <span class="genre">pop rock</span></p>
-            </div>
-            <h2 class="singer">Sting</h2>
-            <p class="song">Shape of My Heart</p>
-            <div class="controls">
-              <button class="control__btn" id="prev__btn"></button>
-              <button class="control__btn play__btn" id="play__btn"></button>
-              <button class="control__btn" id="next__btn"></button>
-              <button class="control__btn" id="next__btn"></button>
-            </div>
-            <div class="timeline">
-              <div class="time">
-                <span class="current">00:00</span>
-                <span class="divider">&nbsp;/&nbsp;</span>
-                <span class="duration">04:35</span>
-              </div>
-              <div class="progress__container">
-                <div class="progress">
-                  <span></span>
-                </div>
-              </div>
-              <button class="sound__btn mute" id="mute_btn"></button>
-            </div>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Audio player</title>
+  <link rel="icon" type="image/x-icon" href="./assets/svg/favicon.ico" />
+  <link rel="stylesheet" href="./style.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+
+<body>
+  <div class="wrapper">
+    <div class="background"></div>
+    <div class="player__wrapper">
+      <header class="header">
+        <h1>Audio-player</h1>
+      </header>
+      <main class="main">
+        <div class="player">
+          <img class="cover" src="./assets/img/track1.png" alt="song cover" />
+          <div class="info">
+            <p>Album: <span class="album">"Ten Summoner's Tales"</span></p>
+            <p>Released: <span class="release">August 1, 1993</span></p>
+            <p>Genre: <span class="genre">pop rock</span></p>
           </div>
-          <div class="sun"></div>
-          <div class="grass"></div>
-        </main>
-        <footer class="footer">
-          <a href="https://github.com/2248lm" target="_blank">
-            <img src="./assets/svg/github.svg" alt="GitHub logo" height="30"
-          /></a>
-          <a href="https://rs.school/js-stage0/" target="_blank">
-            <img src="./assets/svg/rsschool.svg" alt="RSS logo" height="30" />
-          </a>
-          <p>2022</p>
-        </footer>
-      </div>
+          <h2 class="singer">Sting</h2>
+          <p class="song">Shape of My Heart</p>
+          <div class="controls">
+            <span class="material-icons" id="prev__btn">skip_previous</span>
+            <div class="play-pause">
+              <span class="material-icons" id="play__btn">play_arrow</span>
+            </div>
+            <span class="material-icons" id="next__btn">skip_next</span>
+            <span class="material-icons" id="repeat__btn">repeat</span>
+          </div>
+          <div class="timeline">
+            <div class="time">
+              <span class="current">00:00</span>
+              <span class="divider">&nbsp;/&nbsp;</span>
+              <span class="duration">04:35</span>
+            </div>
+            <div class="progress__container">
+              <div class="progress">
+                <span></span>
+              </div>
+            </div>
+            <button class="sound__btn mute" id="mute_btn"></button>
+          </div>
+        </div>
+        <div class="sun"></div>
+        <div class="grass"></div>
+      </main>
+      <footer class="footer">
+        <a href="https://github.com/2248lm" target="_blank">
+          <img src="./assets/svg/github.svg" alt="GitHub logo" height="30" /></a>
+        <a href="https://rs.school/js-stage0/" target="_blank">
+          <img src="./assets/svg/rsschool.svg" alt="RSS logo" height="30" />
+        </a>
+        <p>2022</p>
+      </footer>
     </div>
-    <script src="./index.js"></script>
-  </body>
+  </div>
+  <script src="./index.js"></script>
+</body>
+
 </html>
