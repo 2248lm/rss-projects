@@ -46,10 +46,8 @@ const songs = [
   },
 ];
 
-const player = document.querySelector('.player'),
-  playBtn = document.querySelector('#play__btn'),
-  nextBtn = document.querySelector('#next__btn'),
-  prevBtn = document.querySelector('#prev__btn'),
+const audio = new Audio(),
+  player = document.querySelector('.player'),
   singer = document.querySelector('.singer'),
   title = document.querySelector('.song'),
   cover = document.querySelector('.cover'),
@@ -57,21 +55,21 @@ const player = document.querySelector('.player'),
   release = document.querySelector('.release'),
   genre = document.querySelector('.genre'),
   background = document.querySelector('.background'),
-  audio = new Audio();
+  playBtn = document.querySelector('#play__btn'),
+  nextBtn = document.querySelector('#next__btn'),
+  prevBtn = document.querySelector('#prev__btn');
 
 let songIndex = 0;
 
 function playSong() {
   playBtn.innerHTML = 'pause';
   player.classList.add('play');
-  player.classList.remove('pause');
   audio.play();
 }
 
 function pauseSong() {
   playBtn.innerHTML = 'play_arrow';
   player.classList.remove('play');
-  player.classList.add('pause');
   audio.pause();
 }
 
@@ -90,15 +88,11 @@ function loadSong(song) {
 loadSong(songs[songIndex].track);
 
 playBtn.addEventListener('click', () => {
-  if (player.classList.contains('play')) {
-    pauseSong();
-  } else {
-    playSong();
-  }
+  const isPlay = player.classList.contains('play');
+  isPlay ? pauseSong() : playSong();
 });
 
 function nextSong() {
-  audio.currentTime = 0;
   songIndex++;
   if (songIndex > songs.length - 1) {
     songIndex = 0;
@@ -109,7 +103,6 @@ function nextSong() {
 nextBtn.addEventListener('click', nextSong);
 
 function prevSong() {
-  audio.currentTime = 0;
   songIndex--;
   if (songIndex < 0) {
     songIndex = songs.length - 1;
