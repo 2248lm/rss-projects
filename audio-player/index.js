@@ -62,18 +62,16 @@ const player = document.querySelector('.player'),
 let songIndex = 0;
 
 function playSong() {
+  playBtn.innerHTML = 'pause';
   player.classList.add('play');
   player.classList.remove('pause');
-  playBtn.classList.remove('play__btn');
-  playBtn.classList.add('pause__btn');
   audio.play();
 }
 
 function pauseSong() {
+  playBtn.innerHTML = 'play_arrow';
   player.classList.remove('play');
   player.classList.add('pause');
-  playBtn.classList.remove('pause__btn');
-  playBtn.classList.add('play__btn');
   audio.pause();
 }
 
