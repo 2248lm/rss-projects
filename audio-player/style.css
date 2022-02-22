@@ -216,14 +216,25 @@ h1 {
   background-color: #520000;
 }
 
-.sound__btn {
+#mute_btn {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 30px;
   height: 30px;
-  background-color: transparent;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  border: none;
+  color: #ffffff;
+  font-size: 24px;
+  background-color: #520000;
 }
 
 .time {
@@ -270,11 +281,6 @@ h1 {
 
 .progress__container:hover .progress::before {
   opacity: 1;
-}
-
-.sound__btn {
-  background-color: #520000;
-  background-image: url("./assets/svg/mute.svg");
 }
 
 .sound__btn:hover {
