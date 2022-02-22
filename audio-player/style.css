@@ -1,5 +1,5 @@
 @font-face {
-  font-family: 'Rosa Marena';
+  font-family: "Rosa Marena";
   src: url("./assets/fonts/rosa-marena/rosa-marena.eot");
   src: url("./assets/fonts/rosa-marena/rosa-marena.eot") format("embedded-opentype"), url("./assets/fonts/rosa-marena/rosa-marena.otf") format("opentype"), url("./assets/fonts/rosa-marena/rosa-marena.svg") format("svg"), url("./assets/fonts/rosa-marena/rosa-marena.ttf") format("truetype"), url("./assets/fonts/rosa-marena/rosa-marena.woff") format("woff"), url("./assets/fonts/rosa-marena/rosa-marena.woff2") format("woff2");
   font-style: normal;
@@ -7,7 +7,7 @@
 }
 
 @font-face {
-  font-family: 'Champagne &amp; Limousines';
+  font-family: "Champagne &amp; Limousines";
   src: url("./assets/fonts/champagne-limousines/champagne-limousines.eot");
   src: url("./assets/fonts/champagne-limousines/champagne-limousines.eot") format("embedded-opentype"), url("./assets/fonts/champagne-limousines/champagne-limousines.otf") format("opentype"), url("./assets/fonts/champagne-limousines/champagne-limousines.svg") format("svg"), url("./assets/fonts/champagne-limousines/champagne-limousines.ttf") format("truetype"), url("./assets/fonts/champagne-limousines/champagne-limousines.woff") format("woff"), url("./assets/fonts/champagne-limousines/champagne-limousines.woff2") format("woff2");
   font-weight: normal;
@@ -15,7 +15,7 @@
 }
 
 @font-face {
-  font-family: 'TT2020 Style E Regular';
+  font-family: "TT2020 Style E Regular";
   src: url("./assets/fonts/tt2020/tt2020-style-e-regular.eot");
   src: url("./assets/fonts/tt2020/tt2020-style-e-regular.eot?#iefix") format("embedded-opentype"), url("./assets/fonts/tt2020/tt2020-style-e-regular.otf") format("opentype"), url("./assets/fonts/tt2020/tt2020-style-e-regular.svg") format("svg"), url("./assets/fonts/tt2020/tt2020-style-e-regular.ttf") format("truetype"), url("./assets/fonts/tt2020/tt2020-style-e-regular.woff") format("woff"), url("./assets/fonts/tt2020/tt2020-style-e-regular.woff2") format("woff2");
   font-weight: normal;
@@ -152,7 +152,9 @@ h1 {
   letter-spacing: 0.8px;
 }
 
-.controls, .timeline, .time {
+.controls,
+.timeline,
+.time {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -164,12 +166,15 @@ h1 {
           align-items: center;
 }
 
-.controls, .timeline {
+.controls,
+.timeline {
   width: 100%;
   padding: 12px 0;
 }
 
-.controls span, .sound__btn, .footer a {
+.controls span,
+.sound__btn,
+.footer a {
   cursor: pointer;
   -webkit-transition: 0.3s ease-out;
   transition: 0.3s ease-out;
