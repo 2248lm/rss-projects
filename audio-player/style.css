@@ -58,7 +58,7 @@ body {
           filter: blur(8px);
 }
 
-.player__wrapper {
+.player-wrapper {
   position: absolute;
   z-index: 1;
   display: -webkit-box;
@@ -154,7 +154,7 @@ h1 {
 
 .controls,
 .timeline,
-.time {
+.timer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -173,7 +173,7 @@ h1 {
 }
 
 .controls span,
-#mute_btn,
+#mute-btn,
 .footer a {
   cursor: pointer;
   -webkit-transition: 0.3s ease-out;
@@ -216,7 +216,7 @@ h1 {
   background-color: #520000;
 }
 
-#mute_btn {
+#mute-btn {
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
@@ -237,11 +237,11 @@ h1 {
   background-color: #520000;
 }
 
-#mute_btn:hover {
+#mute-btn:hover {
   background-color: #e04f5f;
 }
 
-.time {
+.timer {
   height: 28px;
   padding: 0 6px;
   color: #ffffff;
@@ -249,7 +249,7 @@ h1 {
   background-color: #520000;
 }
 
-.progress__container {
+.progress-area {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -262,14 +262,14 @@ h1 {
   cursor: pointer;
 }
 
-.progress {
+.progress-bar {
   position: relative;
   height: inherit;
   width: 20%;
   background-color: #ffa500;
 }
 
-.progress::before {
+.progress-bar::before {
   content: "";
   position: absolute;
   top: 50%;
@@ -284,12 +284,8 @@ h1 {
   transition: opacity 0.2s ease;
 }
 
-.progress__container:hover .progress::before {
+.progress-area:hover .progress-bar::before {
   opacity: 1;
-}
-
-.sound__btn:hover {
-  background-color: #e04f5f;
 }
 
 .footer {
@@ -491,7 +487,7 @@ h1 {
 }
 
 @media (max-width: 480px) {
-  .player__wrapper {
+  .player-wrapper {
     width: 320px;
     border-radius: 0;
   }
@@ -508,4 +504,3 @@ h1 {
     height: 150px;
   }
 }
-/*# sourceMappingURL=style.css.map */

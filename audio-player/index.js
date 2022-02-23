@@ -55,9 +55,9 @@ const audio = new Audio(),
   release = document.querySelector('.release'),
   genre = document.querySelector('.genre'),
   background = document.querySelector('.background'),
-  playBtn = document.querySelector('#play__btn'),
-  nextBtn = document.querySelector('#next__btn'),
-  prevBtn = document.querySelector('#prev__btn');
+  playBtn = document.querySelector('#play-btn'),
+  nextBtn = document.querySelector('#next-btn'),
+  prevBtn = document.querySelector('#prev-btn');
 
 let songIndex = 0;
 
