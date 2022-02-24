@@ -63,7 +63,9 @@ const audio = new Audio(),
   progressArea = document.querySelector('.progress-area'),
   progressBar = document.querySelector('.progress-bar');
 
-let songIndex = 0;
+let songIndex = 0,
+  musicCurrentTime = document.querySelector('.current'),
+  musucDuration = document.querySelector('.duration');
 
 const loadSong = (song) => {
   audio.currentTime = 0;
@@ -127,11 +129,26 @@ const replaySong = () => {
 }
 replayBtn.addEventListener('click', replaySong);
 
+const convertTime = (time) => {
+  let min = Math.floor(time / 60),
+    sec = Math.floor(time % 60);
+  if (sec < 10) { sec = `0${sec}`; }
+  return `${min}:${sec}`;
+}
+
+const setTime = () => {
+  musicCurrentTime.innerHTML = `0:00`;
+  musucDuration.innerHTML = convertTime(audio.duration);
+}
+audio.addEventListener('loadeddata', setTime);
+
 const updateProgress = () => {
   const currentTime = audio.currentTime,
     duration = audio.duration,
     progressWidth = (currentTime / duration) * 100;
   progressBar.style.width = `${progressWidth}%`;
+
+  musicCurrentTime.innerHTML = convertTime(currentTime);
 }
 audio.addEventListener('timeupdate', updateProgress);
 
