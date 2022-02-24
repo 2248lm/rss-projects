@@ -57,21 +57,12 @@ const audio = new Audio(),
   background = document.querySelector('.background'),
   playBtn = document.querySelector('#play-btn'),
   nextBtn = document.querySelector('#next-btn'),
-  prevBtn = document.querySelector('#prev-btn');
+  prevBtn = document.querySelector('#prev-btn'),
+  repeatBtn = document.querySelector('#repeat-btn'),
+  progressArea = document.querySelector('.progress-area'),
+  progressBar = document.querySelector('.progress-bar');
 
 let songIndex = 0;
-
-function playSong() {
-  playBtn.innerHTML = 'pause';
-  player.classList.add('play');
-  audio.play();
-}
-
-function pauseSong() {
-  playBtn.innerHTML = 'play_arrow';
-  player.classList.remove('play');
-  audio.pause();
-}
 
 function loadSong(song) {
   audio.currentTime = 0;
@@ -84,8 +75,19 @@ function loadSong(song) {
   genre.innerHTML = songs[songIndex].genre;
   background.style.backgroundImage = `url(${songs[songIndex].cover})`;
 }
-
 loadSong(songs[songIndex].track);
+
+function playSong() {
+  playBtn.innerHTML = 'pause';
+  player.classList.add('play');
+  audio.play();
+}
+
+function pauseSong() {
+  playBtn.innerHTML = 'play_arrow';
+  player.classList.remove('play');
+  audio.pause();
+}
 
 playBtn.addEventListener('click', () => {
   const isPlay = player.classList.contains('play');
@@ -111,3 +113,22 @@ function prevSong() {
   playSong();
 }
 prevBtn.addEventListener('click', prevSong);
+
+function updateProgress() {
+  const currentTime = audio.currentTime,
+    duration = audio.duration,
+    progressWidth = (currentTime / duration) * 100;
+  progressBar.style.width = `${progressWidth}%`;
+}
+audio.addEventListener('timeupdate', updateProgress);
+
+function setProgress(bar) {
+  const width = progressArea.clientWidth,
+    clickX = bar.offsetX,
+    duration = audio.duration;
+  audio.currentTime = (clickX / width) * duration;
+}
+progressArea.addEventListener('click', setProgress);
+
+//after ending of the song play next song
+audio.addEventListener('ended', nextSong);
