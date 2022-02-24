@@ -59,6 +59,7 @@ const audio = new Audio(),
   nextBtn = document.querySelector('#next-btn'),
   prevBtn = document.querySelector('#prev-btn'),
   repeatBtn = document.querySelector('#repeat-btn'),
+  replayBtn = document.querySelector('#replay-btn'),
   progressArea = document.querySelector('.progress-area'),
   progressBar = document.querySelector('.progress-bar');
 
@@ -113,6 +114,14 @@ const prevSong = () => {
   playSong();
 }
 prevBtn.addEventListener('click', prevSong);
+
+const replaySong = () => {
+  loadSong(songs[songIndex].track);
+  progressBar.style.width = `${0}%`;
+  const isPlay = player.classList.contains('play');
+  if (isPlay) audio.play();
+}
+replayBtn.addEventListener('click', replaySong);
 
 const updateProgress = () => {
   const currentTime = audio.currentTime,
