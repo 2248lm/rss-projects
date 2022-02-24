@@ -61,11 +61,11 @@ const audio = new Audio(),
   repeatBtn = document.querySelector('#repeat-btn'),
   replayBtn = document.querySelector('#replay-btn'),
   progressArea = document.querySelector('.progress-area'),
-  progressBar = document.querySelector('.progress-bar');
-
-let songIndex = 0,
+  progressBar = document.querySelector('.progress-bar'),
   musicCurrentTime = document.querySelector('.current'),
   musucDuration = document.querySelector('.duration');
+
+let songIndex = 0;
 
 const loadSong = (song) => {
   audio.currentTime = 0;
@@ -148,6 +148,7 @@ const updateProgress = () => {
     progressWidth = (currentTime / duration) * 100;
   progressBar.style.width = `${progressWidth}%`;
 
+  //current time update
   musicCurrentTime.innerHTML = convertTime(currentTime);
 }
 audio.addEventListener('timeupdate', updateProgress);
