@@ -206,7 +206,8 @@ h1 {
   border-radius: 50%;
 }
 
-.controls span:nth-child(4) {
+.controls span:first-child,
+.controls span:last-child {
   font-size: 20px;
 }
 
