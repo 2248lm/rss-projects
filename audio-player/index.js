@@ -101,7 +101,9 @@ const nextSong = () => {
     songIndex = 0;
   }
   loadSong(songs[songIndex].track);
-  playSong();
+  progressBar.style.width = `${0}%`;
+  const isPlay = player.classList.contains('play');
+  if (isPlay) playSong();
 }
 nextBtn.addEventListener('click', nextSong);
 
@@ -111,7 +113,9 @@ const prevSong = () => {
     songIndex = songs.length - 1;
   }
   loadSong(songs[songIndex].track);
-  playSong();
+  progressBar.style.width = `${0}%`;
+  const isPlay = player.classList.contains('play');
+  if (isPlay) playSong();
 }
 prevBtn.addEventListener('click', prevSong);
 
