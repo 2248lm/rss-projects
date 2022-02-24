@@ -64,7 +64,7 @@ const audio = new Audio(),
 
 let songIndex = 0;
 
-function loadSong(song) {
+const loadSong = (song) => {
   audio.currentTime = 0;
   audio.src = song;
   singer.innerHTML = songs[songIndex].singer;
@@ -77,13 +77,13 @@ function loadSong(song) {
 }
 loadSong(songs[songIndex].track);
 
-function playSong() {
+const playSong = () => {
   playBtn.innerHTML = 'pause';
   player.classList.add('play');
   audio.play();
 }
 
-function pauseSong() {
+const pauseSong = () => {
   playBtn.innerHTML = 'play_arrow';
   player.classList.remove('play');
   audio.pause();
@@ -94,7 +94,7 @@ playBtn.addEventListener('click', () => {
   isPlay ? pauseSong() : playSong();
 });
 
-function nextSong() {
+const nextSong = () => {
   songIndex++;
   if (songIndex > songs.length - 1) {
     songIndex = 0;
@@ -104,7 +104,7 @@ function nextSong() {
 }
 nextBtn.addEventListener('click', nextSong);
 
-function prevSong() {
+const prevSong = () => {
   songIndex--;
   if (songIndex < 0) {
     songIndex = songs.length - 1;
@@ -114,7 +114,7 @@ function prevSong() {
 }
 prevBtn.addEventListener('click', prevSong);
 
-function updateProgress() {
+const updateProgress = () => {
   const currentTime = audio.currentTime,
     duration = audio.duration,
     progressWidth = (currentTime / duration) * 100;
@@ -122,7 +122,7 @@ function updateProgress() {
 }
 audio.addEventListener('timeupdate', updateProgress);
 
-function setProgress(bar) {
+const setProgress = (bar) => {
   const width = progressArea.clientWidth,
     clickX = bar.offsetX,
     duration = audio.duration;
