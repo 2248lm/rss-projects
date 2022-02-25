@@ -45,6 +45,7 @@ const songs = [
     genre: 'alternative rock',
   },
 ];
+let songIndex = 0;
 
 const audio = new Audio(),
   player = document.querySelector('.player'),
@@ -65,8 +66,6 @@ const audio = new Audio(),
   progressBar = document.querySelector('.progress-bar'),
   musicCurrentTime = document.querySelector('.current'),
   musucDuration = document.querySelector('.duration');
-
-let songIndex = 0;
 
 const loadSong = (song) => {
   audio.currentTime = 0;
@@ -123,7 +122,6 @@ prevBtn.addEventListener('click', prevSong);
 
 const replaySong = () => {
   loadSong(songs[songIndex].track);
-  progressBar.style.width = `${0}%`;
   const isPlay = player.classList.contains('play');
   if (isPlay) audio.play();
 }

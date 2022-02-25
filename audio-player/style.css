@@ -1,7 +1,12 @@
 @font-face {
   font-family: "Rosa Marena";
   src: url("./assets/fonts/rosa-marena/rosa-marena.eot");
-  src: url("./assets/fonts/rosa-marena/rosa-marena.eot") format("embedded-opentype"), url("./assets/fonts/rosa-marena/rosa-marena.otf") format("opentype"), url("./assets/fonts/rosa-marena/rosa-marena.svg") format("svg"), url("./assets/fonts/rosa-marena/rosa-marena.ttf") format("truetype"), url("./assets/fonts/rosa-marena/rosa-marena.woff") format("woff"), url("./assets/fonts/rosa-marena/rosa-marena.woff2") format("woff2");
+  src: url("./assets/fonts/rosa-marena/rosa-marena.eot") format("embedded-opentype"),
+    url("./assets/fonts/rosa-marena/rosa-marena.otf") format("opentype"),
+    url("./assets/fonts/rosa-marena/rosa-marena.svg") format("svg"),
+    url("./assets/fonts/rosa-marena/rosa-marena.ttf") format("truetype"),
+    url("./assets/fonts/rosa-marena/rosa-marena.woff") format("woff"),
+    url("./assets/fonts/rosa-marena/rosa-marena.woff2") format("woff2");
   font-style: normal;
   font-weight: normal;
 }
@@ -9,7 +14,12 @@
 @font-face {
   font-family: "Champagne &amp; Limousines";
   src: url("./assets/fonts/champagne-limousines/champagne-limousines.eot");
-  src: url("./assets/fonts/champagne-limousines/champagne-limousines.eot") format("embedded-opentype"), url("./assets/fonts/champagne-limousines/champagne-limousines.otf") format("opentype"), url("./assets/fonts/champagne-limousines/champagne-limousines.svg") format("svg"), url("./assets/fonts/champagne-limousines/champagne-limousines.ttf") format("truetype"), url("./assets/fonts/champagne-limousines/champagne-limousines.woff") format("woff"), url("./assets/fonts/champagne-limousines/champagne-limousines.woff2") format("woff2");
+  src: url("./assets/fonts/champagne-limousines/champagne-limousines.eot") format("embedded-opentype"),
+    url("./assets/fonts/champagne-limousines/champagne-limousines.otf") format("opentype"),
+    url("./assets/fonts/champagne-limousines/champagne-limousines.svg") format("svg"),
+    url("./assets/fonts/champagne-limousines/champagne-limousines.ttf") format("truetype"),
+    url("./assets/fonts/champagne-limousines/champagne-limousines.woff") format("woff"),
+    url("./assets/fonts/champagne-limousines/champagne-limousines.woff2") format("woff2");
   font-weight: normal;
   font-style: normal;
 }
@@ -17,14 +27,19 @@
 @font-face {
   font-family: "TT2020 Style E Regular";
   src: url("./assets/fonts/tt2020/tt2020-style-e-regular.eot");
-  src: url("./assets/fonts/tt2020/tt2020-style-e-regular.eot?#iefix") format("embedded-opentype"), url("./assets/fonts/tt2020/tt2020-style-e-regular.otf") format("opentype"), url("./assets/fonts/tt2020/tt2020-style-e-regular.svg") format("svg"), url("./assets/fonts/tt2020/tt2020-style-e-regular.ttf") format("truetype"), url("./assets/fonts/tt2020/tt2020-style-e-regular.woff") format("woff"), url("./assets/fonts/tt2020/tt2020-style-e-regular.woff2") format("woff2");
+  src: url("./assets/fonts/tt2020/tt2020-style-e-regular.eot?#iefix") format("embedded-opentype"),
+    url("./assets/fonts/tt2020/tt2020-style-e-regular.otf") format("opentype"),
+    url("./assets/fonts/tt2020/tt2020-style-e-regular.svg") format("svg"),
+    url("./assets/fonts/tt2020/tt2020-style-e-regular.ttf") format("truetype"),
+    url("./assets/fonts/tt2020/tt2020-style-e-regular.woff") format("woff"),
+    url("./assets/fonts/tt2020/tt2020-style-e-regular.woff2") format("woff2");
   font-weight: normal;
   font-style: normal;
 }
 
 * {
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
@@ -38,11 +53,11 @@ body {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .background {
@@ -53,9 +68,9 @@ body {
   background-size: cover;
   background-position: top center;
   -webkit-box-shadow: 0px 0px 5px 55px #000000;
-          box-shadow: 0px 0px 5px 55px #000000;
+  box-shadow: 0px 0px 5px 55px #000000;
   -webkit-filter: blur(8px);
-          filter: blur(8px);
+  filter: blur(8px);
 }
 
 .player-wrapper {
@@ -66,16 +81,16 @@ body {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   width: 400px;
   background-color: #4682b4;
   border-radius: 5px;
   -webkit-box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.5);
-          box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.5);
   overflow: hidden;
   -webkit-animation: sky-change 15s infinite linear;
-          animation: sky-change 15s infinite linear;
+  animation: sky-change 15s infinite linear;
 }
 
 .header,
@@ -99,11 +114,11 @@ h1 {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: end;
+  -ms-flex-align: end;
+  align-items: end;
 }
 
 .player {
@@ -112,8 +127,8 @@ h1 {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   position: relative;
   z-index: 3;
   width: 100%;
@@ -127,7 +142,7 @@ h1 {
   margin-right: 0;
   border-radius: 5px;
   -webkit-box-shadow: 0px 0px 10px 5px rgba(255, 255, 106, 0.5);
-          box-shadow: 0px 0px 10px 5px rgba(255, 255, 106, 0.5);
+  box-shadow: 0px 0px 10px 5px rgba(255, 255, 106, 0.5);
 }
 
 .info {
@@ -159,11 +174,11 @@ h1 {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .controls,
@@ -186,18 +201,18 @@ h1 {
 
 .controls span {
   -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   width: 32px;
   height: 32px;
   color: #ffffff;
@@ -213,24 +228,24 @@ h1 {
 
 .controls span:hover {
   -webkit-transform: scale(1.2);
-          transform: scale(1.2);
+  transform: scale(1.2);
   background-color: #520000;
 }
 
 #mute-btn {
   -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   width: 30px;
   height: 30px;
   color: #ffffff;
@@ -255,8 +270,8 @@ h1 {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   width: 160px;
   height: 28px;
   background: #ffffff;
@@ -284,11 +299,11 @@ h1 {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   color: #ffffff;
   font-size: 30px;
   font-weight: 700;
@@ -297,7 +312,7 @@ h1 {
 
 .footer a:hover {
   -webkit-transform: scale(1.2);
-          transform: scale(1.2);
+  transform: scale(1.2);
 }
 
 .sun {
@@ -311,11 +326,11 @@ h1 {
   background-color: #ff4500;
   border-radius: 50%;
   -webkit-box-shadow: 0 0 20px #ffa500;
-          box-shadow: 0 0 20px #ffa500;
+  box-shadow: 0 0 20px #ffa500;
   -webkit-animation: 15s infinite linear;
-          animation: 15s infinite linear;
+  animation: 15s infinite linear;
   -webkit-animation-name: sun-move, sun-color;
-          animation-name: sun-move, sun-color;
+  animation-name: sun-move, sun-color;
 }
 
 .grass {
@@ -446,12 +461,12 @@ h1 {
   40% {
     background-color: #ffd700;
     -webkit-box-shadow: 0 0 35px #ffd700;
-            box-shadow: 0 0 35px #ffd700;
+    box-shadow: 0 0 35px #ffd700;
   }
   60% {
     background-color: #ffff00;
     -webkit-box-shadow: 0 0 35px #ffff00;
-            box-shadow: 0 0 35px #ffff00;
+    box-shadow: 0 0 35px #ffff00;
   }
   80% {
     background-color: #ffa500;
@@ -465,12 +480,12 @@ h1 {
   40% {
     background-color: #ffd700;
     -webkit-box-shadow: 0 0 35px #ffd700;
-            box-shadow: 0 0 35px #ffd700;
+    box-shadow: 0 0 35px #ffd700;
   }
   60% {
     background-color: #ffff00;
     -webkit-box-shadow: 0 0 35px #ffff00;
-            box-shadow: 0 0 35px #ffff00;
+    box-shadow: 0 0 35px #ffff00;
   }
   80% {
     background-color: #ffa500;
