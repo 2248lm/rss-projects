@@ -60,6 +60,7 @@ const audio = new Audio(),
   prevBtn = document.querySelector('#prev-btn'),
   repeatBtn = document.querySelector('#repeat-btn'),
   replayBtn = document.querySelector('#replay-btn'),
+  soundBtn = document.querySelector('#mute-btn'),
   progressArea = document.querySelector('.progress-area'),
   progressBar = document.querySelector('.progress-bar'),
   musicCurrentTime = document.querySelector('.current'),
@@ -199,3 +200,18 @@ const endedSong = () => {
   }
 }
 audio.addEventListener('ended', endedSong);
+
+const muteSound = () => {
+  let getText = soundBtn.innerHTML;
+  switch (getText) {
+    case 'volume_off':
+      soundBtn.innerHTML = 'volume_up';
+      audio.muted = true;
+      break;
+    case 'volume_up':
+      soundBtn.innerHTML = 'volume_off';
+      audio.muted = false;
+      break;
+  }
+}
+soundBtn.addEventListener('click', muteSound);
