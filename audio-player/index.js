@@ -69,6 +69,7 @@ let songIndex = 0;
 
 const loadSong = (song) => {
   audio.currentTime = 0;
+  progressBar.style.width = `${0}%`;
   audio.src = song;
   singer.innerHTML = songs[songIndex].singer;
   title.innerHTML = songs[songIndex].song;
@@ -103,7 +104,6 @@ const nextSong = () => {
     songIndex = 0;
   }
   loadSong(songs[songIndex].track);
-  progressBar.style.width = `${0}%`;
   const isPlay = player.classList.contains('play');
   if (isPlay) playSong();
 }
@@ -115,7 +115,6 @@ const prevSong = () => {
     songIndex = songs.length - 1;
   }
   loadSong(songs[songIndex].track);
-  progressBar.style.width = `${0}%`;
   const isPlay = player.classList.contains('play');
   if (isPlay) playSong();
 }
@@ -161,5 +160,42 @@ const setProgress = (bar) => {
 }
 progressArea.addEventListener('click', setProgress);
 
-//after ending of the song play next song
-audio.addEventListener('ended', nextSong);
+const repeatSong = () => {
+  let getText = repeatBtn.innerHTML;
+  switch (getText) {
+    case 'repeat':
+      repeatBtn.innerHTML = 'repeat_one';
+      break;
+    case 'repeat_one':
+      repeatBtn.innerHTML = 'shuffle';
+      break;
+    case 'shuffle':
+      repeatBtn.innerHTML = 'repeat';
+      break;
+  }
+}
+repeatBtn.addEventListener('click', repeatSong);
+
+const endedSong = () => {
+  let getText = repeatBtn.innerHTML;
+  switch (getText) {
+    case 'repeat':
+      nextSong();
+      audio.play();
+      break;
+    case 'repeat_one':
+      replaySong();
+      audio.play();
+      break;
+    case 'shuffle':
+      let randIndex = Math.floor(Math.random() * songs.length);
+      do {
+        randIndex = Math.floor(Math.random() * songs.length);
+      } while (songIndex === randIndex);
+      songIndex = randIndex;
+      loadSong(songs[songIndex].track);
+      audio.play();
+      break;
+  }
+}
+audio.addEventListener('ended', endedSong);
