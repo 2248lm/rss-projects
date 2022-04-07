@@ -640,3 +640,120 @@ a {
   font-weight: 400;
   line-height: 150%;
 }
+
+.footer {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (auto)[2];
+      grid-template-columns: repeat(2, auto);
+  width: 100%;
+  padding-top: 40px;
+}
+
+.footer__background {
+  background: url("../../assets/img/noise_lines_transparent@2X.png"), radial-gradient(110.67% 538.64% at 5.73% 50%, #513d2f 0%, #1a1a1c 100%), -webkit-gradient(linear, left bottom, left top, from(#211f20), to(#211f20));
+  background: url("../../assets/img/noise_lines_transparent@2X.png"), radial-gradient(110.67% 538.64% at 5.73% 50%, #513d2f 0%, #1a1a1c 100%), linear-gradient(0deg, #211f20, #211f20);
+}
+
+.footer__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 740px;
+  width: 100%;
+}
+
+.footer__title {
+  width: 280px;
+  padding-top: 17px;
+  padding-left: 1px;
+  color: var(--color-light-xl);
+  font-family: Georgia;
+  font-size: 35px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 130%;
+  letter-spacing: 0.06em;
+}
+
+.footer__title span {
+  display: block;
+}
+
+.footer__puppy {
+  -ms-grid-column-align: end;
+      justify-self: end;
+}
+
+.contacts {
+  width: 280px;
+}
+
+.contacts__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: var(--color-primary);
+  font-family: Georgia;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 115%;
+  letter-spacing: 0.06em;
+}
+
+.contacts__item:nth-child(1) {
+  padding-top: 43px;
+}
+
+.contacts__item:nth-child(1) img {
+  margin-top: -2px;
+  padding-right: 20px;
+}
+
+.contacts__item:nth-child(2) {
+  padding-top: 48px;
+}
+
+.contacts__item:nth-child(2) img {
+  margin-top: -5px;
+  padding-right: 20px;
+}
+
+.location {
+  width: 302px;
+}
+
+.location__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: var(--color-primary);
+  font-family: Georgia;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 115%;
+  letter-spacing: 0.06em;
+}
+
+.location__item:nth-child(1) {
+  padding-top: 32px;
+}
+
+.location__item:nth-child(1) img {
+  margin-top: -2px;
+  padding-right: 20px;
+}
+
+.location__item:nth-child(2) {
+  padding-top: 37px;
+}
+
+.location__item:nth-child(2) img {
+  margin-top: -5px;
+  padding-right: 20px;
+}
