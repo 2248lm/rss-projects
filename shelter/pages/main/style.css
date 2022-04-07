@@ -302,3 +302,214 @@ a {
   padding-top: 25px;
   padding-bottom: 25px;
 }
+
+.our-friends {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: (auto)[3];
+      grid-template-rows: repeat(3, auto);
+  grid-gap: 60px;
+}
+
+.our-friends__background {
+  background-color: var(--color-light-l);
+}
+
+.our-friends__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 12px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.our-friends form {
+  width: 261px;
+  margin: -2px auto 0;
+}
+
+.our-friends__button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 52px;
+  color: var(--color-dark-3xl);
+  font-family: Georgia;
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 22px;
+  letter-spacing: 0.06em;
+  border-radius: 100px;
+  cursor: pointer;
+  background-color: var(--color-primary);
+  border: none;
+  width: 261px;
+}
+
+.our-friends__button:hover {
+  background-color: var(--color-primary-light);
+}
+
+.pets-group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: calc((100% - 810px) / 2);
+  width: 100%;
+  width: 990px;
+}
+
+.pet-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 270px;
+  height: 435px;
+  background-color: var(--color-light-s);
+  border-radius: 9px;
+  cursor: pointer;
+}
+
+.pet-card__img {
+  width: 100%;
+  height: 270px;
+  border-top-left-radius: 9px;
+  border-top-right-radius: 9px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top -2px center;
+}
+
+.pet-card__description {
+  font-family: Georgia;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 100%;
+  letter-spacing: 0.06em;
+  text-align: center;
+  margin-top: 28px;
+}
+
+.pet-card__button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 52px;
+  color: var(--color-dark-3xl);
+  font-family: Georgia;
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 22px;
+  letter-spacing: 0.06em;
+  border-radius: 100px;
+  cursor: pointer;
+  background-color: transparent;
+  border: 2px solid var(--color-primary);
+  width: 187px;
+  margin-top: 32px;
+  cursor: pointer;
+}
+
+.pet-card__button:hover {
+  background-color: var(--color-primary-light);
+}
+
+.pet-card__button:hover {
+  border: none;
+}
+
+.pet-card:hover {
+  background-color: var(--color-light-xl);
+  -webkit-filter: drop-shadow(0px 2px 35px rgba(13, 13, 13, 0.04));
+          filter: drop-shadow(0px 2px 35px rgba(13, 13, 13, 0.04));
+}
+
+.pet-card:hover .pet-card__button {
+  background-color: var(--color-primary-light);
+  border: none;
+}
+
+#card-1__img {
+  background-image: url("../../assets/img/pets-katrine.png");
+}
+
+#card-2__img {
+  background-image: url("../../assets/img/pets-jennifer.png");
+}
+
+#card-3__img {
+  background-image: url("../../assets/img/pets-woody.png");
+}
+
+.arrow-button {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  width: 52px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 52px;
+  color: var(--color-dark-3xl);
+  font-family: Georgia;
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 22px;
+  letter-spacing: 0.06em;
+  border-radius: 100px;
+  cursor: pointer;
+  background-color: transparent;
+  border: 2px solid var(--color-primary);
+  background-image: url("../../assets/svg/arrow.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.arrow-button:hover {
+  background-color: var(--color-primary-light);
+}
+
+.arrow-button:hover {
+  border: none;
+}
+
+.right {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
