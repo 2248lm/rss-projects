@@ -1,1 +1,244 @@
-/* No CSS *//*# sourceMappingURL=style.css.map */
+@font-face {
+  font-family: "Georgia";
+  src: url("../assets/fonts/Georgia/Georgia.eot");
+  src: local("Georgia"), url("../assets/fonts/Georgia/Georgia.eot") format("embedded-opentype"), url("../assets/fonts/Georgia/Georgia.woff") format("woff"), url("../assets/fonts/Georgia/Georgia.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Arial";
+  src: url("../assets/fonts/Arial/ArialMT.eot");
+  src: local("Arial"), local("ArialMT"), url("../assets/fonts/Arial/ArialMT.eot") format("embedded-opentype"), url("../assets/fonts/Arial/ArialMT.woff") format("woff"), url("../assets/fonts/Arial/ArialMT.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Arial";
+  src: url("../assets/fonts/Arial/Arial-ItalicMT.eot");
+  src: local("Arial Italic"), local("Arial-ItalicMT"), url("../assets/fonts/Arial/Arial-ItalicMT.eot") format("embedded-opentype"), url("../assets/fonts/Arial/Arial-ItalicMT.woff") format("woff"), url("../assets/fonts/Arial/Arial-ItalicMT.ttf") format("truetype");
+  font-weight: 400;
+  font-style: italic;
+}
+
+:root {
+  --color-dark-s: #cdcdcd;
+  --color-dark-m: #b2b2b2;
+  --color-dark-l: #545454;
+  --color-dark-xl: #4c4c4c;
+  --color-dark-3xl: #292929;
+  --color-light-s: #fafafa;
+  --color-light-l: #f6f6f6;
+  --color-light-xl: #ffffff;
+  --color-primary: #f1cdb3;
+  --color-primary-light: #fddcc4;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.header {
+  padding: 30px 0;
+}
+
+.logo__title {
+  color: var(--color-dark-l);
+}
+
+.logo__subtitle {
+  color: var(--color-dark-3xl);
+}
+
+.menu__link {
+  color: var(--color-dark-l);
+}
+
+.menu__link:hover {
+  color: var(--color-dark-3xl);
+}
+
+.active {
+  color: var(--color-dark-3xl);
+}
+
+.our-friends {
+  margin-top: 1px;
+}
+
+.our-friends__background {
+  background-color: var(--color-light-l);
+}
+
+.pets__group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 30px 40px;
+  width: 100%;
+  width: 1200px;
+}
+
+.pets__buttons-group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  justify-self: center;
+  width: 340px;
+}
+
+.pets__scroll-button {
+  display: block;
+  width: 52px;
+  margin-top: -2px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 52px;
+  color: var(--color-dark-3xl);
+  font-family: Georgia;
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 22px;
+  letter-spacing: 0.06em;
+  border-radius: 100px;
+  cursor: pointer;
+  background-color: transparent;
+  border: 2px solid var(--color-primary);
+}
+
+.pets__scroll-button:hover {
+  background-color: var(--color-primary-light);
+}
+
+.pets__scroll-button:hover {
+  border: none;
+}
+
+.pets__scroll-button:disabled {
+  color: var(--color-dark-s);
+  border: 2px solid var(--color-dark-s);
+}
+
+.pets__scroll-button:disabled:hover {
+  background-color: transparent;
+  cursor: url("../../assets/svg/cursor-inactive.svg"), pointer;
+}
+
+.active-btn {
+  background-color: var(--color-primary);
+  border: none;
+  pointer-events: none;
+}
+
+#pet-1__img {
+  background-image: url("../../assets/img/pets-katrine.png");
+}
+
+#pet-2__img {
+  background-image: url("../../assets/img/pets-jennifer.png");
+}
+
+#pet-3__img {
+  background-image: url("../../assets/img/pets-woody.png");
+}
+
+#pet-4__img {
+  background-image: url("../../assets/img/pets-sophia.png");
+}
+
+#pet-5__img {
+  background-image: url("../../assets/img/pets-timmy.png");
+}
+
+#pet-6__img {
+  background-image: url("../../assets/img/pets-charly.png");
+}
+
+#pet-7__img {
+  background-image: url("../../assets/img/pets-scarlet.png");
+}
+
+#pet-8__img {
+  background-image: url("../../assets/img/pets-freddie.png");
+}
+
+.inactive-btn,
+.active-btn,
+.normal-btn {
+  width: 52px;
+}
+
+.arrow-button {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  width: 52px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 52px;
+  color: var(--color-dark-3xl);
+  font-family: Georgia;
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 22px;
+  letter-spacing: 0.06em;
+  border-radius: 100px;
+  cursor: pointer;
+  background-color: transparent;
+  border: 2px solid var(--color-primary);
+  background-image: url("../../assets/svg/arrow.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.arrow-button:hover {
+  background-color: var(--color-primary-light);
+}
+
+.arrow-button:hover {
+  border: none;
+}
+
+.right {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
