@@ -195,7 +195,7 @@ a {
 }
 
 .not-only__description {
-  padding-top: 40px;
+  padding-top: 42px;
   padding-bottom: 42px;
   color: var(--color-dark-s);
   font-family: Arial;
@@ -281,7 +281,7 @@ a {
 }
 
 .about__pets {
-  margin-bottom: -4px;
+  margin-bottom: -5px;
 }
 
 .about__pets img {
@@ -303,7 +303,7 @@ a {
 }
 
 .about__description:nth-child(2) {
-  padding-top: 25px;
+  padding-top: 24px;
   padding-bottom: 25px;
 }
 
@@ -313,6 +313,7 @@ a {
   -ms-grid-rows: (auto)[3];
       grid-template-rows: repeat(3, auto);
   grid-gap: 60px;
+  padding-top: 1px;
 }
 
 .our-friends__background {
@@ -446,9 +447,6 @@ a {
 
 .pet-card__button:hover {
   background-color: var(--color-primary-light);
-}
-
-.pet-card__button:hover {
   border: none;
 }
 
@@ -507,9 +505,6 @@ a {
 
 .arrow-button:hover {
   background-color: var(--color-primary-light);
-}
-
-.arrow-button:hover {
   border: none;
 }
 
@@ -567,7 +562,6 @@ a {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding-bottom: 1px;
 }
 
 .in-addition__background {
@@ -580,7 +574,7 @@ a {
 }
 
 .in-addition__pet {
-  padding-top: 11px;
+  padding-top: 10px;
 }
 
 .in-addition__pet img {
@@ -592,6 +586,7 @@ a {
 }
 
 .credit-card__title {
+  margin-top: -1px;
   color: var(--color-dark-l);
   font-family: Georgia;
   font-size: 15px;
@@ -655,6 +650,7 @@ a {
 }
 
 .footer__background {
+  margin-top: -1px;
   background: url("../../assets/img/noise_lines_transparent@2X.png"), radial-gradient(110.67% 538.64% at 5.73% 50%, #513d2f 0%, #1a1a1c 100%), -webkit-gradient(linear, left bottom, left top, from(#211f20), to(#211f20));
   background: url("../../assets/img/noise_lines_transparent@2X.png"), radial-gradient(110.67% 538.64% at 5.73% 50%, #513d2f 0%, #1a1a1c 100%), linear-gradient(0deg, #211f20, #211f20);
 }
