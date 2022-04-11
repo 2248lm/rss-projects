@@ -54,6 +54,14 @@ a {
   text-decoration: none;
 }
 
+.header__background {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 5;
+  background-color: #ffffff;
+}
+
 .header {
   padding: 30px 0;
 }
