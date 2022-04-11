@@ -86,12 +86,9 @@ a {
   color: var(--color-dark-3xl);
 }
 
-.our-friends {
-  margin-top: 1px;
-}
-
 .our-friends__background {
   background-color: var(--color-light-l);
+  padding-bottom: 1px;
 }
 
 .pets__group {
@@ -148,9 +145,6 @@ a {
 
 .pets__scroll-button:hover {
   background-color: var(--color-primary-light);
-}
-
-.pets__scroll-button:hover {
   border: none;
 }
 
