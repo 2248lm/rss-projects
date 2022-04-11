@@ -157,11 +157,7 @@ a {
 .pets__scroll-button:disabled {
   color: var(--color-dark-s);
   border: 2px solid var(--color-dark-s);
-}
-
-.pets__scroll-button:disabled:hover {
-  background-color: transparent;
-  cursor: url("../../assets/svg/cursor-inactive.svg"), pointer;
+  pointer-events: none;
 }
 
 .active-btn {
