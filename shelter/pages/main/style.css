@@ -37,7 +37,7 @@
 
 * {
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
@@ -71,11 +71,39 @@ a {
   padding-right: 40px;
 }
 
+.logo__title,
+.not-only__title,
+.not-only__button,
+.section__title,
+.section__title-center,
+.our-friends__button,
+.pet-card__name,
+.pet-card__button,
+.help-icon__description,
+.credit-card__title,
+.credit-card__number,
+.footer__title,
+.contacts__item,
+.location__item {
+  font-family: Georgia;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.logo__subtitle,
+.menu__link,
+.not-only__description,
+.about__description {
+  font-family: Arial;
+  font-weight: 400;
+  font-style: normal;
+}
+
 .header {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 186px 1fr;
-      grid-template-columns: 186px 1fr;
+  grid-template-columns: 186px 1fr;
   width: 100%;
   padding: 60px 0;
 }
@@ -86,11 +114,11 @@ a {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   width: 186px;
   height: 60px;
 }
@@ -98,10 +126,7 @@ a {
 .logo__title {
   margin: 1px 0 0;
   color: var(--color-primary);
-  font-family: Georgia;
   font-size: 32px;
-  font-style: normal;
-  font-weight: 400;
   line-height: 110%;
   letter-spacing: 0.06em;
 }
@@ -109,17 +134,14 @@ a {
 .logo__subtitle {
   padding-left: 4px;
   color: var(--color-light-xl);
-  font-family: Arial;
   font-size: 13px;
-  font-style: normal;
-  font-weight: 400;
   line-height: 100%;
   letter-spacing: 0.1em;
 }
 
 .menu {
   -ms-grid-column-align: end;
-      justify-self: end;
+  justify-self: end;
   height: 60px;
 }
 
@@ -128,11 +150,11 @@ a {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   width: 442px;
   height: 100%;
   margin-top: -1px;
@@ -140,17 +162,11 @@ a {
 
 .menu__link {
   color: var(--color-dark-s);
-  font-family: Arial;
   font-size: 15px;
-  font-style: normal;
-  font-weight: 400;
   line-height: 160%;
 }
 
-.menu__link:hover {
-  color: var(--color-light-s);
-}
-
+.menu__link:hover,
 .active {
   color: var(--color-light-s);
 }
@@ -166,27 +182,43 @@ a {
   display: none;
 }
 
+.not-only__button,
+.our-friends__button,
+.pet-card__button,
+.arrow-button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 52px;
+  color: var(--color-dark-3xl);
+  border-radius: 100px;
+  cursor: pointer;
+}
+
 .not-only {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr 698px;
-      grid-template-columns: 1fr 698px;
+  grid-template-columns: 1fr 698px;
 }
 
 .not-only__content {
   -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
+  -ms-grid-row-align: center;
+  align-self: center;
   width: 460px;
   margin-top: -80px;
 }
 
 .not-only__title {
   color: var(--color-light-xl);
-  font-family: Georgia;
   font-size: 44px;
-  font-style: normal;
-  font-weight: 400;
   line-height: 130%;
 }
 
@@ -198,10 +230,7 @@ a {
   padding-top: 42px;
   padding-bottom: 42px;
   color: var(--color-dark-s);
-  font-family: Arial;
   font-size: 15px;
-  font-style: normal;
-  font-weight: 400;
   line-height: 160%;
 }
 
@@ -210,27 +239,11 @@ a {
 }
 
 .not-only__button {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  height: 52px;
-  color: var(--color-dark-3xl);
-  font-family: Georgia;
-  font-size: 17px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 22px;
-  letter-spacing: 0.06em;
-  border-radius: 100px;
-  cursor: pointer;
   background-color: var(--color-primary);
   border: none;
+  font-size: 17px;
+  line-height: 22px;
+  letter-spacing: 0.06em;
   width: 207px;
 }
 
@@ -251,17 +264,16 @@ a {
   padding-bottom: 100px;
 }
 
-.section__title, .section__title-center {
+.section__title,
+.section__title-center {
   color: var(--color-dark-l);
-  font-family: Georgia;
   font-size: 35px;
-  font-style: normal;
-  font-weight: 400;
   line-height: 130%;
   letter-spacing: 0.06em;
 }
 
-.section__title span, .section__title-center span {
+.section__title span,
+.section__title-center span {
   display: block;
 }
 
@@ -273,11 +285,11 @@ a {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (auto)[2];
-      grid-template-columns: repeat(2, auto);
+  grid-template-columns: repeat(2, auto);
   grid-gap: 120px;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 
 .about__pets {
@@ -295,10 +307,7 @@ a {
 
 .about__description {
   color: var(--color-dark-xl);
-  font-family: Arial;
   font-size: 15px;
-  font-style: normal;
-  font-weight: 400;
   line-height: 160%;
 }
 
@@ -311,7 +320,7 @@ a {
   display: -ms-grid;
   display: grid;
   -ms-grid-rows: (auto)[3];
-      grid-template-rows: repeat(3, auto);
+  grid-template-rows: repeat(3, auto);
   grid-gap: 60px;
   padding-top: 1px;
 }
@@ -326,11 +335,11 @@ a {
   display: flex;
   gap: 12px;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .our-friends form {
@@ -339,25 +348,11 @@ a {
 }
 
 .our-friends__button {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  height: 52px;
-  color: var(--color-dark-3xl);
-  font-family: Georgia;
+  background-color: transparent;
+  border: 2px solid var(--color-primary);
   font-size: 17px;
-  font-style: normal;
-  font-weight: 400;
   line-height: 22px;
   letter-spacing: 0.06em;
-  border-radius: 100px;
-  cursor: pointer;
   background-color: var(--color-primary);
   border: none;
   width: 261px;
@@ -372,8 +367,8 @@ a {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   gap: calc((100% - 810px) / 2);
   width: 100%;
   width: 990px;
@@ -385,11 +380,11 @@ a {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   width: 270px;
   height: 435px;
   background-color: var(--color-light-s);
@@ -407,48 +402,29 @@ a {
   background-position: top -2px center;
 }
 
-.pet-card__description {
-  font-family: Georgia;
+.pet-card__name {
+  color: var(--color-dark-l);
   font-size: 20px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 100%;
+  line-height: 115%;
   letter-spacing: 0.06em;
-  text-align: center;
   margin-top: 28px;
+  text-align: center;
 }
 
 .pet-card__button {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  height: 52px;
-  color: var(--color-dark-3xl);
-  font-family: Georgia;
-  font-size: 17px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 22px;
-  letter-spacing: 0.06em;
-  border-radius: 100px;
-  cursor: pointer;
   background-color: transparent;
   border: 2px solid var(--color-primary);
+  font-size: 17px;
+  line-height: 22px;
+  letter-spacing: 0.06em;
   width: 187px;
-  margin-top: 32px;
-  cursor: pointer;
+  margin-top: 30px;
 }
 
 .pet-card:hover {
   background-color: var(--color-light-xl);
   -webkit-filter: drop-shadow(0px 2px 35px rgba(13, 13, 13, 0.04));
-          filter: drop-shadow(0px 2px 35px rgba(13, 13, 13, 0.04));
+  filter: drop-shadow(0px 2px 35px rgba(13, 13, 13, 0.04));
 }
 
 .pet-card:hover .pet-card__button {
@@ -469,30 +445,11 @@ a {
 }
 
 .arrow-button {
-  -ms-flex-negative: 0;
-      flex-shrink: 0;
-  width: 52px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  height: 52px;
-  color: var(--color-dark-3xl);
-  font-family: Georgia;
-  font-size: 17px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 22px;
-  letter-spacing: 0.06em;
-  border-radius: 100px;
-  cursor: pointer;
   background-color: transparent;
   border: 2px solid var(--color-primary);
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  width: 52px;
   background-image: url("../../assets/svg/arrow.svg");
   background-repeat: no-repeat;
   background-position: center;
@@ -505,14 +462,14 @@ a {
 
 .right {
   -webkit-transform: rotate(180deg);
-          transform: rotate(180deg);
+  transform: rotate(180deg);
 }
 
 .help {
   display: -ms-grid;
   display: grid;
   -ms-grid-rows: (auto)[2];
-      grid-template-rows: repeat(2, auto);
+  grid-template-rows: repeat(2, auto);
   grid-gap: 60px;
 }
 
@@ -521,11 +478,11 @@ a {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
   gap: 55px 120px;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 
 .help-icon {
@@ -533,17 +490,14 @@ a {
   text-align: center;
 }
 
-.help-icon__img {
+.help-icon img {
   height: 60px;
 }
 
 .help-icon__description {
   margin-top: 26px;
   color: var(--color-dark-l);
-  font-family: Georgia;
   font-size: 20px;
-  font-style: normal;
-  font-weight: 400;
   line-height: 115%;
   letter-spacing: 0.06em;
 }
@@ -552,11 +506,11 @@ a {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (auto)[2];
-      grid-template-columns: repeat(2, auto);
+  grid-template-columns: repeat(2, auto);
   grid-gap: 30px;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 
 .in-addition__background {
@@ -583,10 +537,7 @@ a {
 .credit-card__title {
   margin-top: -1px;
   color: var(--color-dark-l);
-  font-family: Georgia;
   font-size: 15px;
-  font-style: normal;
-  font-weight: 400;
   line-height: 110%;
   letter-spacing: 0.06em;
 }
@@ -596,20 +547,17 @@ a {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   width: 349px;
   height: 43px;
   margin-top: 20px;
   padding-left: 46px;
   color: var(--color-dark-l);
-  font-family: Georgia;
   font-size: 20px;
-  font-style: normal;
-  font-weight: 400;
   line-height: 115%;
   letter-spacing: 0.06em;
   background-color: var(--color-primary);
@@ -629,9 +577,9 @@ a {
   padding-top: 20px;
   color: var(--color-dark-m);
   font-family: Arial;
-  font-size: 12px;
   font-style: italic;
   font-weight: 400;
+  font-size: 12px;
   line-height: 150%;
 }
 
@@ -639,7 +587,7 @@ a {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (auto)[2];
-      grid-template-columns: repeat(2, auto);
+  grid-template-columns: repeat(2, auto);
   width: 100%;
   padding-top: 40px;
 }
@@ -655,8 +603,8 @@ a {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   width: 740px;
   width: 100%;
 }
@@ -666,10 +614,7 @@ a {
   padding-top: 17px;
   padding-left: 1px;
   color: var(--color-light-xl);
-  font-family: Georgia;
   font-size: 35px;
-  font-style: normal;
-  font-weight: 400;
   line-height: 130%;
   letter-spacing: 0.06em;
 }
@@ -680,7 +625,7 @@ a {
 
 .footer__puppy {
   -ms-grid-column-align: end;
-      justify-self: end;
+  justify-self: end;
 }
 
 .contacts {
@@ -692,10 +637,7 @@ a {
   display: -ms-flexbox;
   display: flex;
   color: var(--color-primary);
-  font-family: Georgia;
   font-size: 20px;
-  font-style: normal;
-  font-weight: 400;
   line-height: 115%;
   letter-spacing: 0.06em;
 }
@@ -727,10 +669,7 @@ a {
   display: -ms-flexbox;
   display: flex;
   color: var(--color-primary);
-  font-family: Georgia;
   font-size: 20px;
-  font-style: normal;
-  font-weight: 400;
   line-height: 115%;
   letter-spacing: 0.06em;
 }

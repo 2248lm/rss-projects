@@ -37,7 +37,7 @@
 
 * {
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
@@ -46,42 +46,25 @@ html {
   font-size: 16px;
 }
 
-ul {
-  list-style: none;
-}
-
-a {
-  text-decoration: none;
-}
-
 .header__background {
   position: -webkit-sticky;
   position: sticky;
   top: 0;
   z-index: 5;
-  background-color: #ffffff;
+  background-color: var(--color-light-xl);
 }
 
 .header {
   padding: 30px 0;
 }
 
-.logo__title {
-  color: var(--color-dark-l);
-}
-
-.logo__subtitle {
-  color: var(--color-dark-3xl);
-}
-
+.logo__title,
 .menu__link {
   color: var(--color-dark-l);
 }
 
-.menu__link:hover {
-  color: var(--color-dark-3xl);
-}
-
+.menu__link:hover,
+.logo__subtitle,
 .active {
   color: var(--color-dark-3xl);
 }
@@ -91,15 +74,37 @@ a {
   padding-bottom: 1px;
 }
 
+.pets__scroll-button {
+  font-family: Georgia;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.pets__scroll-button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 52px;
+  color: var(--color-dark-3xl);
+  border-radius: 100px;
+  cursor: pointer;
+}
+
 .pets__group {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   gap: 30px 40px;
   width: 100%;
   width: 1200px;
@@ -110,37 +115,20 @@ a {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   justify-self: center;
   width: 340px;
 }
 
 .pets__scroll-button {
-  display: block;
-  width: 52px;
-  margin-top: -2px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  height: 52px;
-  color: var(--color-dark-3xl);
-  font-family: Georgia;
-  font-size: 17px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 22px;
-  letter-spacing: 0.06em;
-  border-radius: 100px;
-  cursor: pointer;
   background-color: transparent;
   border: 2px solid var(--color-primary);
+  font-size: 17px;
+  line-height: 22px;
+  letter-spacing: 0.06em;
+  width: 52px;
+  margin-top: -2px;
 }
 
 .pets__scroll-button:hover {
@@ -190,53 +178,4 @@ a {
 
 #pet-8__img {
   background-image: url("../../assets/img/pets-freddie.png");
-}
-
-.inactive-btn,
-.active-btn,
-.normal-btn {
-  width: 52px;
-}
-
-.arrow-button {
-  -ms-flex-negative: 0;
-      flex-shrink: 0;
-  width: 52px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  height: 52px;
-  color: var(--color-dark-3xl);
-  font-family: Georgia;
-  font-size: 17px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 22px;
-  letter-spacing: 0.06em;
-  border-radius: 100px;
-  cursor: pointer;
-  background-color: transparent;
-  border: 2px solid var(--color-primary);
-  background-image: url("../../assets/svg/arrow.svg");
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-.arrow-button:hover {
-  background-color: var(--color-primary-light);
-}
-
-.arrow-button:hover {
-  border: none;
-}
-
-.right {
-  -webkit-transform: rotate(180deg);
-          transform: rotate(180deg);
 }
