@@ -42,10 +42,6 @@
   padding: 0;
 }
 
-html {
-  font-size: 16px;
-}
-
 .header__background {
   position: -webkit-sticky;
   position: sticky;
@@ -97,17 +93,14 @@ html {
 }
 
 .pets__group {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  gap: 30px 40px;
-  width: 100%;
-  width: 1200px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (270px)[4];
+  grid-template-columns: repeat(4, 270px);
+  grid-gap: 30px 40px;
+  -ms-grid-column-align: center;
+  justify-self: center;
+  max-width: 1200px;
 }
 
 .pets__buttons-group {
@@ -119,6 +112,7 @@ html {
   justify-content: space-between;
   justify-self: center;
   width: 340px;
+  margin-top: -2px;
 }
 
 .pets__scroll-button {
@@ -128,7 +122,7 @@ html {
   line-height: 22px;
   letter-spacing: 0.06em;
   width: 52px;
-  margin-top: -2px;
+  padding-bottom: 2px;
 }
 
 .pets__scroll-button:hover {
@@ -178,4 +172,39 @@ html {
 
 #pet-8__img {
   background-image: url("../../assets/img/pets-freddie.png");
+}
+
+@media (max-width: 1279px) {
+  .section__container {
+    padding-bottom: 76px;
+  }
+
+  .our-friends {
+    grid-gap: 30px;
+    padding-top: 0;
+  }
+
+  .pets__group {
+    -ms-grid-columns: (270px)[2];
+    grid-template-columns: repeat(2, 270px);
+  }
+
+  .pets__buttons-group {
+    margin-top: 9px;
+  }
+
+  .pets__button {
+    margin-top: 0;
+  }
+
+  .active-btn {
+    background-color: var(--color-primary);
+    border: none;
+    pointer-events: none;
+  }
+
+  #pet-7,
+  #pet-8 {
+    display: none;
+  }
 }
