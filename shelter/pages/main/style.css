@@ -864,6 +864,9 @@ a {
 }
 
 @media (max-width: 767px) {
+  body {
+    min-width: 320px;
+  }
 
   .container,
   .section__container {
