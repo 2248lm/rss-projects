@@ -42,14 +42,6 @@
   padding: 0;
 }
 
-html {
-  font-size: 16px;
-}
-
-body {
-  min-width: 1280px;
-}
-
 ul {
   list-style: none;
 }
@@ -65,7 +57,7 @@ a {
 
 .container,
 .section__container {
-  width: 1280px;
+  max-width: 1280px;
   margin: 0 auto;
   padding-left: 40px;
   padding-right: 40px;
@@ -253,6 +245,7 @@ a {
 
 .not-only__puppy {
   margin-bottom: -4px;
+  width: 698px;
 }
 
 .not-only__puppy img {
@@ -371,7 +364,7 @@ a {
   justify-content: center;
   gap: calc((100% - 810px) / 2);
   width: 100%;
-  width: 990px;
+  max-width: 990px;
 }
 
 .pet-card {
@@ -605,7 +598,7 @@ a {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  width: 740px;
+  max-width: 740px;
   width: 100%;
 }
 
@@ -690,4 +683,181 @@ a {
 .location__item:nth-child(2) img {
   margin-top: -5px;
   padding-right: 20px;
+}
+
+@media (max-width: 1279px) {
+
+  .container,
+  .section__container {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  .header {
+    padding: 30px 0;
+  }
+
+  .section__title-center {
+    margin-top: 1px;
+    margin-bottom: -1px;
+  }
+
+  .not-only {
+    -ms-grid-columns: none;
+    grid-template-columns: none;
+    -ms-grid-rows: (auto)[2];
+    grid-template-rows: repeat(2, auto);
+    grid-gap: 100px;
+  }
+
+  .not-only__content {
+    -ms-grid-column-align: center;
+    justify-self: center;
+    margin-top: 31px;
+  }
+
+  .not-only__description {
+    padding-top: 41px;
+  }
+
+  .not-only form {
+    margin: 0 auto;
+  }
+
+  .not-only__puppy {
+    width: 569px;
+    -ms-grid-column-align: end;
+    justify-self: end;
+    margin-left: calc(50% - 354px);
+    margin-right: calc(50% - 354px);
+    margin-bottom: -5px;
+  }
+
+  .about {
+    -ms-grid-columns: none;
+    grid-template-columns: none;
+    -ms-grid-rows: (auto)[2];
+    grid-template-rows: repeat(2, auto);
+    grid-gap: 80px;
+  }
+
+  .about__content {
+    padding-top: 0;
+  }
+
+  .about__pets {
+    -webkit-box-ordinal-group: 3;
+    -ms-flex-order: 2;
+    order: 2;
+    -ms-grid-column-align: center;
+    justify-self: center;
+  }
+
+  .about__description {
+    -webkit-box-ordinal-group: 2;
+    -ms-flex-order: 1;
+    order: 1;
+  }
+
+  #card-3 {
+    display: none;
+  }
+
+  .our-friends {
+    padding-top: 0;
+  }
+
+  .our-friends__content {
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+
+  .our-friends form {
+    margin-top: -1px;
+  }
+
+  .pets-group {
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    gap: 5%;
+    max-width: 630px;
+  }
+
+  .pet-card__img {
+    background-position: top -1px center;
+  }
+
+  .pet-card__name {
+    margin-top: 29px;
+  }
+
+  .help__list {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (170px)[3];
+    grid-template-columns: repeat(3, 170px);
+    -ms-grid-rows: auto;
+    grid-template-rows: auto;
+    grid-gap: 55px 60px;
+  }
+
+  .in-addition {
+    -ms-grid-columns: none;
+    grid-template-columns: none;
+    -ms-grid-rows: (auto)[2];
+    grid-template-rows: repeat(2, auto);
+    grid-gap: 60px;
+  }
+
+  .in-addition__content {
+    -webkit-box-ordinal-group: 2;
+    -ms-flex-order: 1;
+    order: 1;
+    -ms-grid-column-align: center;
+    justify-self: center;
+  }
+
+  .in-addition__pet {
+    -webkit-box-ordinal-group: 3;
+    -ms-flex-order: 2;
+    order: 2;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    padding-top: 0;
+  }
+
+  .footer {
+    -ms-grid-columns: none;
+    grid-template-columns: none;
+    -ms-grid-rows: (auto)[2];
+    grid-template-rows: repeat(2, auto);
+    grid-gap: 65px;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    padding-top: 30px;
+  }
+
+  .footer__content {
+    gap: 58px;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+
+  .footer__title {
+    padding-top: 1px;
+    padding-left: 0;
+  }
+
+  .footer__puppy {
+    -ms-grid-column-align: center;
+    justify-self: center;
+  }
 }
