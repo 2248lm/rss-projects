@@ -33,6 +33,7 @@
   --color-light-xl: #ffffff;
   --color-primary: #f1cdb3;
   --color-primary-light: #fddcc4;
+  --color-black: #000000;
 }
 
 * {
@@ -214,9 +215,10 @@
     padding-bottom: 42px;
   }
 
-  .burger {
-    -webkit-filter: brightness(0) saturate(100%) invert(0%) sepia(0%) saturate(9%) hue-rotate(239deg) brightness(100%) contrast(100%);
-    filter: brightness(0) saturate(100%) invert(0%) sepia(0%) saturate(9%) hue-rotate(239deg) brightness(100%) contrast(100%);
+  .burger span,
+  .burger span:before,
+  .burger span:after {
+    background-color: var(--color-black);
   }
 
   #pet-4,

@@ -33,6 +33,7 @@
   --color-light-xl: #ffffff;
   --color-primary: #f1cdb3;
   --color-primary-light: #fddcc4;
+  --color-black: #000000;
 }
 
 * {
@@ -884,15 +885,40 @@ a {
   }
 
   .burger {
+    position: relative;
     display: block;
     width: 30px;
     height: 60px;
-    background-image: url("../../assets/svg/burger.svg");
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    cursor: pointer;
     margin-right: 43px;
+    cursor: pointer;
+  }
+
+  .burger span {
+    position: absolute;
+    top: 29px;
+    width: 30px;
+    height: 2px;
+    background-color: var(--color-primary);
+  }
+
+  .burger span:before {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: 0;
+    width: 30px;
+    height: 2px;
+    background-color: var(--color-primary);
+  }
+
+  .burger span:after {
+    content: "";
+    position: absolute;
+    top: 10px;
+    left: 0;
+    width: 30px;
+    height: 2px;
+    background-color: var(--color-primary);
   }
 
   .menu__list {
