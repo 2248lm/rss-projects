@@ -512,7 +512,6 @@ a {
 
 .in-addition__content {
   width: 380px;
-  height: 282px;
 }
 
 .in-addition__pet {
@@ -829,6 +828,7 @@ a {
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
+    margin-top: 1px;
     padding-top: 0;
   }
 
@@ -859,5 +859,248 @@ a {
   .footer__puppy {
     -ms-grid-column-align: center;
     justify-self: center;
+  }
+}
+
+@media (max-width: 767px) {
+
+  .container,
+  .section__container {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .section__container {
+    padding-top: 42px;
+    padding-bottom: 42px;
+  }
+
+  .section__title,
+  .section__title-center {
+    font-size: 25px;
+    line-height: 130%;
+    letter-spacing: 0.06em;
+    text-align: center;
+  }
+
+  .burger {
+    display: block;
+    width: 30px;
+    height: 60px;
+    background-image: url("../../assets/svg/burger.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+    margin-right: 43px;
+  }
+
+  .menu__list {
+    display: none;
+  }
+
+  .not-only {
+    grid-gap: 105px;
+  }
+
+  .not-only__content {
+    margin-top: 30px;
+    width: 300px;
+  }
+
+  .not-only__title {
+    font-size: 25px;
+    line-height: 130%;
+    letter-spacing: 0.06em;
+    text-align: center;
+  }
+
+  .not-only__description {
+    text-align: center;
+  }
+
+  .not-only__puppy {
+    width: 260px;
+    margin-left: calc(50% - 150px);
+    margin-right: calc(50% - 150px);
+    margin-bottom: -4px;
+  }
+
+  .about {
+    grid-gap: 42px;
+  }
+
+  .about__content {
+    width: 270px;
+  }
+
+  .about__pets {
+    margin-top: -1px;
+  }
+
+  .about__pets img {
+    width: 260px;
+  }
+
+  .about__description {
+    -webkit-box-ordinal-group: 2;
+    -ms-flex-order: 1;
+    order: 1;
+    text-align: justify;
+  }
+
+  .about__description:nth-child(2) {
+    padding-top: 24px;
+    padding-bottom: 22px;
+  }
+
+  #card-2 {
+    display: none;
+  }
+
+  .our-friends {
+    grid-gap: 43px;
+  }
+
+  .our-friends form {
+    margin-top: -2px;
+  }
+
+  .our-friends__content {
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    gap: 20px 80px;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+
+  .pets-group {
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-ordinal-group: 2;
+    -ms-flex-order: 1;
+    order: 1;
+  }
+
+  .left {
+    -webkit-box-ordinal-group: 3;
+    -ms-flex-order: 2;
+    order: 2;
+  }
+
+  .right {
+    -webkit-box-ordinal-group: 4;
+    -ms-flex-order: 3;
+    order: 3;
+  }
+
+  .help {
+    grid-gap: 42px;
+    margin-top: -1px;
+  }
+
+  .help__list {
+    -ms-grid-columns: (130px)[2];
+    grid-template-columns: repeat(2, 130px);
+    grid-gap: 30px;
+  }
+
+  .help-icon {
+    height: 87px;
+  }
+
+  .help-icon img {
+    height: 50px;
+  }
+
+  .help-icon__description {
+    margin-top: 17px;
+    font-size: 15px;
+    line-height: 110%;
+  }
+
+  .in-addition {
+    grid-gap: 42px;
+  }
+
+  .in-addition__content {
+    width: 280px;
+  }
+
+  .in-addition__pet {
+    margin-top: 1px;
+    padding-bottom: 1px;
+  }
+
+  .in-addition__pet img {
+    width: 260px;
+  }
+
+  .credit-card {
+    padding-top: 20px;
+    width: 280px;
+  }
+
+  .credit-card__title {
+    margin-top: -1px;
+    line-height: 160%;
+    letter-spacing: 0;
+    text-align: center;
+  }
+
+  .credit-card__number {
+    width: 100%;
+    font-size: 15px;
+    line-height: 110%;
+  }
+
+  .credit-card__description {
+    text-align: justify;
+  }
+
+  .footer {
+    grid-gap: 40px;
+  }
+
+  .footer__content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    gap: 40px;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+
+  .footer__title {
+    width: 270px;
+    margin: 0 auto;
+    padding-top: 0;
+    padding-left: 0;
+    font-size: 25px;
+    line-height: 130%;
+    letter-spacing: 0.06em;
+    text-align: center;
+  }
+
+  .footer__puppy img {
+    width: 260px;
+  }
+
+  .contacts__item {
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+
+  .location {
+    padding-top: 8px;
+  }
+
+  .location__item:nth-child(2) {
+    padding-top: 45px;
   }
 }
