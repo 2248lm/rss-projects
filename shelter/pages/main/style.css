@@ -365,7 +365,7 @@ a {
   justify-content: center;
   gap: calc((100% - 810px) / 2);
   width: 100%;
-  max-width: 990px;
+  width: 990px;
 }
 
 .pet-card {
@@ -782,7 +782,7 @@ a {
     -ms-flex-pack: justify;
     justify-content: space-between;
     gap: 40px;
-    max-width: 630px;
+    width: 580px;
   }
 
   .pet-card__img {
@@ -1011,6 +1011,7 @@ a {
     -webkit-box-ordinal-group: 2;
     -ms-flex-order: 1;
     order: 1;
+    width: 100%;
   }
 
   .left {
@@ -1116,6 +1117,7 @@ a {
   }
 
   .footer__puppy img {
+    padding-top: 1px;
     width: 260px;
   }
 
@@ -1123,13 +1125,14 @@ a {
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
+    padding-bottom: 1px;
   }
 
   .location {
-    padding-top: 8px;
+    padding-top: 6px;
   }
 
   .location__item:nth-child(2) {
-    padding-top: 45px;
+    padding-top: 44px;
   }
 }
