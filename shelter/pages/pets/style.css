@@ -208,3 +208,36 @@
     display: none;
   }
 }
+
+@media (max-width: 767px) {
+  .section__container {
+    padding-bottom: 42px;
+  }
+
+  .burger {
+    -webkit-filter: brightness(0) saturate(100%) invert(0%) sepia(0%) saturate(9%) hue-rotate(239deg) brightness(100%) contrast(100%);
+    filter: brightness(0) saturate(100%) invert(0%) sepia(0%) saturate(9%) hue-rotate(239deg) brightness(100%) contrast(100%);
+  }
+
+  #pet-4,
+  #pet-5,
+  #pet-6 {
+    display: none;
+  }
+
+  .pets__group {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: none;
+    grid-template-columns: none;
+    -ms-grid-rows: (auto)[3];
+    grid-template-rows: repeat(3, auto);
+    grid-gap: 30px;
+    padding-top: 12px;
+  }
+
+  .pets__buttons-group {
+    width: 300px;
+    margin-top: 11px;
+  }
+}
