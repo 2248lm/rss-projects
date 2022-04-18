@@ -6,6 +6,10 @@ const menuStatus = document.querySelector('.close'),
 function getScreenWidth() {
   let screenWidth = window.innerWidth;
   if (screenWidth < 768) {
+    burgerBtn.style.transform = 'rotate(0deg)';
+    menuStatus.classList.remove('open');
+    menuStatus.classList.add('close');
+    menuList.classList.remove('shadow');
     menuList.style.display = 'none';
     menuList.style.right = '-350px';
   } else {
@@ -28,10 +32,6 @@ const openBurgerMenu = () => {
 }
 
 const closeBurgerMenu = () => {
-  burgerBtn.style.transform = 'rotate(0deg)';
-  menuStatus.classList.remove('open');
-  menuStatus.classList.add('close');
-  menuList.classList.remove('shadow');
   getScreenWidth();
 }
 
@@ -43,3 +43,16 @@ burgerBtn.addEventListener('click', () => {
 menuItems.forEach(menuItem => {
   menuItem.addEventListener('click', closeBurgerMenu);
 });
+
+const getAreaClick = (e) => {
+  const isOpenMenu = menuStatus.classList.contains('open');
+  const target = e.target;
+  const its_menu = target == menuList || menuList.contains(target);
+  const its_btnMenu = target == burgerBtn;
+
+  if (!its_menu && !its_btnMenu && isOpenMenu) {
+    closeBurgerMenu();
+  }
+}
+
+document.addEventListener('click', getAreaClick);
