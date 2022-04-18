@@ -913,11 +913,12 @@ a {
 
   .burger {
     position: absolute;
-    right: 0;
     z-index: 10;
+    right: 0;
     display: block;
     width: 30px;
-    height: 60px;
+    height: 30px;
+    margin-top: 15px;
     margin-right: 53px;
     -webkit-transform: rotate(0deg);
     transform: rotate(0deg);
@@ -926,7 +927,7 @@ a {
 
   .burger span {
     position: absolute;
-    top: 29px;
+    top: 15px;
     width: 30px;
     height: 2px;
     background-color: var(--color-primary);
