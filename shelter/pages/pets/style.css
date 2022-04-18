@@ -56,12 +56,14 @@
 }
 
 .logo__title,
+.menu-logo__title,
 .menu__link {
   color: var(--color-dark-l);
 }
 
 .menu__link:hover,
 .logo__subtitle,
+.menu-logo__subtitle,
 .active {
   color: var(--color-dark-3xl);
 }
