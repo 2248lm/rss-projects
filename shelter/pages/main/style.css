@@ -95,8 +95,8 @@ a {
 .header {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 186px 1fr;
-  grid-template-columns: 186px 1fr;
+  -ms-grid-columns: 200px 1fr;
+  grid-template-columns: 200px 1fr;
   width: 100%;
   padding: 60px 0;
 }
@@ -112,7 +112,7 @@ a {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  width: 186px;
+  width: 200px;
   height: 60px;
 }
 
