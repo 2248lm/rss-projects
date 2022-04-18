@@ -10,12 +10,13 @@ function getScreenWidth() {
   if (screenWidth < 768) {
     burgerBtn.style.transform = 'rotate(0deg)';
     menuList.style.transform = 'translatex(100%)';
-    menuList.style.transition = 'transform 0.5s linear';
+    menuList.style.transition = 'transform 0.25s linear';
     menuStatus.classList.remove('open');
     menuStatus.classList.add('close');
     menuList.classList.remove('shadow');
   } else {
     menuList.style.display = 'flex';
+    menuList.style.transform = 'none';
   }
 }
 
@@ -26,7 +27,7 @@ window.addEventListener('resize', function () {
 function openBurgerMenu() {
   burgerBtn.style.transform = 'rotate(90deg)';
   menuList.style.transform = 'translatex(0%)';
-  menuList.style.transition = 'transform 0.5s linear';
+  menuList.style.transition = 'transform 0.25s linear';
   menuStatus.classList.remove('close');
   menuStatus.classList.add('open');
   menuList.classList.add('shadow');

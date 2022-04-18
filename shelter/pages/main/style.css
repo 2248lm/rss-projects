@@ -983,10 +983,10 @@ a {
     background-color: var(--color-dark-3xl);
     -webkit-transform: translatex(100%);
     transform: translatex(100%);
-    -webkit-transition: -webkit-transform 0.5s linear;
-    transition: -webkit-transform 0.5s linear;
-    transition: transform 0.5s linear;
-    transition: transform 0.5s linear, -webkit-transform 0.5s linear;
+    -webkit-transition: -webkit-transform 0.25s linear;
+    transition: -webkit-transform 0.25s linear;
+    transition: transform 0.25s linear;
+    transition: transform 0.25s linear, -webkit-transform 0.25s linear;
   }
 
   .menu__link {
