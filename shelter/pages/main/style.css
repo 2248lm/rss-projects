@@ -967,7 +967,7 @@ a {
     position: absolute;
     z-index: 5;
     top: 0;
-    right: -350px;
+    right: 0;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
@@ -976,10 +976,17 @@ a {
     -ms-flex-pack: center;
     justify-content: center;
     gap: 40px;
+    display: none;
     width: 320px;
     height: 100%;
     margin-top: 1px;
     background-color: var(--color-dark-3xl);
+    -webkit-transform: translatex(100%);
+    transform: translatex(100%);
+    -webkit-transition: -webkit-transform 0.5s linear;
+    transition: -webkit-transform 0.5s linear;
+    transition: transform 0.5s linear;
+    transition: transform 0.5s linear, -webkit-transform 0.5s linear;
   }
 
   .menu__link {

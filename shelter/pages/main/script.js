@@ -9,14 +9,13 @@ function getScreenWidth() {
   burgerBtn.removeEventListener('click', closeBurgerMenu);
   if (screenWidth < 768) {
     burgerBtn.style.transform = 'rotate(0deg)';
+    menuList.style.transform = 'translatex(100%)';
+    menuList.style.transition = 'transform 0.5s linear';
     menuStatus.classList.remove('open');
     menuStatus.classList.add('close');
     menuList.classList.remove('shadow');
-    menuList.style.display = 'none';
-    menuList.style.right = '-350px';
   } else {
     menuList.style.display = 'flex';
-    menuList.style.right = '0';
   }
 }
 
@@ -26,10 +25,11 @@ window.addEventListener('resize', function () {
 
 function openBurgerMenu() {
   burgerBtn.style.transform = 'rotate(90deg)';
+  menuList.style.transform = 'translatex(0%)';
+  menuList.style.transition = 'transform 0.5s linear';
   menuStatus.classList.remove('close');
   menuStatus.classList.add('open');
   menuList.classList.add('shadow');
-  menuList.style.right = '0';
   menuList.style.display = 'flex';
 }
 
