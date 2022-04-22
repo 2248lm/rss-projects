@@ -43,6 +43,10 @@
   padding: 0;
 }
 
+body {
+  overflow-x: hidden;
+}
+
 ul {
   list-style: none;
 }
@@ -698,6 +702,10 @@ a {
 }
 
 @media (max-width: 1279px) {
+  body {
+    max-width: 1279px;
+    overflow-x: hidden;
+  }
 
   .header__container,
   .section__container,
@@ -922,6 +930,10 @@ a {
     margin-right: 53px;
     -webkit-transform: rotate(0deg);
     transform: rotate(0deg);
+    -webkit-transition: -webkit-transform 0.5s ease;
+    transition: -webkit-transform 0.5s ease;
+    transition: transform 0.5s ease;
+    transition: transform 0.5s ease, -webkit-transform 0.5s ease;
     cursor: pointer;
   }
 
@@ -965,10 +977,10 @@ a {
   }
 
   .menu__list {
-    position: absolute;
+    position: fixed;
     z-index: 5;
     top: 0;
-    right: 0;
+    right: -350px;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
@@ -977,22 +989,23 @@ a {
     -ms-flex-pack: center;
     justify-content: center;
     gap: 40px;
-    display: none;
     width: 320px;
     height: 100%;
     margin-top: 1px;
     background-color: var(--color-dark-3xl);
-    -webkit-transform: translatex(100%);
-    transform: translatex(100%);
-    -webkit-transition: -webkit-transform 0.25s linear;
-    transition: -webkit-transform 0.25s linear;
-    transition: transform 0.25s linear;
-    transition: transform 0.25s linear, -webkit-transform 0.25s linear;
+    -webkit-transition: right 0.5s ease;
+    transition: right 0.5s ease;
   }
 
   .menu__link {
     font-size: 32px;
     line-height: 160%;
+  }
+
+  .open-menu-list {
+    right: 0;
+    -webkit-transition: right 0.5s ease;
+    transition: right 0.5s ease;
   }
 
   .menu-logo {

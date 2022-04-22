@@ -4,38 +4,24 @@ const menuStatus = document.querySelector('.close'),
   menuItems = document.querySelectorAll('.menu__link'),
   menuLogo = document.querySelector('.menu-logo');
 
-function getScreenWidth() {
-  let screenWidth = window.innerWidth;
-  burgerBtn.removeEventListener('click', closeBurgerMenu);
-  if (screenWidth < 768) {
-    burgerBtn.style.transform = 'rotate(0deg)';
-    menuList.style.transform = 'translatex(100%)';
-    menuList.style.transition = 'transform 0.25s linear';
-    menuStatus.classList.remove('open');
-    menuStatus.classList.add('close');
-    menuList.classList.remove('shadow');
-  } else {
-    menuList.style.display = 'flex';
-    menuList.style.transform = 'none';
-  }
-}
-
-window.addEventListener('resize', function () {
-  getScreenWidth();
-});
-
 function openBurgerMenu() {
   burgerBtn.style.transform = 'rotate(90deg)';
-  menuList.style.transform = 'translatex(0%)';
-  menuList.style.transition = 'transform 0.25s linear';
   menuStatus.classList.remove('close');
   menuStatus.classList.add('open');
+  menuList.classList.add('open-menu-list');
   menuList.classList.add('shadow');
-  menuList.style.display = 'flex';
+  document.body.style['overflow-y'] = 'hidden';
+  burgerBtn.removeEventListener('click', openBurgerMenu);
 }
 
 function closeBurgerMenu() {
-  getScreenWidth();
+  burgerBtn.style.transform = 'rotate(0deg)';
+  menuStatus.classList.remove('open');
+  menuStatus.classList.add('close');
+  menuList.classList.remove('open-menu-list');
+  menuList.classList.remove('shadow');
+  document.body.style['overflow-y'] = 'auto';
+  burgerBtn.removeEventListener('click', closeBurgerMenu);
 }
 
 burgerBtn.addEventListener('click', function () {
@@ -43,7 +29,7 @@ burgerBtn.addEventListener('click', function () {
   isCloseMenu ? openBurgerMenu() : closeBurgerMenu();
 });
 
-menuLogo.addEventListener('click', getScreenWidth);
+menuLogo.addEventListener('click', closeBurgerMenu);
 
 menuItems.forEach(menuItem => {
   menuItem.addEventListener('click', closeBurgerMenu);
@@ -61,3 +47,10 @@ function getAreaClick(e) {
 }
 
 document.addEventListener('click', getAreaClick);
+
+window.addEventListener('resize', function () {
+  let screenWidth = window.innerWidth;
+  if (screenWidth < 768) {
+    closeBurgerMenu()
+  }
+});
