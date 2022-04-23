@@ -91,50 +91,50 @@ const pets = [
 ]
 
 //Burger menu
-const menuStatus = document.querySelector('.close'),
-  burgerBtn = document.querySelector('.burger'),
-  menuList = document.querySelector('.menu__list'),
-  menuItems = document.querySelectorAll('.menu__link'),
-  menuLogo = document.querySelector('.menu-logo');
+const MENU_STATUS = document.querySelector('.close'),
+  BURGER_BTN = document.querySelector('.burger'),
+  MENU_LIST = document.querySelector('.menu__list'),
+  MENU_ITEMS = document.querySelectorAll('.menu__link'),
+  MENU_LOGO = document.querySelector('.menu-logo');
 
 function openBurgerMenu() {
-  burgerBtn.style.transform = 'rotate(90deg)';
-  menuStatus.classList.remove('close');
-  menuStatus.classList.add('open');
-  menuList.classList.add('open-menu-list');
-  menuList.classList.add('shadow');
+  BURGER_BTN.style.transform = 'rotate(90deg)';
+  MENU_STATUS.classList.remove('close');
+  MENU_STATUS.classList.add('open');
+  MENU_LIST.classList.add('open-menu-list');
+  MENU_LIST.classList.add('shadow');
   document.body.style['overflow-y'] = 'hidden';
-  burgerBtn.removeEventListener('click', openBurgerMenu);
+  BURGER_BTN.removeEventListener('click', openBurgerMenu);
 }
 
 function closeBurgerMenu() {
-  burgerBtn.style.transform = 'rotate(0deg)';
-  menuStatus.classList.remove('open');
-  menuStatus.classList.add('close');
-  menuList.classList.remove('open-menu-list');
-  menuList.classList.remove('shadow');
+  BURGER_BTN.style.transform = 'rotate(0deg)';
+  MENU_STATUS.classList.remove('open');
+  MENU_STATUS.classList.add('close');
+  MENU_LIST.classList.remove('open-menu-list');
+  MENU_LIST.classList.remove('shadow');
   document.body.style['overflow-y'] = 'auto';
-  burgerBtn.removeEventListener('click', closeBurgerMenu);
+  BURGER_BTN.removeEventListener('click', closeBurgerMenu);
 }
 
-burgerBtn.addEventListener('click', function () {
-  const isCloseMenu = menuStatus.classList.contains('close');
+BURGER_BTN.addEventListener('click', function () {
+  const isCloseMenu = MENU_STATUS.classList.contains('close');
   isCloseMenu ? openBurgerMenu() : closeBurgerMenu();
 });
 
-menuLogo.addEventListener('click', closeBurgerMenu);
+MENU_LOGO.addEventListener('click', closeBurgerMenu);
 
-menuItems.forEach(menuItem => {
+MENU_ITEMS.forEach(menuItem => {
   menuItem.addEventListener('click', closeBurgerMenu);
 });
 
 function getAreaClick(e) {
-  const isOpenMenu = menuStatus.classList.contains('open');
+  const isOpenMenu = MENU_STATUS.classList.contains('open');
   const target = e.target;
-  const its_menu = target == menuList || menuList.contains(target);
-  const its_btnMenu = target == burgerBtn;
+  const itsMenu = target == MENU_LIST || MENU_LIST.contains(target);
+  const itsBtnMenu = target == BURGER_BTN;
 
-  if (!its_menu && !its_btnMenu && isOpenMenu) {
+  if (!itsMenu && !itsBtnMenu && isOpenMenu) {
     closeBurgerMenu();
   }
 }
@@ -149,67 +149,78 @@ window.addEventListener('resize', function () {
 });
 
 //Popup
-const popUpStatus = document.querySelector('.close-pet-info'),
-  popUpBtn = document.querySelector('.popup__button'),
-  popUp = document.querySelector('.popup'),
-  popUpWindow = document.querySelector('.popup__content'),
-  petCards = document.querySelectorAll('.pet-card');
+const POP_UP_STATUS = document.querySelector('.close-pet-info'),
+  POP_UP_BTN = document.querySelector('.popup__button'),
+  POP_UP = document.querySelector('.popup'),
+  POP_UP_WINDOW = document.querySelector('.popup__content'),
+  PET_CARDS = document.querySelectorAll('.pet-card');
 
-function loadPet() {
+function loadPet(e) {
   openPopUp();
 }
 
-petCards.forEach(petCard => {
+PET_CARDS.forEach(petCard => {
   petCard.addEventListener('click', function () {
     loadPet();
   });
 });
 
 function openPopUp() {
-  popUpStatus.classList.remove('close-pet-info');
-  popUpStatus.classList.add('open-pet-info');
-  popUp.classList.add('open-popup');
+  POP_UP_STATUS.classList.remove('close-pet-info');
+  POP_UP_STATUS.classList.add('open-pet-info');
+  POP_UP.classList.add('open-popup');
   document.body.style['overflow'] = 'hidden';
 }
 
 function closePopUp() {
-  popUpStatus.classList.remove('open-pet-info');
-  popUpStatus.classList.add('close-pet-info');
-  popUp.classList.remove('open-popup');
+  POP_UP_STATUS.classList.remove('open-pet-info');
+  POP_UP_STATUS.classList.add('close-pet-info');
+  POP_UP.classList.remove('open-popup');
   document.body.style['overflow'] = 'auto';
 }
 
-popUpBtn.addEventListener('click', closePopUp);
+POP_UP_BTN.addEventListener('click', closePopUp);
 
 function getAreaPopup(e) {
-  const isOpenMenu = popUpStatus.classList.contains('open-pet-info');
+  const isOpenMenu = POP_UP_STATUS.classList.contains('open-pet-info');
   const target = e.target;
-  const its_menu = target == popUpWindow || popUpWindow.contains(target);
+  const itsMenu = target == POP_UP_WINDOW || POP_UP_WINDOW.contains(target);
 
-  if (!its_menu && isOpenMenu) {
+  if (!itsMenu && isOpenMenu) {
     closePopUp();
   }
 }
 
-popUp.addEventListener('click', getAreaPopup);
+POP_UP.addEventListener('click', getAreaPopup);
 
 function hoverPopupBtn() {
-  popUpBtn.style.backgroundColor = 'var(--color-primary-light)';
-  popUpBtn.style.border = 'none';
+  POP_UP_BTN.style.backgroundColor = 'var(--color-primary-light)';
+  POP_UP_BTN.style.border = 'none';
 }
 
-popUp.onmouseover = function (e) {
+POP_UP.onmouseover = function (e) {
   const target = e.target;
-  const its_menu = target == popUpWindow || popUpWindow.contains(target);
+  const itsMenu = target == POP_UP_WINDOW || POP_UP_WINDOW.contains(target);
 
-  if (!its_menu) {
+  if (!itsMenu) {
+    //    POP_UP.style.cursor = 'pointer';
     hoverPopupBtn();
   }
+  //  else {
+  //    POP_UP.style.cursor = 'auto';
+  //  }
 };
 
-popUpBtn.addEventListener('mouseover', hoverPopupBtn);
+POP_UP_BTN.addEventListener('mouseover', hoverPopupBtn);
 
-popUp.onmouseout = function () {
-  popUpBtn.style.backgroundColor = '';
-  popUpBtn.style.border = '';
+POP_UP.onmouseout = function () {
+  POP_UP_BTN.style.backgroundColor = '';
+  POP_UP_BTN.style.border = '';
 };
+
+//Carousel
+const BTN_LEFT = document.querySelector("#btn-left"),
+  BTN_RIGHT = document.querySelector("#btn-right"),
+  CAROUSEL = document.querySelector("#carousel"),
+  ITEM_LEFT = document.querySelector("#item-left"),
+  ITEM_RIGHT = document.querySelector("#item-right");
