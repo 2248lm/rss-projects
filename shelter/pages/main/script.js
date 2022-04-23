@@ -1,5 +1,4 @@
-//Pets data
-const pets = [
+const JSON_PETS = `[
   {
     "name": "Katrine",
     "img": "../../assets/img/pets-katrine.png",
@@ -88,7 +87,14 @@ const pets = [
     "diseases": ["none"],
     "parasites": ["none"]
   }
-]
+]`;
+
+const PETS = JSON.parse(JSON_PETS);
+
+const PETS_NAME_ARR = [];
+for (let i of PETS) {
+  PETS_NAME_ARR.push(i.name);
+}
 
 //Burger menu
 const MENU_STATUS = document.querySelector('.close'),
@@ -148,22 +154,26 @@ window.addEventListener('resize', function () {
   }
 });
 
+const PET_CARDS = document.querySelectorAll('.pet-card'),
+  PET_NAMES = document.querySelectorAll('.pet-card__name');
+
 //Popup
 const POP_UP_STATUS = document.querySelector('.close-pet-info'),
   POP_UP_BTN = document.querySelector('.popup__button'),
   POP_UP = document.querySelector('.popup'),
-  POP_UP_WINDOW = document.querySelector('.popup__content'),
-  PET_CARDS = document.querySelectorAll('.pet-card');
+  POP_UP_WINDOW = document.querySelector('.popup__content');
 
-function loadPet(e) {
-  openPopUp();
-}
+const POP_UP_PET_IMG = document.querySelector('.popup__img'),
+  POP_UP_PET_NAME = document.querySelector('.popup__name'),
+  POP_UP_PET_TYPE = document.querySelector('.popup__type'),
+  POP_UP_PET_DESCRIPTION = document.querySelector('.popup__description'),
+  POP_UP_ADDITIONAL_INFO = document.querySelector('.popup__additional'),
+  PET_AGE = document.querySelector(".popup__additional li:nth-child(1) span"),
+  PET_INOCULATIONS = document.querySelector(".popup__additional li:nth-child(2) span"),
+  PET_DISEASES = document.querySelector(".popup__additional li:nth-child(3) span"),
+  PET_PARASITES = document.querySelector(".popup__additional li:nth-child(4) span");
 
-PET_CARDS.forEach(petCard => {
-  petCard.addEventListener('click', function () {
-    loadPet();
-  });
-});
+let petPosition;
 
 function openPopUp() {
   POP_UP_STATUS.classList.remove('close-pet-info');
@@ -171,6 +181,29 @@ function openPopUp() {
   POP_UP.classList.add('open-popup');
   document.body.style['overflow'] = 'hidden';
 }
+
+function loadPet() {
+  const PET_NAME = PET_NAMES[petPosition].innerHTML;
+  const PET_INDEX = PETS_NAME_ARR.indexOf(PET_NAME);
+
+  POP_UP_PET_IMG.src = PETS[PET_INDEX].img;
+  POP_UP_PET_NAME.innerHTML = PETS[PET_INDEX].name;
+  POP_UP_PET_TYPE.innerHTML = `${PETS[PET_INDEX].type} - ${PETS[PET_INDEX].breed}`;
+  POP_UP_PET_DESCRIPTION.innerHTML = PETS[PET_INDEX].description;
+  PET_AGE.innerHTML = PETS[PET_INDEX].age;
+  PET_INOCULATIONS.innerHTML = PETS[PET_INDEX].inoculations;
+  PET_DISEASES.innerHTML = PETS[PET_INDEX].diseases;
+  PET_PARASITES.innerHTML = PETS[PET_INDEX].parasites;
+
+  openPopUp();
+}
+
+PET_CARDS.forEach((petCard, i) => {
+  petCard.addEventListener('click', function () {
+    petPosition = i;
+    loadPet();
+  });
+});
 
 function closePopUp() {
   POP_UP_STATUS.classList.remove('open-pet-info');

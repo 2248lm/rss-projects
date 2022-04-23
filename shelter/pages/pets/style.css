@@ -239,6 +239,10 @@
     margin: -1px;
   }
 
+  .popup__content {
+    margin-top: -1px;
+  }
+
   .pets__group {
     display: -ms-grid;
     display: grid;
