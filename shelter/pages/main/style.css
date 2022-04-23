@@ -75,6 +75,9 @@ a {
 .not-only__button,
 .section__title,
 .section__title-center,
+.popup__name,
+.popup__type,
+.popup__description,
 .our-friends__button,
 .pet-card__name,
 .pet-card__button,
@@ -193,6 +196,7 @@ a {
 }
 
 .not-only__button,
+.popup__button,
 .our-friends__button,
 .pet-card__button,
 .arrow-button {
@@ -327,7 +331,129 @@ a {
   padding-bottom: 25px;
 }
 
+.popup {
+  position: fixed;
+  z-index: 15;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  margin-left: -2px;
+  background-color: rgba(41, 41, 41, 0.6);
+  opacity: 0;
+  visibility: hidden;
+}
+
+.popup__body {
+  min-height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.popup__button {
+  position: absolute;
+  top: -52px;
+  right: -42px;
+  width: 52px;
+  height: 52px;
+  font-size: 30px;
+  background-color: transparent;
+  border: 2px solid var(--color-primary);
+}
+
+.popup__content {
+  position: relative;
+  z-index: 20;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 900px;
+  height: 500px;
+  background-color: var(--color-light-s);
+  border-radius: 9px;
+}
+
+.popup__img {
+  width: 500px;
+  height: 500px;
+  background-image: url("../../assets/img/pets-jennifer.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  border-top-left-radius: 9px;
+  border-bottom-left-radius: 9px;
+}
+
+.popup__data {
+  width: 400px;
+  padding-top: 51px;
+  padding-left: 30px;
+  padding-right: 20px;
+  color: var(--color-black);
+}
+
+.popup__name {
+  font-size: 35px;
+  line-height: 130%;
+  letter-spacing: 0.06em;
+}
+
+.popup__type {
+  margin-top: 8px;
+  font-size: 20px;
+  line-height: 115%;
+  letter-spacing: 0.06em;
+}
+
+.popup__description {
+  margin-top: 40px;
+  font-size: 15px;
+  line-height: 110%;
+  letter-spacing: 0.06em;
+  line-height: 17px;
+}
+
+.popup__additional li {
+  margin-top: 12px;
+  font-family: Georgia;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 110%;
+  letter-spacing: 0.8px;
+}
+
+.popup__additional li::before {
+  content: "\2022";
+  display: inline-block;
+  width: 4px;
+  margin-right: 11px;
+  color: var(--color-primary);
+  font-weight: bold;
+}
+
+.popup__additional li b {
+  letter-spacing: 2.1px;
+}
+
+.popup__additional li:first-child {
+  margin-top: 24px;
+}
+
+.open-popup {
+  opacity: 1;
+  visibility: visible;
+}
+
 .our-friends {
+  position: relative;
   display: -ms-grid;
   display: grid;
   -ms-grid-rows: (auto)[3];
@@ -991,6 +1117,7 @@ a {
     gap: 40px;
     width: 320px;
     height: 100%;
+    min-height: 823px;
     margin-top: 1px;
     background-color: var(--color-dark-3xl);
     -webkit-transition: right 0.5s ease;
