@@ -144,6 +144,17 @@ function getAreaClick(e) {
   }
 }
 
+MENU_WRAPPER.onmouseover = function (e) {
+  const target = e.target;
+  const itsMenu = target == MENU_LIST || MENU_LIST.contains(target);
+
+  if (!itsMenu) {
+    MENU_WRAPPER.style.cursor = 'pointer';
+  } else {
+    MENU_WRAPPER.style.cursor = 'auto';
+  }
+};
+
 MENU_WRAPPER.addEventListener('click', getAreaClick);
 
 window.addEventListener('resize', function () {
@@ -227,7 +238,10 @@ POP_UP.onmouseover = function (e) {
   const itsMenu = target == POP_UP_WINDOW || POP_UP_WINDOW.contains(target);
 
   if (!itsMenu) {
+    POP_UP.style.cursor = 'pointer';
     hoverPopupBtn();
+  } else {
+    POP_UP.style.cursor = 'auto';
   }
 };
 
