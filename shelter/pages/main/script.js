@@ -245,42 +245,6 @@ const BTN_LEFT = document.querySelector('#btn-left'),
   ITEM_RIGHT = document.querySelector('#item-right'),
   ITEM_ACTIVE = document.querySelector('#item-active');
 
-let arrActivePetsIndex = [];
-let arrNewPetsIndex = [];
-let carouselPetCount;
-
-function countCarouselPets() {
-  let screenWidth = window.innerWidth;
-  if (screenWidth >= 1280) { return 3 }
-  else if (screenWidth >= 768) { return 2 }
-  else { return 1 }
-}
-
-function getActivePetsIndex() {
-  carouselPetCount = countCarouselPets();
-  arrActivePetsIndex = [];
-
-  for (let i = 0; i < carouselPetCount; i++) {
-    let petName = ITEM_ACTIVE.children[i].children[1].innerHTML;
-    let petIndex = PETS_NAME_ARR.indexOf(petName);
-    arrActivePetsIndex.push(petIndex);
-  }
-  return arrActivePetsIndex;
-}
-
-function creatNewPetsIndex() {
-  let activePets = getActivePetsIndex();
-  arrNewPetsIndex = [];
-
-  while (arrNewPetsIndex.length < carouselPetCount) {
-    let petIndex = Math.floor(Math.random() * 8);
-    if (!activePets.includes(petIndex) && !arrNewPetsIndex.includes(petIndex)) {
-      arrNewPetsIndex.push(petIndex);
-    }
-  }
-  return arrNewPetsIndex;
-}
-
 function moveLeft() {
   CAROUSEL.classList.add('transition-left');
   BTN_LEFT.removeEventListener('click', moveLeft);
@@ -296,26 +260,60 @@ function moveRight() {
 BTN_LEFT.addEventListener('click', moveLeft);
 BTN_RIGHT.addEventListener('click', moveRight);
 
+let carouselPetCount;
+function countCarouselPets() {
+  let screenWidth = window.innerWidth;
+  if (screenWidth >= 1280) { return 3 }
+  else if (screenWidth >= 768) { return 2 }
+  else { return 1 }
+}
+carouselPetCount = countCarouselPets();
+
+function getActivePetsIndex() {
+  let arrActivePetsIndex = [];
+  for (let i = 0; i < carouselPetCount; i++) {
+    let petName = ITEM_ACTIVE.children[i].children[1].innerHTML;
+    let petIndex = PETS_NAME_ARR.indexOf(petName);
+    arrActivePetsIndex.push(petIndex);
+  }
+  return arrActivePetsIndex;
+}
+
+function creatNewPetsIndex() {
+  let activePets = getActivePetsIndex();
+  let arrNewPetsIndex = [];
+  while (arrNewPetsIndex.length < carouselPetCount) {
+    let petIndex = Math.floor(Math.random() * 8);
+    if (!activePets.includes(petIndex) && !arrNewPetsIndex.includes(petIndex)) {
+      arrNewPetsIndex.push(petIndex);
+    }
+  }
+  return arrNewPetsIndex;
+}
+
 CAROUSEL.addEventListener('animationend', (animationEvent) => {
   let changedItem;
+  let newPets;
   if (animationEvent.animationName === "move-left") {
     CAROUSEL.classList.remove("transition-left");
     changedItem = ITEM_LEFT;
-    document.querySelector("#item-active").innerHTML = ITEM_LEFT.innerHTML;
-    creatNewPetsIndex();
-    for (let i in arrNewPetsIndex) {
-      ITEM_LEFT.children[i].children[0].src = PETS[arrNewPetsIndex[i]].img;
-      ITEM_LEFT.children[i].children[1].innerHTML = PETS[arrNewPetsIndex[i]].name;
+    newPets = creatNewPetsIndex();
+
+    for (let i in newPets) {
+      ITEM_LEFT.children[i].children[0].src = PETS[newPets[i]].img;
+      ITEM_LEFT.children[i].children[1].innerHTML = PETS[newPets[i]].name;
     }
+    document.querySelector("#item-active").innerHTML = ITEM_LEFT.innerHTML;
   } else {
     CAROUSEL.classList.remove("transition-right");
     changedItem = ITEM_RIGHT;
-    document.querySelector("#item-active").innerHTML = ITEM_RIGHT.innerHTML;
-    creatNewPetsIndex();
-    for (let i in arrNewPetsIndex) {
-      ITEM_RIGHT.children[i].children[0].src = PETS[arrNewPetsIndex[i]].img;
-      ITEM_RIGHT.children[i].children[1].innerHTML = PETS[arrNewPetsIndex[i]].name;
+    newPets = creatNewPetsIndex();
+
+    for (let i in newPets) {
+      ITEM_RIGHT.children[i].children[0].src = PETS[newPets[i]].img;
+      ITEM_RIGHT.children[i].children[1].innerHTML = PETS[newPets[i]].name;
     }
+    document.querySelector("#item-active").innerHTML = ITEM_RIGHT.innerHTML;
   }
 
   BTN_LEFT.addEventListener("click", moveLeft);
