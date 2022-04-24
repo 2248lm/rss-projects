@@ -152,10 +152,9 @@ window.addEventListener('resize', function () {
   }
 });
 
-const PET_CARDS = document.querySelectorAll('.pet-card'),
-  PET_NAMES = document.querySelectorAll('.pet-card__name');
+//Pop-up
+let petCards = document.querySelectorAll('.pet-card');
 
-//Popup
 const POP_UP_STATUS = document.querySelector('.close-pet-info'),
   POP_UP_BTN = document.querySelector('.popup__button'),
   POP_UP = document.querySelector('.popup'),
@@ -178,10 +177,8 @@ function openPopUp() {
   document.body.style['overflow'] = 'hidden';
 }
 
-function loadPet(petPosition) {
-  const PET_NAME = PET_NAMES[petPosition].innerHTML;
-  const PET_INDEX = PETS_NAME_ARR.indexOf(PET_NAME);
-
+function loadPet(petName) {
+  const PET_INDEX = PETS_NAME_ARR.indexOf(petName);
   POP_UP_PET_IMG.src = PETS[PET_INDEX].img;
   POP_UP_PET_NAME.innerHTML = PETS[PET_INDEX].name;
   POP_UP_PET_TYPE.innerHTML = `${PETS[PET_INDEX].type} - ${PETS[PET_INDEX].breed}`;
@@ -189,14 +186,12 @@ function loadPet(petPosition) {
   PET_AGE.innerHTML = PETS[PET_INDEX].age;
   PET_INOCULATIONS.innerHTML = PETS[PET_INDEX].inoculations;
   PET_DISEASES.innerHTML = PETS[PET_INDEX].diseases;
-  PET_PARASITES.innerHTML = PETS[PET_INDEX].parasites;
-
   openPopUp();
 }
 
-PET_CARDS.forEach((petCard, i) => {
+petCards.forEach(petCard => {
   petCard.addEventListener('click', function () {
-    loadPet(i);
+    loadPet(petCard.children[1].innerHTML);
   });
 });
 
@@ -302,6 +297,7 @@ BTN_LEFT.addEventListener('click', moveLeft);
 BTN_RIGHT.addEventListener('click', moveRight);
 
 CAROUSEL.addEventListener('animationend', (animationEvent) => {
+  let changedItem;
   if (animationEvent.animationName === "move-left") {
     CAROUSEL.classList.remove("transition-left");
     changedItem = ITEM_LEFT;
@@ -321,6 +317,14 @@ CAROUSEL.addEventListener('animationend', (animationEvent) => {
       ITEM_RIGHT.children[i].children[1].innerHTML = PETS[arrNewPetsIndex[i]].name;
     }
   }
+
   BTN_LEFT.addEventListener("click", moveLeft);
   BTN_RIGHT.addEventListener("click", moveRight);
+
+  petCards = document.querySelectorAll('.pet-card');
+  petCards.forEach(petCard => {
+    petCard.addEventListener('click', function () {
+      loadPet(petCard.children[1].innerHTML);
+    });
+  });
 });
