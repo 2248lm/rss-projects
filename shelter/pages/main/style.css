@@ -565,8 +565,8 @@ a {
 .transition-right {
   -webkit-animation-name: move-right;
   animation-name: move-right;
-  -webkit-animation-duration: 2s;
-  animation-duration: 2s;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
 }
 
 @-webkit-keyframes move-left {
@@ -592,8 +592,8 @@ a {
 .transition-left {
   -webkit-animation-name: move-left;
   animation-name: move-left;
-  -webkit-animation-duration: 2s;
-  animation-duration: 2s;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
 }
 
 .hidden {
@@ -1166,6 +1166,15 @@ a {
     line-height: 130%;
     letter-spacing: 0.06em;
     text-align: center;
+  }
+
+  .menu__wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    width: 100%;
+    height: 100%;
   }
 
   .menu-logo__subtitle {

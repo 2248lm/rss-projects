@@ -101,7 +101,8 @@ const MENU_STATUS = document.querySelector('.close'),
   BURGER_BTN = document.querySelector('.burger'),
   MENU_LIST = document.querySelector('.menu__list'),
   MENU_ITEMS = document.querySelectorAll('.menu__link'),
-  MENU_LOGO = document.querySelector('.menu-logo');
+  MENU_LOGO = document.querySelector('.menu-logo'),
+  MENU_WRAPPER = document.querySelector('.menu__wrapper');
 
 function openBurgerMenu() {
   BURGER_BTN.style.transform = 'rotate(90deg)';
@@ -143,7 +144,7 @@ function getAreaClick(e) {
   }
 }
 
-document.addEventListener('click', getAreaClick);
+MENU_WRAPPER.addEventListener('click', getAreaClick);
 
 window.addEventListener('resize', function () {
   let screenWidth = window.innerWidth;
