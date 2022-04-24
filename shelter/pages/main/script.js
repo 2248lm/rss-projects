@@ -110,7 +110,6 @@ function openBurgerMenu() {
   MENU_LIST.classList.add('open-menu-list');
   MENU_LIST.classList.add('shadow');
   document.body.style['overflow-y'] = 'hidden';
-  BURGER_BTN.removeEventListener('click', openBurgerMenu);
 }
 
 function closeBurgerMenu() {
@@ -120,7 +119,6 @@ function closeBurgerMenu() {
   MENU_LIST.classList.remove('open-menu-list');
   MENU_LIST.classList.remove('shadow');
   document.body.style['overflow-y'] = 'auto';
-  BURGER_BTN.removeEventListener('click', closeBurgerMenu);
 }
 
 BURGER_BTN.addEventListener('click', function () {
@@ -173,8 +171,6 @@ const POP_UP_PET_IMG = document.querySelector('.popup__img'),
   PET_DISEASES = document.querySelector(".popup__additional li:nth-child(3) span"),
   PET_PARASITES = document.querySelector(".popup__additional li:nth-child(4) span");
 
-let petPosition;
-
 function openPopUp() {
   POP_UP_STATUS.classList.remove('close-pet-info');
   POP_UP_STATUS.classList.add('open-pet-info');
@@ -182,7 +178,7 @@ function openPopUp() {
   document.body.style['overflow'] = 'hidden';
 }
 
-function loadPet() {
+function loadPet(petPosition) {
   const PET_NAME = PET_NAMES[petPosition].innerHTML;
   const PET_INDEX = PETS_NAME_ARR.indexOf(PET_NAME);
 
@@ -200,8 +196,7 @@ function loadPet() {
 
 PET_CARDS.forEach((petCard, i) => {
   petCard.addEventListener('click', function () {
-    petPosition = i;
-    loadPet();
+    loadPet(i);
   });
 });
 
@@ -236,12 +231,8 @@ POP_UP.onmouseover = function (e) {
   const itsMenu = target == POP_UP_WINDOW || POP_UP_WINDOW.contains(target);
 
   if (!itsMenu) {
-    //    POP_UP.style.cursor = 'pointer';
     hoverPopupBtn();
   }
-  //  else {
-  //    POP_UP.style.cursor = 'auto';
-  //  }
 };
 
 POP_UP_BTN.addEventListener('mouseover', hoverPopupBtn);
@@ -252,8 +243,84 @@ POP_UP.onmouseout = function () {
 };
 
 //Carousel
-const BTN_LEFT = document.querySelector("#btn-left"),
-  BTN_RIGHT = document.querySelector("#btn-right"),
-  CAROUSEL = document.querySelector("#carousel"),
-  ITEM_LEFT = document.querySelector("#item-left"),
-  ITEM_RIGHT = document.querySelector("#item-right");
+const BTN_LEFT = document.querySelector('#btn-left'),
+  BTN_RIGHT = document.querySelector('#btn-right'),
+  CAROUSEL = document.querySelector('#carousel'),
+  ITEM_LEFT = document.querySelector('#item-left'),
+  ITEM_RIGHT = document.querySelector('#item-right'),
+  ITEM_ACTIVE = document.querySelector('#item-active');
+
+let arrActivePetsIndex = [];
+let arrNewPetsIndex = [];
+let carouselPetCount;
+
+function countCarouselPets() {
+  let screenWidth = window.innerWidth;
+  if (screenWidth >= 1280) { return 3 }
+  else if (screenWidth >= 768) { return 2 }
+  else { return 1 }
+}
+
+function getActivePetsIndex() {
+  carouselPetCount = countCarouselPets();
+  arrActivePetsIndex = [];
+
+  for (let i = 0; i < carouselPetCount; i++) {
+    let petName = ITEM_ACTIVE.children[i].children[1].innerHTML;
+    let petIndex = PETS_NAME_ARR.indexOf(petName);
+    arrActivePetsIndex.push(petIndex);
+  }
+  return arrActivePetsIndex;
+}
+
+function creatNewPetsIndex() {
+  let activePets = getActivePetsIndex();
+  arrNewPetsIndex = [];
+
+  while (arrNewPetsIndex.length < carouselPetCount) {
+    let petIndex = Math.floor(Math.random() * 8);
+    if (!activePets.includes(petIndex) && !arrNewPetsIndex.includes(petIndex)) {
+      arrNewPetsIndex.push(petIndex);
+    }
+  }
+  return arrNewPetsIndex;
+}
+
+function moveLeft() {
+  CAROUSEL.classList.add('transition-left');
+  BTN_LEFT.removeEventListener('click', moveLeft);
+  BTN_RIGHT.removeEventListener('click', moveRight);
+}
+
+function moveRight() {
+  CAROUSEL.classList.add('transition-right');
+  BTN_LEFT.removeEventListener('click', moveLeft);
+  BTN_RIGHT.removeEventListener('click', moveRight);
+};
+
+BTN_LEFT.addEventListener('click', moveLeft);
+BTN_RIGHT.addEventListener('click', moveRight);
+
+CAROUSEL.addEventListener('animationend', (animationEvent) => {
+  if (animationEvent.animationName === "move-left") {
+    CAROUSEL.classList.remove("transition-left");
+    changedItem = ITEM_LEFT;
+    document.querySelector("#item-active").innerHTML = ITEM_LEFT.innerHTML;
+    creatNewPetsIndex();
+    for (let i in arrNewPetsIndex) {
+      ITEM_LEFT.children[i].children[0].src = PETS[arrNewPetsIndex[i]].img;
+      ITEM_LEFT.children[i].children[1].innerHTML = PETS[arrNewPetsIndex[i]].name;
+    }
+  } else {
+    CAROUSEL.classList.remove("transition-right");
+    changedItem = ITEM_RIGHT;
+    document.querySelector("#item-active").innerHTML = ITEM_RIGHT.innerHTML;
+    creatNewPetsIndex();
+    for (let i in arrNewPetsIndex) {
+      ITEM_RIGHT.children[i].children[0].src = PETS[arrNewPetsIndex[i]].img;
+      ITEM_RIGHT.children[i].children[1].innerHTML = PETS[arrNewPetsIndex[i]].name;
+    }
+  }
+  BTN_LEFT.addEventListener("click", moveLeft);
+  BTN_RIGHT.addEventListener("click", moveRight);
+});

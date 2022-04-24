@@ -565,8 +565,8 @@ a {
 .transition-right {
   -webkit-animation-name: move-right;
   animation-name: move-right;
-  -webkit-animation-duration: 5s;
-  animation-duration: 5s;
+  -webkit-animation-duration: 3s;
+  animation-duration: 3s;
 }
 
 @-webkit-keyframes move-left {
@@ -592,8 +592,8 @@ a {
 .transition-left {
   -webkit-animation-name: move-left;
   animation-name: move-left;
-  -webkit-animation-duration: 5s;
-  animation-duration: 5s;
+  -webkit-animation-duration: 3s;
+  animation-duration: 3s;
 }
 
 .hidden {

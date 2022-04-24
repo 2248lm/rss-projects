@@ -224,7 +224,6 @@
   }
 
   .menu__list {
-    height: 100vh;
     padding-bottom: 18px;
     background-color: var(--color-light-xl);
   }
