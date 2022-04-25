@@ -100,7 +100,7 @@
   display: grid;
   -ms-grid-columns: (270px)[4];
   grid-template-columns: repeat(4, 270px);
-  grid-gap: 30px 40px;
+  grid-gap: 32px 40px;
   -ms-grid-column-align: center;
   justify-self: center;
   max-width: 1200px;
@@ -115,7 +115,6 @@
   justify-content: space-between;
   justify-self: center;
   width: 340px;
-  margin-top: -2px;
 }
 
 .pets__scroll-button {
@@ -133,48 +132,16 @@
   border: none;
 }
 
-.pets__scroll-button:disabled {
-  color: var(--color-dark-s);
-  border: 2px solid var(--color-dark-s);
-  pointer-events: none;
-}
-
 .active-btn {
   background-color: var(--color-primary);
   border: none;
   pointer-events: none;
 }
 
-#pet-1__img {
-  background-image: url("../../assets/img/pets-katrine.png");
-}
-
-#pet-2__img {
-  background-image: url("../../assets/img/pets-jennifer.png");
-}
-
-#pet-3__img {
-  background-image: url("../../assets/img/pets-woody.png");
-}
-
-#pet-4__img {
-  background-image: url("../../assets/img/pets-sophia.png");
-}
-
-#pet-5__img {
-  background-image: url("../../assets/img/pets-timmy.png");
-}
-
-#pet-6__img {
-  background-image: url("../../assets/img/pets-charly.png");
-}
-
-#pet-7__img {
-  background-image: url("../../assets/img/pets-scarlet.png");
-}
-
-#pet-8__img {
-  background-image: url("../../assets/img/pets-freddie.png");
+.disabled-btn {
+  color: var(--color-dark-s);
+  border: 2px solid var(--color-dark-s);
+  pointer-events: none;
 }
 
 @media (max-width: 1279px) {
@@ -182,9 +149,12 @@
     padding-bottom: 76px;
   }
 
+  .section__title-center {
+    line-height: 128%;
+  }
+
   .our-friends {
-    grid-gap: 30px;
-    padding-top: 0;
+    grid-gap: 31px;
   }
 
   .pets__group {
@@ -234,10 +204,6 @@
     display: none;
   }
 
-  .our-friends {
-    margin: -1px;
-  }
-
   .popup__content {
     margin-top: -1px;
   }
@@ -249,7 +215,7 @@
     grid-template-columns: none;
     -ms-grid-rows: (auto)[3];
     grid-template-rows: repeat(3, auto);
-    grid-gap: 30px;
+    grid-gap: 32px;
     padding-top: 13px;
   }
 
@@ -264,12 +230,11 @@
   }
 
   .contacts {
-    padding-top: 2px;
     margin-bottom: -2px;
   }
 
   .location {
-    padding-top: 8px;
+    padding-top: 9px;
   }
 
   .location__item:nth-child(2) {
