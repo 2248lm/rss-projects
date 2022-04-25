@@ -281,13 +281,26 @@ function creatNewPetsIndex() {
   return arrNewPetsIndex;
 }
 
+function loadCarouselPets(item) {
+  const ACTIVE_PETS = getActivePetsIndex();
+  const NEW_PETS = creatNewPetsIndex();
+
+  for (let i in NEW_PETS) {
+    item.children[i].children[0].src = PETS[NEW_PETS[i]].img;
+    item.children[i].children[1].innerHTML = PETS[NEW_PETS[i]].name;
+  }
+  return item;
+}
+
 function moveLeft() {
+  loadCarouselPets(ITEM_LEFT);
   CAROUSEL.classList.add('transition-left');
   BTN_LEFT.removeEventListener('click', moveLeft);
   BTN_RIGHT.removeEventListener('click', moveRight);
 }
 
 function moveRight() {
+  loadCarouselPets(ITEM_RIGHT);
   CAROUSEL.classList.add('transition-right');
   BTN_LEFT.removeEventListener('click', moveLeft);
   BTN_RIGHT.removeEventListener('click', moveRight);
@@ -297,25 +310,13 @@ BTN_LEFT.addEventListener('click', moveLeft);
 BTN_RIGHT.addEventListener('click', moveRight);
 
 CAROUSEL.addEventListener('animationend', (animationEvent) => {
-  let changedItem;
-  let newPets = creatNewPetsIndex();
   if (animationEvent.animationName === "move-left") {
     CAROUSEL.classList.remove("transition-left");
-    for (let i in newPets) {
-      ITEM_LEFT.children[i].children[0].src = PETS[newPets[i]].img;
-      ITEM_LEFT.children[i].children[1].innerHTML = PETS[newPets[i]].name;
-    }
-    changedItem = ITEM_LEFT;
-    document.querySelector("#item-active").innerHTML = changedItem.innerHTML;
+    document.querySelector("#item-active").innerHTML = ITEM_LEFT.innerHTML;
 
   } else {
     CAROUSEL.classList.remove("transition-right");
-    for (let i in newPets) {
-      ITEM_RIGHT.children[i].children[0].src = PETS[newPets[i]].img;
-      ITEM_RIGHT.children[i].children[1].innerHTML = PETS[newPets[i]].name;
-    }
-    changedItem = ITEM_RIGHT;
-    document.querySelector("#item-active").innerHTML = changedItem.innerHTML;
+    document.querySelector("#item-active").innerHTML = ITEM_RIGHT.innerHTML;
   }
   BTN_LEFT.addEventListener("click", moveLeft);
   BTN_RIGHT.addEventListener("click", moveRight);
