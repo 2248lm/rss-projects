@@ -31,10 +31,42 @@ while (ourPetsArray.length < pageCount) {
   }
 
   if (pageCount === 8) {
-    console.log('8 pages');
-    break;
+    if (ourPetsArray.length === 1 || ourPetsArray.length === 5) {
+      let test = ourPetsArray[ourPetsArray.length - 1];
+      while (ourPetsSet.length < 2) {
+        let petIndex = Math.floor(Math.random() * 8);
+        if (!ourPetsSet.includes(petIndex) && !test.includes(petIndex)) {
+          ourPetsSet.push(petIndex);
+        }
+      }
+    }
+    if (ourPetsArray.length === 2 || ourPetsArray.length === 6) {
+      let test = ourPetsArray[ourPetsArray.length - 1].slice(2);
+      while (ourPetsSet.length < 4) {
+        let petIndex = Math.floor(Math.random() * 8);
+        if (!ourPetsSet.includes(petIndex) && !test.includes(petIndex)) {
+          ourPetsSet.push(petIndex);
+        }
+      }
+    }
+    if (ourPetsArray.length === 3 || ourPetsArray.length === 7) {
+      let test = ourPetsArray[ourPetsArray.length - 1].slice(4);
+      while (ourPetsSet.length < 6) {
+        let petIndex = Math.floor(Math.random() * 8);
+        if (!ourPetsSet.includes(petIndex) && !test.includes(petIndex)) {
+          ourPetsSet.push(petIndex);
+        }
+      }
+    }
+    while (ourPetsSet.length < ourPetsCount) {
+      petIndex = Math.floor(Math.random() * 8);
+      if (!ourPetsSet.includes(petIndex)) {
+        ourPetsSet.push(petIndex);
+      }
+    }
+    ourPetsArray.push(ourPetsSet);
+    ourPetsSet = [];
   }
-
   if (pageCount === 16) {
     console.log('16 pages');
     break;
