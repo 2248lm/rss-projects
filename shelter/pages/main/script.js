@@ -248,7 +248,6 @@ const BTN_LEFT = document.querySelector('#btn-left'),
 
 let arrActivePetsIndex = [];
 let arrNewPetsIndex = [];
-let carouselPetCount;
 
 function countCarouselPets() {
   let screenWidth = window.innerWidth;
@@ -258,7 +257,7 @@ function countCarouselPets() {
 }
 
 function getActivePetsIndex() {
-  carouselPetCount = countCarouselPets();
+  let carouselPetCount = countCarouselPets();
   arrActivePetsIndex = [];
 
   for (let i = 0; i < carouselPetCount; i++) {
@@ -270,6 +269,7 @@ function getActivePetsIndex() {
 }
 
 function creatNewPetsIndex() {
+  let carouselPetCount = countCarouselPets();
   let activePets = getActivePetsIndex();
   arrNewPetsIndex = [];
   while (arrNewPetsIndex.length < carouselPetCount) {
@@ -281,10 +281,23 @@ function creatNewPetsIndex() {
   return arrNewPetsIndex;
 }
 
-function loadCarouselPets(item) {
-  const ACTIVE_PETS = getActivePetsIndex();
-  const NEW_PETS = creatNewPetsIndex();
+document.addEventListener("DOMContentLoaded", function () {
+  let carouselPetCount = countCarouselPets();
+  let carouselPetLine = [];
+  while (carouselPetLine.length < carouselPetCount) {
+    let petIndex = Math.floor(Math.random() * 8);
+    if (!carouselPetLine.includes(petIndex)) {
+      carouselPetLine.push(petIndex);
+    }
+  }
+  for (let i in carouselPetLine) {
+    ITEM_ACTIVE.children[i].children[0].src = PETS[carouselPetLine[i]].img;
+    ITEM_ACTIVE.children[i].children[1].innerHTML = PETS[carouselPetLine[i]].name;
+  }
+});
 
+function loadCarouselPets(item) {
+  const NEW_PETS = creatNewPetsIndex();
   for (let i in NEW_PETS) {
     item.children[i].children[0].src = PETS[NEW_PETS[i]].img;
     item.children[i].children[1].innerHTML = PETS[NEW_PETS[i]].name;
