@@ -68,53 +68,82 @@ while (ourPetsArray.length < pageCount) {
     ourPetsSet = [];
   }
   if (pageCount === 16) {
-    let test = [];
     if (ourPetsArray.length === 1 || ourPetsArray.length === 9) {
-      test = ourPetsArray[ourPetsArray.length - 1];
+      let test = ourPetsArray[ourPetsArray.length - 1];
+      while (ourPetsSet.length < ourPetsCount) {
+        petIndex = Math.floor(Math.random() * 8);
+        if (!ourPetsSet.includes(petIndex) && !test.includes(petIndex)) {
+          ourPetsSet.push(petIndex);
+        }
+      }
     }
     if (ourPetsArray.length === 2 || ourPetsArray.length === 10) {
       let test1 = ourPetsArray[ourPetsArray.length - 2];
       let test2 = ourPetsArray[ourPetsArray.length - 1];
-      test = test1.concat(test2);
+      let test = test1.concat(test2);
       while (ourPetsSet.length < 2) {
         let petIndex = Math.floor(Math.random() * 8);
         if (!ourPetsSet.includes(petIndex) && !test.includes(petIndex)) {
           ourPetsSet.push(petIndex);
         }
-      } test = [];
+      }
     }
     if (ourPetsArray.length === 3 || ourPetsArray.length === 11) {
       let test = ourPetsArray[ourPetsArray.length - 1].slice(-1);
+      while (ourPetsSet.length < ourPetsCount) {
+        let petIndex = Math.floor(Math.random() * 8);
+        if (!ourPetsSet.includes(petIndex) && !test.includes(petIndex)) {
+          ourPetsSet.push(petIndex);
+        }
+      }
     }
     if (ourPetsArray.length === 4 || ourPetsArray.length === 12) {
       let test1 = ourPetsArray[ourPetsArray.length - 2].slice(-1);
       let test2 = ourPetsArray[ourPetsArray.length - 1];
-      test = test1.concat(test2);
+      let test = test1.concat(test2);
+      while (ourPetsSet.length < ourPetsCount) {
+        let petIndex = Math.floor(Math.random() * 8);
+        if (!ourPetsSet.includes(petIndex) && !test.includes(petIndex)) {
+          ourPetsSet.push(petIndex);
+        }
+      }
     }
-
     if (ourPetsArray.length === 5 || ourPetsArray.length === 13) {
       let test1 = ourPetsArray[ourPetsArray.length - 3].slice(-1);
       let test2 = ourPetsArray[ourPetsArray.length - 2];
       let test3 = ourPetsArray[ourPetsArray.length - 1];
-      test = test1.concat(test2);
-      test = test.concat(test3);
+      let test4 = test1.concat(test2);
+      let test = test4.concat(test3);
       while (ourPetsSet.length < 1) {
         let petIndex = Math.floor(Math.random() * 8);
         if (!ourPetsSet.includes(petIndex) && !test.includes(petIndex)) {
           ourPetsSet.push(petIndex);
         }
-      } test = [];
+      }
     }
-
+    if (ourPetsArray.length === 6 || ourPetsArray.length === 14) {
+      let test = ourPetsArray[ourPetsArray.length - 1].slice(-2);
+      while (ourPetsSet.length < ourPetsCount) {
+        let petIndex = Math.floor(Math.random() * 8);
+        if (!ourPetsSet.includes(petIndex) && !test.includes(petIndex)) {
+          ourPetsSet.push(petIndex);
+        }
+      }
+    }
     if (ourPetsArray.length === 7 || ourPetsArray.length === 15) {
       let test1 = ourPetsArray[ourPetsArray.length - 2].slice(-2);
       let test2 = ourPetsArray[ourPetsArray.length - 1];
-      test = test1.concat(test2);
+      let test = test1.concat(test2);
+      while (ourPetsSet.length < ourPetsCount) {
+        let petIndex = Math.floor(Math.random() * 8);
+        if (!ourPetsSet.includes(petIndex) && !test.includes(petIndex)) {
+          ourPetsSet.push(petIndex);
+        }
+      }
     }
-
-    while (ourPetsSet.length < 3) {
-      let petIndex = Math.floor(Math.random() * 8);
-      if (!ourPetsSet.includes(petIndex) && !test.includes(petIndex)) {
+    while (ourPetsSet.length < ourPetsCount) {
+      petIndex = Math.floor(Math.random() * 8);
+      if (!ourPetsSet.includes(petIndex)) {
         ourPetsSet.push(petIndex);
       }
     }
@@ -122,7 +151,7 @@ while (ourPetsArray.length < pageCount) {
     ourPetsSet = [];
   }
 }
-
+console.log(ourPetsArray);
 let startSet = ourPetsArray[0];
 for (let i in startSet) {
   OUR_PETS_SET.children[i].children[0].src = PETS[startSet[i]].img;
