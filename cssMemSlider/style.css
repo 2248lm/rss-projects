@@ -3,3 +3,168 @@
   margin: 0;
   padding: 0;
 }
+
+html {
+  font-size: 1em;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  background-color: #fecd03;
+}
+
+.wrapper {
+  max-width: 75rem;
+  min-width: 20rem;
+  padding-left: 2%;
+  padding-right: 2%;
+}
+
+.header,
+.footer {
+  padding-top: 2rem;
+  padding-bottom: 1.5rem;
+}
+
+.task_name {
+  font-family: 'Fredericka the Great', cursive;
+  font-size: min(max(1.5rem, calc(1.5rem + ((1vw - 0.2rem) * 1.5))), 3rem);
+  text-align: center;
+}
+
+.main {
+  width: 100%;
+  overflow: hidden;
+}
+
+.slider {
+  display: flex;
+  width: 1000%;
+}
+
+.slide {
+  width: 10%;
+  transition: 1s ease;
+}
+
+.slider input {
+  width: 0;
+  height: 0;
+  opacity: 0;
+}
+
+.slide img {
+  width: 100%;
+}
+
+.description {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.controls {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.control_btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: min(max(1.8rem, calc(1.8rem + ((1vw - 0.2rem) * 1.2))), 3rem);
+  height: min(max(1.8rem, calc(1.8rem + ((1vw - 0.2rem) * 1.2))), 3rem);
+  background-color: transparent;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.control_btn span {
+  width: min(max(0.7rem, calc(0.7rem + ((1vw - 0.2rem) * 0.3))), 1rem);
+  height: min(max(0.7rem, calc(0.7rem + ((1vw - 0.2rem) * 0.3))), 1rem);
+  background-color: #71abfe;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.5s ease;
+}
+
+.control_btn:hover span {
+  background-color: #ffffff;
+}
+
+.titles_container {
+  height: min(max(1.8rem, calc(1.8rem + ((1vw - 0.2rem) * 1.2))), 3rem);
+  overflow: hidden;
+}
+
+.title {
+  font-size: min(max(0.9rem, calc(0.9rem + ((1vw - 0.2rem) * 0.6))), 1.5rem);
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  line-height: 200%;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer a {
+  height: 2rem;
+  background-repeat: no-repeat;
+  background-size: contain;
+  cursor: pointer;
+}
+
+.github,
+.rsschool {
+  height: min(max(1.5rem, calc(1.5rem + ((1vw - 0.2rem) * 1.5))), 3rem);
+}
+
+.footer a:hover {
+  filter: invert(11%) sepia(40%) saturate(808%) hue-rotate(281deg) brightness(98%) contrast(90%);
+  transform: scale(1.1);
+}
+
+.year {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 900;
+  font-size: min(max(1.5rem, calc(1.5rem + ((1vw - 0.2rem) * 1.5))), 3rem);
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    width: 100%;
+  }
+
+  .header,
+  .footer {
+    padding-top: 1rem;
+  }
+
+  .main {
+    padding-bottom: 0;
+  }
+
+  .description {
+    display: flex;
+    flex-direction: column;
+    margin-top: 0;
+  }
+
+  .controls {
+    order: 1;
+    gap: min(max(0.3rem, calc(0.3rem + ((1vw - 0.2rem) * 0.2))), 0.5rem);
+    justify-content: center;
+    width: 100%;
+    margin: 0.8rem 0;
+  }
+
+  .titles_container {
+    order: 2;
+  }
+}
