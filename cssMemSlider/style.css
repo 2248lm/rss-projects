@@ -67,7 +67,6 @@ body {
 
 .controls {
   display: flex;
-  gap: 0.5rem;
   align-items: center;
 }
 
@@ -146,6 +145,34 @@ body {
 
 #slide_10:checked~.slider {
   transform: translateX(-90%);
+}
+
+#slide_1:checked~.description .controls .control_btn #control_1,
+#slide_2:checked~.description .controls .control_btn #control_2,
+#slide_3:checked~.description .controls .control_btn #control_3,
+#slide_4:checked~.description .controls .control_btn #control_4,
+#slide_5:checked~.description .controls .control_btn #control_5,
+#slide_6:checked~.description .controls .control_btn #control_6,
+#slide_7:checked~.description .controls .control_btn #control_7,
+#slide_8:checked~.description .controls .control_btn #control_8,
+#slide_9:checked~.description .controls .control_btn #control_9,
+#slide_10:checked~.description .controls .control_btn #control_10 {
+  background-color: transparent;
+  border: 2px solid #71abfe;
+}
+
+#slide_1:checked~.description .controls .control_btn:hover #control_1,
+#slide_2:checked~.description .controls .control_btn:hover #control_2,
+#slide_3:checked~.description .controls .control_btn:hover #control_3,
+#slide_4:checked~.description .controls .control_btn:hover #control_4,
+#slide_5:checked~.description .controls .control_btn:hover #control_5,
+#slide_6:checked~.description .controls .control_btn:hover #control_6,
+#slide_7:checked~.description .controls .control_btn:hover #control_7,
+#slide_8:checked~.description .controls .control_btn:hover #control_8,
+#slide_9:checked~.description .controls .control_btn:hover #control_9,
+#slide_10:checked~.description .controls .control_btn:hover #control_10 {
+  background-color: transparent;
+  border: 2px solid #ffffff;
 }
 
 .footer {
