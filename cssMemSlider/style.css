@@ -21,16 +21,16 @@ body {
   padding-right: 2%;
 }
 
-.header,
-.footer {
-  padding-top: 2rem;
-  padding-bottom: 1.5rem;
-}
-
 .task_name {
   font-family: 'Fredericka the Great', cursive;
   font-size: min(max(1.5rem, calc(1.5rem + ((1vw - 0.2rem) * 1.5))), 3rem);
   text-align: center;
+}
+
+.header,
+.footer {
+  padding-top: 2rem;
+  padding-bottom: 1rem;
 }
 
 .main {
@@ -225,10 +225,9 @@ body {
 
   .controls {
     order: 1;
-    gap: min(max(0.3rem, calc(0.3rem + ((1vw - 0.2rem) * 0.2))), 0.5rem);
     justify-content: center;
     width: 100%;
-    margin: 0.8rem 0;
+    margin: 0.5rem 0;
   }
 
   .titles_container {
