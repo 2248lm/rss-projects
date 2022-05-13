@@ -280,4 +280,8 @@ body {
     order: 2;
     align-self: flex-start;
   }
+
+  .title {
+    line-height: 100%;
+  }
 }
