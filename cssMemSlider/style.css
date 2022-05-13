@@ -96,6 +96,10 @@ body {
   background-color: #ffffff;
 }
 
+.control_btn:active span {
+  opacity: 50%;
+}
+
 .titles_container {
   height: min(max(1.8rem, calc(1.8rem + ((1vw - 0.2rem) * 1.2))), 3rem);
   overflow: hidden;
