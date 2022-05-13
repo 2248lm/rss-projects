@@ -232,5 +232,6 @@ body {
 
   .titles_container {
     order: 2;
+    align-self: flex-start;
   }
 }
