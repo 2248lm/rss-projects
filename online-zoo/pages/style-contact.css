@@ -1,0 +1,91 @@
+.contact-us-content {
+  min-height: 1874px;
+}
+
+.touch-img {
+  width: 100%;
+}
+
+.touch-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 145px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.touch-us-title {
+  color: #00a092;
+}
+
+.touch-us-subtitle {
+  margin-top: 51px;
+  max-width: 545px;
+  color: #000;
+}
+
+.touch-us-form {
+  display: flexbox;
+}
+
+.send-message {
+  padding-top: 1px;
+  width: 680px;
+  height: 618px;
+  color: #000;
+}
+
+.required {
+  display: inline-block;
+  margin-top: 30px;
+}
+
+.required:first-child {
+  margin-top: 0;
+}
+
+.required::before {
+  color: #00a092;
+  content: "* ";
+}
+
+.send-message-form,
+.send-message-textarea {
+  margin-top: 10px;
+  padding-left: 20px;
+  width: 680px;
+  height: 60px;
+  border: 1px solid #000;
+  border-radius: 5px;
+}
+
+.send-message-textarea {
+  height: 200px;
+  padding-top: 22px;
+}
+
+.send-message-btn {
+  margin-top: 67px;
+  padding-right: 32px;
+  width: 359px;
+  height: 74px;
+  color: #fff;
+  background-color: #00a092;
+  background-image: url(../assets/icons/arrow-r-w.svg);
+  background-position: 245px center;
+  background-repeat: no-repeat;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.send-message-btn:focus {
+  outline: none;
+}
+
+.send-message-btn:hover,
+.send-message-btn:active {
+  background-color: #05786e;
+}

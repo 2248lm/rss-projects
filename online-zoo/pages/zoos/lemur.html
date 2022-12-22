@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>online-zoo</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../normalize.css">
+  <link rel="stylesheet" href="../style-main.css">
+  <link rel="stylesheet" href="style-zoos.css">
+</head>
+
+<body>
+  <header class="header">
+    <h1 class="visuallyhidden">Online Zoo</h1>
+    <div class="content header-content">
+      <a class="logo" href="../index.html">
+        <img class="header-logo" src="../../assets/icons/logo.svg" alt="Online Zoo Logo">
+      </a>
+      <nav>
+        <ul class="menu h-menu">
+          <li><a class="p-btn" href="../index.html">About</a></li>
+          <li><a class="p-btn" href="../map.html">Map</a></li>
+          <li><a class="p-btn activ" href="#">Zoos</a></li>
+          <li><a class="p-btn" href="../contact-us.html">Contact us</a></li>
+          <li><a class="p-btn" href="https://www.figma.com/file/lnK11foY8Aoa6oOlDXovVN/Online-ZOO-Project?node-id=0%3A1"
+              target="_blank">Design</a></li>
+        </ul>
+      </nav>
+      <div class="social-nets">
+        <ul class="social">
+          <li><a href="https://www.youtube.com/" target="_blank"><img src="../../assets/icons/youtube.svg"
+                alt="YouTube"></a></li>
+          <li><a href="https://www.instagram.com/" target="_blank"><img src="../../assets/icons/instagram.svg"
+                alt="Instagram"></a></li>
+          <li><a href="https://www.facebook.com/" target="_blank"><img src="../../assets/icons/facebook.svg"
+                alt="Facebook"></a></li>
+        </ul>
+      </div>
+    </div>
+  </header>
+  <main>
+    <div class="bamboo-bg bamboo-bg-all"></div>
+    <div class="wrapper">
+      <aside class="sidebar">
+        <div class="live-frame">
+          <div class="p-btn live-sign-cam">Live</div>
+          <div class="double-arrow-right"></div>
+        </div>
+        <div class="animal-container">
+          <div class="animal-frame">
+            <a class="animal-sign lemur-icon active" title="Ring-Tailed Lemur, Southeast Asia"></a>
+          </div>
+          <div class="animal-frame">
+            <a class="animal-sign panda-icon" href="./panda.html" title="Giant Panda, Eastern Asia"></a>
+          </div>
+          <div class="animal-frame">
+            <a class="animal-sign eagle-icon" href="./eagle.html" title="Bald Eagle, Continental United States"></a>
+          </div>
+          <div class="animal-frame">
+            <a class="animal-sign gorilla-icon" href="./gorilla.html"
+              title="Western Lowland Gorilla, Western Africa"></a>
+          </div>
+        </div>
+        <div class="down-btn-frame">
+          <div class="arrow-down-btn"></div>
+        </div>
+      </aside>
+      <div class="zoos-container">
+        <div class="zoos-content-general">
+          <section class="zoos-content">
+            <div class="zoos-title-line">
+              <h2 class="zoos-title">Lemurs cams&nbsp;</h2>
+              <form>
+                <button class="p-btn org-btn donate-btn-zoos" disabled>Donate now</button>
+              </form>
+            </div>
+            <div class="zoos-live-main">
+              <p class="p-main-video">Andy, the ring-tailed lemurs in Madagascar, Lemuria Land cam 1</p>
+              <div class="live-video-container video-container-lemur">
+                <iframe id="live-video" width="100%" height="100%"
+                src="https://www.youtube.com/embed/pKIeJqLT-XA?autoplay=1" title="YouTube video player"
+                  frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen></iframe>
+              </div>
+              <div class="zoos-live-button"
+                onclick="liveVideo=document.getElementById('live-video'); liveVideo.style.display='block'; this.style.display='none'">
+              </div>
+              <div class="main-video-logo"></div>
+            </div>
+            <h3 class="zoos-subtitle-line">More live views</h3>
+            <div class="zoos-slider" role="group">
+              <button class="square-btn zoos-slider-btn zoos-btn-l"></button>
+              <div class="zoos-video-line">
+                <div class="zoos-slider-video zoos-video-1 active">
+                  <div class="cap"></div>
+                  <div class="subheader camera-num cam-1">cam 1</div>
+                  <div class="slider-v-container slider-v-1 v-1-lemur">
+                    <iframe id="live-video-1" width="100%" height="100%"
+                    src="https://www.youtube.com/embed/pKIeJqLT-XA?autoplay=1" title="YouTube video player"
+                      frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowfullscreen></iframe>
+                  </div>
+                  <div class="slider-v-button sl-btn-1"
+                    onclick="liveVideo=document.getElementById('live-video-1'); liveVideo.style.display='block'; this.style.display='none'">
+                  </div>
+                </div>
+                <div class="zoos-slider-video zoos-video-2">
+                  <div class="cap"></div>
+                  <div class="subheader camera-num cam-2">cam 2</div>
+                  <div class="slider-v-container slider-v v-2-lemur">
+                    <iframe id="live-video-2" width="100%" height="100%"
+                    src="https://www.youtube.com/embed/pKIeJqLT-XA?autoplay=1" title="YouTube video player"
+                      frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowfullscreen></iframe>
+                  </div>
+                  <div class="slider-v-button sl-btn-2"
+                    onclick="liveVideo=document.getElementById('live-video-2'); liveVideo.style.display='block'; this.style.display='none'">
+                  </div>
+                </div>
+                <div class="zoos-slider-video zoos-video-3">
+                  <div class="cap"></div>
+                  <div class="subheader camera-num cam-2">cam 3</div>
+                  <div class="slider-v-container slider-v v-3-lemur">
+                    <iframe id="live-video-3" width="100%" height="100%"
+                    src="https://www.youtube.com/embed/pKIeJqLT-XA?autoplay=1" title="YouTube video player"
+                      frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowfullscreen></iframe>
+                  </div>
+                  <div class="slider-v-button sl-btn-2"
+                    onclick="liveVideo=document.getElementById('live-video-3'); liveVideo.style.display='block'; this.style.display='none'">
+                  </div>
+                </div>
+              </div>
+              <button class="square-btn zoos-slider-btn zoos-btn-r"></button>
+            </div>
+          </section>
+          <section class="content bamboo-content">
+            <div class="donation-descr">
+              <h3 class="bamboo-descr-title">Provide Andy the lemur with fruits!</h3>
+              <p class="p-body bamboo-descr-subtitle b-d-s-eagle">More than 90% of lemur species are endangered and might face extinction in the nearest future. Watch the ring-tailed lemurs play and climb in this soothing setting and support them by donating for the fruits they adore.</p>
+            </div>
+            <div class="quick-donation">
+              <h4 class="subheader donation-title">Quick Donate</h4>
+              <form class="donation-form">
+                <input id="donation-input" name="input" type="number" placeholder="Donation amount" min="0" max="9999"
+                  onKeyPress="if (this.value.length === 4) {return false;}">
+                <input id="donation-submit" name="submit" type="submit" value="">
+              </form>
+            </div>
+          </section>
+          <section class="content bio-content">
+            <div class="you-know you-know-lemur">
+              <h3>Did you know?</h3>
+              <h4 class="subheader">A ring-tailed lemur mob will gather in open areas of the forest to sunbathe. They sit in what some call a "yoga position" with their bellies toward the sun and their arms and legs stretched&nbsp;<br> out to the sides.</h4>
+            </div>
+            <div class="animal-bio bio-lemur">
+              <div class="bio-card">
+                <ul>
+                  <li class="bio-card-line-1">
+                    <h4 class="subheader">Common name:</h4>
+                    <p class="p-body">Ring-Tailed Lemur</p>
+                  </li>
+                  <li class="bio-card-line-1">
+                    <h4 class="subheader">Scientific name:</h4>
+                    <p class="p-body">Lemur catta</p>
+                  </li>
+                  <li class="bio-card-line-2">
+                    <h4 class="subheader">Type:</h4>
+                    <p class="p-body">Mammals</p>
+                  </li>
+                  <li class="bio-card-line-2">
+                    <h4 class="subheader">Size:</h4>
+                    <p class="p-body">Head and body: 17.75 inches; tail: 21.75 inches</p>
+                  </li>
+                  <li class="bio-card-line-2">
+                    <h4 class="subheader">Diet:</h4>
+                    <p class="p-body">Herbivore</p>
+                  </li>
+                  <li class="bio-card-line-2">
+                    <h4 class="subheader">Habitat:</h4>
+                    <p class="p-body">Arid, open areas and forests</p>
+                  </li>
+                  <li class="bio-card-line-2">
+                    <h4 class="subheader">Range:</h4>
+                    <p class="p-body">Southeast Asia</p>
+                    <form class="trp-btn-form" action="../map.html">
+                      <button class="trp-btn p-btn bio-btn btn-gorilla">View map</button>
+                    </form>
+                  </li>
+                </ul>
+              </div>
+              <div class="bio-photo">
+                <img class="bio-img" src="../../assets/images/lemur-live2.png" alt="Lemur">
+              </div>
+            </div>
+            <div class="bio-descr">
+              <p class="p-body">Ring-tailed lemurs are named for the 13 alternating black and white bands that adorn their tails. Unlike most other lemurs, ringtails spend 40 percent of their time on the ground, moving quadrupedally along the forest floor. Ring-tailed lemurs live in southwestern Madagascar, in arid, open areas and forests in territories that range from 15 to 57 acres (0.06 to 0.2 square kilometers) in size. As with all lemurs, olfactory communication is important for ringtails. Ring-tailed lemurs have scent glands&nbsp; on their wrists and chests that they use to mark their foraging routes. Ringtails eat leaves, flowers and insects. They can also eat fruit, herbs and small vertebrates. Females usually give birth to their first baby when they are three years old, and usually once a year every year after that. All adult females participate in raising the offspring of the group. The median life expectancy for a&nbsp; ring-tailed lemur<br> is about 16 years.</p>
+            </div>
+          </section>
+        </div>
+      </div>
+
+    </div>
+  </main>
+  <footer class="footer">
+    <div class="content footer-content">
+      <div class="footer-line f-line-1">
+        <div class="footer-logos" role="group">
+          <img src="../../assets/icons/logo-w.svg" alt="Online Zoo Logo" title="Online Zoo">
+          <img src="../../assets/icons/yem-digital.svg" alt="Yem Digital Logo" title="Yem Digital">
+          <img src="../../assets/icons/rss-logo.svg" alt="RS School Logo" title="Rolling Scopes School">
+        </div>
+        <ul class="menu f-menu">
+          <li><a class="p-btn" href="../index.html">About</a></li>
+          <li><a class="p-btn" href="../map.html">Map</a></li>
+          <li><a class="p-btn" href="#">Zoos</a></li>
+          <li><a class="p-btn" href="../contact-us.html">Contact us</a></li>
+        </ul>
+        <form>
+          <button class="p-btn long-btn footer-btn" disabled>Donate for volunteers</button>
+        </form>
+      </div>
+      <div class="footer-line f-line-2">
+        <div class="company">
+          <ul class="p-body list-company">
+            <li>© 2021 DinaK</li>
+            <li>© Yem Digital</li>
+            <li>© RSSchool</li>
+          </ul>
+        </div>
+        <div class="social-nets">
+          <ul class="social f-social">
+            <li><a href="https://www.youtube.com/" target="_blank"><img src="../../assets/icons/youtube.svg"
+                  alt="YouTube"></a></li>
+            <li><a href="https://www.instagram.com/" target="_blank"><img src="../../assets/icons/instagram.svg"
+                  alt="Instagram"></a></li>
+            <li><a href="https://www.facebook.com/" target="_blank"><img src="../../assets/icons/facebook.svg"
+                  alt="Facebook"></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>

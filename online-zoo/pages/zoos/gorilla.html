@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>online-zoo</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../normalize.css">
+  <link rel="stylesheet" href="../style-main.css">
+  <link rel="stylesheet" href="style-zoos.css">
+</head>
+
+<body>
+  <header class="header">
+    <h1 class="visuallyhidden">Online Zoo</h1>
+    <div class="content header-content">
+      <a class="logo" href="../index.html">
+        <img class="header-logo" src="../../assets/icons/logo.svg" alt="Online Zoo Logo">
+      </a>
+      <nav>
+        <ul class="menu h-menu">
+          <li><a class="p-btn" href="../index.html">About</a></li>
+          <li><a class="p-btn" href="../map.html">Map</a></li>
+          <li><a class="p-btn activ" href="#">Zoos</a></li>
+          <li><a class="p-btn" href="../contact-us.html">Contact us</a></li>
+          <li><a class="p-btn" href="https://www.figma.com/file/lnK11foY8Aoa6oOlDXovVN/Online-ZOO-Project?node-id=0%3A1"
+              target="_blank">Design</a></li>
+        </ul>
+      </nav>
+      <div class="social-nets">
+        <ul class="social">
+          <li><a href="https://www.youtube.com/" target="_blank"><img src="../../assets/icons/youtube.svg"
+                alt="YouTube"></a></li>
+          <li><a href="https://www.instagram.com/" target="_blank"><img src="../../assets/icons/instagram.svg"
+                alt="Instagram"></a></li>
+          <li><a href="https://www.facebook.com/" target="_blank"><img src="../../assets/icons/facebook.svg"
+                alt="Facebook"></a></li>
+        </ul>
+      </div>
+    </div>
+  </header>
+  <main>
+    <div class="bamboo-bg bamboo-bg-gorilla"></div>
+    <div class="wrapper">
+      <aside class="sidebar">
+        <div class="live-frame">
+          <div class="p-btn live-sign-cam">Live</div>
+          <div class="double-arrow-right"></div>
+        </div>
+        <div class="animal-container">
+          <div class="animal-frame">
+            <a class="animal-sign gorilla-icon active" title="Western Lowland Gorilla, Western Africa"></a>
+          </div>
+          <div class="animal-frame">
+            <a class="animal-sign lemur-icon" href="./lemur.html" title="Ring-Tailed Lemur, Southeast Asia"></a>
+          </div>
+          <div class="animal-frame">
+            <a class="animal-sign panda-icon" href="./panda.html" title="Giant Panda, Eastern Asia"></a>
+          </div>
+          <div class="animal-frame">
+            <a class="animal-sign eagle-icon" href="./eagle.html" title="Bald Eagle, Continental United States"></a>
+          </div>
+        </div>
+        <div class="down-btn-frame">
+          <div class="arrow-down-btn"></div>
+        </div>
+      </aside>
+      <div class="zoos-container">
+        <div class="zoos-content-general">
+          <section class="zoos-content">
+            <div class="zoos-title-line">
+              <h2 class="zoos-title">Gorillas cams</h2>
+              <form>
+                <button class="p-btn org-btn donate-btn-zoos" disabled>Donate now</button>
+              </form>
+            </div>
+            <div class="zoos-live-main">
+              <p class="p-main-video">Glen, Western lowland gorilla cam 1</p>
+              <div class="live-video-container video-container-gorilla">
+                <iframe id="live-video" width="100%" height="100%"
+                  src="https://www.youtube.com/embed/rgXWDk7rh4w?autoplay=1" title="YouTube video player"
+                  frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen></iframe>
+              </div>
+              <div class="zoos-live-button"
+                onclick="liveVideo=document.getElementById('live-video'); liveVideo.style.display='block'; this.style.display='none'">
+              </div>
+              <div class="main-video-logo"></div>
+            </div>
+            <h3 class="zoos-subtitle-line">More live views</h3>
+            <div class="zoos-slider" role="group">
+              <button class="square-btn zoos-slider-btn zoos-btn-l"></button>
+              <div class="zoos-video-line">
+                <div class="zoos-slider-video zoos-video-1 active">
+                  <div class="cap"></div>
+                  <div class="subheader camera-num cam-1">cam 1</div>
+                  <div class="slider-v-container slider-v-1 v-1-gorilla">
+                    <iframe id="live-video-1" width="100%" height="100%"
+                      src="https://www.youtube.com/embed/rgXWDk7rh4w?autoplay=1" title="YouTube video player"
+                      frameborder="0"
+                      allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowfullscreen></iframe>
+                  </div>
+                  <div class="slider-v-button sl-btn-1"
+                    onclick="liveVideo=document.getElementById('live-video-1'); liveVideo.style.display='block'; this.style.display='none'">
+                  </div>
+                </div>
+                <div class="zoos-slider-video zoos-video-2">
+                  <div class="cap"></div>
+                  <div class="subheader camera-num cam-2">cam 2</div>
+                  <div class="slider-v-container slider-v v-2-gorilla">
+                    <iframe id="live-video-2" width="100%" height="100%"
+                      src="https://www.youtube.com/embed/rgXWDk7rh4w?autoplay=1" title="YouTube video player"
+                      frameborder="0"
+                      allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowfullscreen></iframe>
+                  </div>
+                  <div class="slider-v-button sl-btn-2"
+                    onclick="liveVideo=document.getElementById('live-video-2'); liveVideo.style.display='block'; this.style.display='none'">
+                  </div>
+                </div>
+                <div class="zoos-slider-video zoos-video-3">
+                  <div class="cap"></div>
+                  <div class="subheader camera-num cam-2">cam 3</div>
+                  <div class="slider-v-container slider-v v-3-gorilla">
+                    <iframe id="live-video-3" width="100%" height="100%"
+                      src="https://www.youtube.com/embed/eY0dvOvGM1A?autoplay=1" title="YouTube video player"
+                      frameborder="0"
+                      allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowfullscreen></iframe>
+                  </div>
+                  <div class="slider-v-button sl-btn-2"
+                    onclick="liveVideo=document.getElementById('live-video-3'); liveVideo.style.display='block'; this.style.display='none'">
+                  </div>
+                </div>
+              </div>
+              <button class="square-btn zoos-slider-btn zoos-btn-r"></button>
+            </div>
+          </section>
+          <section class="content bamboo-content">
+            <div class="donation-descr">
+              <h3 class="bamboo-descr-title">Make a difference for the gorillas!</h3>
+              <p class="p-body bamboo-descr-subtitle b-d-s-eagle">&nbsp;It is our goal to ensure the conservation and
+                restoration of the gorilla population and their habitat in Central Africa. To do this, we need your
+                help! Bring your food charity straight to Glen and his family.</p>
+            </div>
+            <div class="quick-donation">
+              <h4 class="subheader donation-title">Quick Donate</h4>
+              <form class="donation-form">
+                <input id="donation-input" name="input" type="number" placeholder="Donation amount" min="0" max="9999"
+                  onKeyPress="if (this.value.length === 4) {return false;}">
+                <input id="donation-submit" name="submit" type="submit" value="">
+              </form>
+            </div>
+          </section>
+          <section class="content bio-content">
+            <div class="you-know you-know-gorilla">
+              <h3 class="ykt-eagle">Did you know?</h3>
+              <h4 class="subheader ykst-gorilla">&nbsp;&nbsp;&nbsp;In addition to having distinctive fingerprints like humans do, gorillas also have unique nose prints.<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Gorillas are the largest of the great apes, but the western lowland gorilla is the smallest of the
+                subspecies.
+              </h4>
+            </div>
+            <div class="animal-bio bio-eagle">
+              <div class="bio-card">
+                <ul>
+                  <li class="bio-card-line-1">
+                    <h4 class="subheader">Common name:</h4>
+                    <p class="p-body">Western lowland gorillas</p>
+                  </li>
+                  <li class="bio-card-line-1">
+                    <h4 class="subheader">Scientific name:</h4>
+                    <p class="p-body">Gorilla gorilla gorilla</p>
+                  </li>
+                  <li class="bio-card-line-2">
+                    <h4 class="subheader">Type:</h4>
+                    <p class="p-body">Mammals</p>
+                  </li>
+                  <li class="bio-card-line-2">
+                    <h4 class="subheader">Size:</h4>
+                    <p class="p-body">Standing height, four to six feet</p>
+                  </li>
+                  <li class="bio-card-line-2">
+                    <h4 class="subheader">Diet:</h4>
+                    <p class="p-body">Omnivore</p>
+                  </li>
+                  <li class="bio-card-line-2">
+                    <h4 class="subheader">Habitat:</h4>
+                    <p class="p-body">Rainforests</p>
+                  </li>
+                  <li class="bio-card-line-2">
+                    <h4 class="subheader">Range:</h4>
+                    <p class="p-body">Western Africa</p>
+                    <form class="trp-btn-form" action="../map.html">
+                      <button class="trp-btn p-btn bio-btn btn-gorilla">View map</button>
+                    </form>
+                  </li>
+                </ul>
+              </div>
+              <div class="bio-photo">
+                <img class="bio-img" src="../../assets/images/gorilla-live2.png" alt="Gorilla">
+              </div>
+            </div>
+            <div class="bio-descr">
+              <p class="p-body">Western lowland gorillas are the smallest of the four subspecies. They live in thick tropical rainforests, where they find plenty of food for their vegetarian diet. They eat roots, shoots, fruit, wild celery, and tree bark and pulp. Gorillas can climb trees, but they’re usually found on the ground in communities—known as troops. Troops are led by one dominant, older adult male, often called a silverback because of the swath of silver hair that adorns his otherwise dark fur. Troops also include several other young males, some females, and their offspring. The leader organizes troop activities, such as eating, nesting in leaves, and moving about the group's home range. Gorillas prefer traveling on all fours, pushing themselves forward with their knuckles and soles of their feet. Female gorillas give birth to one infant after a pregnancy of nearly nine months. These infants ride on their mothers’ backs from the age of four months through the first two or three years of their lives.</p>
+            </div>
+          </section>
+        </div>
+      </div>
+
+    </div>
+  </main>
+  <footer class="footer">
+    <div class="content footer-content">
+      <div class="footer-line f-line-1">
+        <div class="footer-logos" role="group">
+          <img src="../../assets/icons/logo-w.svg" alt="Online Zoo Logo" title="Online Zoo">
+          <img src="../../assets/icons/yem-digital.svg" alt="Yem Digital Logo" title="Yem Digital">
+          <img src="../../assets/icons/rss-logo.svg" alt="RS School Logo" title="Rolling Scopes School">
+        </div>
+        <ul class="menu f-menu">
+          <li><a class="p-btn" href="../index.html">About</a></li>
+          <li><a class="p-btn" href="../map.html">Map</a></li>
+          <li><a class="p-btn" href="#">Zoos</a></li>
+          <li><a class="p-btn" href="../contact-us.html">Contact us</a></li>
+        </ul>
+        <form>
+          <button class="p-btn long-btn footer-btn" disabled>Donate for volunteers</button>
+        </form>
+      </div>
+      <div class="footer-line f-line-2">
+        <div class="company">
+          <ul class="p-body list-company">
+            <li>© 2021 DinaK</li>
+            <li>© Yem Digital</li>
+            <li>© RSSchool</li>
+          </ul>
+        </div>
+        <div class="social-nets">
+          <ul class="social f-social">
+            <li><a href="https://www.youtube.com/" target="_blank"><img src="../../assets/icons/youtube.svg"
+                  alt="YouTube"></a></li>
+            <li><a href="https://www.instagram.com/" target="_blank"><img src="../../assets/icons/instagram.svg"
+                  alt="Instagram"></a></li>
+            <li><a href="https://www.facebook.com/" target="_blank"><img src="../../assets/icons/facebook.svg"
+                  alt="Facebook"></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>

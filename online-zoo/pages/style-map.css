@@ -1,0 +1,127 @@
+.map-title {
+  margin: 40px auto 0;
+  width: 600px;
+  color: #20113d;
+  text-align: center;
+}
+
+.map {
+  margin-top: 69px;
+  margin-bottom: 145px;
+  margin-left: -6px;
+}
+
+.tag {
+  position: absolute;
+  z-index: 2;
+  width: 100px;
+  height: 144px;
+}
+
+.tag-panda {
+  top: 700px;
+  left: 1194px;
+}
+
+.tag-tiger {
+  top: 849px;
+  left: 1257px;
+}
+
+.tag-koala {
+  top: 962px;
+  left: 1388px;
+}
+
+.tag-lion {
+  top: 802px;
+  left: 818px;
+}
+
+.tag-gorilla {
+  top: 824px;
+  left: 934px;
+}
+
+.tag-lemur {
+  top: 936px;
+  left: 1037px;
+}
+
+.tag-alligator {
+  top: 754px;
+  left: 533px;
+}
+
+.tag-eagle {
+  position: absolute;
+  z-index: 2;
+  top: 716px;
+  left: 379px;
+  width: 150px;
+}
+
+.tag-container {
+  position: relative;
+  margin-top: -39px;
+  margin-left: 11px;
+  fill: #f58021;
+  -webkit-filter: drop-shadow(0px 4px 30px rgba(245, 128, 33, 0.7));
+          filter: drop-shadow(0px 4px 30px rgba(245, 128, 33, 0.7));
+}
+
+.tag-container-eagle {
+  position: relative;
+  margin-top: -39px;
+  margin-left: 11px;
+  fill: #fff;
+  -webkit-filter: drop-shadow(0px 4px 30px rgba(245, 128, 33, 0.7));
+          filter: drop-shadow(0px 4px 30px rgba(245, 128, 33, 0.7));
+  background-image: url(./assets/icons/tag-w.svg);
+}
+
+.tag-icon {
+  position: relative;
+  z-index: 5;
+}
+
+.tag-icon-panda {
+  top: 26px;
+  left: 22px;
+}
+
+.tag-icon-tiger {
+  top: 32px;
+  left: 20px;
+}
+
+.tag-icon-koala {
+  top: 34px;
+  left: 29px;
+}
+
+.tag-icon-lion {
+  top: 29px;
+  left: 25px;
+}
+
+.tag-icon-gorilla {
+  top: 28px;
+  left: 24px;
+}
+
+.tag-icon-lemur {
+  top: 38px;
+  left: 35px;
+}
+
+.tag-icon-alligator {
+  top: 28px;
+  left: 22px;
+}
+
+.tag-icon-eagle {
+  top: 57px;
+  left: 56px;
+}
+/*# sourceMappingURL=style-map.css.map */

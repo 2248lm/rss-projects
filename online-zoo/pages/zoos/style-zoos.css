@@ -1,0 +1,621 @@
+.wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 auto;
+  width: 1920px;
+}
+
+.sidebar {
+  position: -webkit-sticky;
+  position: sticky;
+  z-index: 5;
+  top: 0;
+  margin: 0 0 0 -8px;
+  padding-bottom: 20px;
+  width: 220px;
+  height: 846px;
+  background-color: #20113d;
+}
+
+.live-frame {
+  width: 100%;
+  height: 80px;
+  border-bottom: 1px solid #fff;
+}
+
+.live-sign-cam {
+  padding-top: 8px;
+  padding-right: 30px;
+  width: 120px;
+  height: 38px;
+  color: #fff;
+  background-color: #f58021;
+  background-image: url(../../assets/icons/camera-w.svg);
+  background-position: 75px center;
+  background-repeat: no-repeat;
+  border-radius: 0 0 5px 0;
+  text-align: center;
+}
+
+.double-arrow-right {
+  margin-top: -8px;
+  margin-left: 174px;
+  width: 16px;
+  height: 15px;
+  background-image: url(../../assets/icons/double-arrows.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+
+.animal-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.animal-frame {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: -1px;
+  margin-bottom: 1px;
+  height: 172px;
+  width: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-bottom: 1px solid #fff;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.animal-sign {
+  width: 104px;
+  height: 104px;
+  background-color: #f58021;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 50%;
+  -webkit-box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+          box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+}
+
+.animal-sign.active {
+  background-color: #fff;
+  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  -webkit-box-shadow: 0 0 0 4px #20113d, 0 0 0 8px #fff;
+          box-shadow: 0 0 0 4px #20113d, 0 0 0 8px #fff;
+  cursor: auto;
+}
+
+.panda-icon {
+  background-image: url(../../assets/icons/panda.svg);
+}
+
+.eagle-icon {
+  background-image: url(../../assets/icons/eagle.svg);
+}
+
+.gorilla-icon {
+  background-image: url(../../assets/icons/gorilla.svg);
+}
+
+.lemur-icon {
+  background-image: url(../../assets/icons/lemur.svg);
+}
+
+.arrow-down-btn {
+  margin: 35px auto 0;
+  width: 15px;
+  height: 9px;
+  background-image: url(../../assets/icons/arrow-down.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+
+.zoos-container {
+  margin: 0;
+  width: 1700px;
+}
+
+.zoos-content-general {
+  margin-top: 0;
+  margin-left: 40px;
+  width: 1400px;
+}
+
+.zoos-content {
+  margin-top: 0;
+  padding-top: 50px;
+  width: 100%;
+  color: #fff;
+}
+
+.zoos-title-line {
+  text-align: center;
+}
+
+.zoos-title {
+  margin-top: 4px;
+  color: #00a092;
+}
+
+.donate-btn-zoos {
+  position: absolute;
+  margin-top: -70px;
+  margin-left: 460px;
+  background-position: 180px center;
+}
+
+.zoos-live-main {
+  margin-top: 50px;
+  max-width: 1400px;
+  height: 787px;
+}
+
+.p-main-video {
+  display: inline-block;
+  position: relative;
+  z-index: 2;
+  margin-top: 13px;
+  margin-left: 16px;
+  color: #fff;
+  font-size: 28.4375px;
+  font-weight: 500;
+  line-height: 130%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.live-video-container {
+  margin-top: -49px;
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.video-container-panda {
+  background-image: url(../../assets/images/panda-live-main.png);
+}
+
+.video-container-eagle {
+  background-image: url(../../assets/images/eagles-live-main.png);
+}
+
+.video-container-gorilla {
+  background-image: url(../../assets/images/gorilla-live-main.png);
+}
+
+.video-container-lemur {
+  background-image: url(../../assets/images/lemur-live-main.png);
+}
+
+#live-video,
+#live-video-1,
+#live-video-2,
+#live-video-3 {
+  display: none;
+}
+
+.zoos-live-button {
+  position: relative;
+  top: -420px;
+  margin: 0 auto;
+  z-index: 5;
+  width: 80px;
+  height: 53px;
+  background-image: url(../../assets/icons/play-button.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+
+.zoos-live-button:hover,
+.zoos-live-button:active,
+.slider-v-button:hover,
+.slider-v-button:active {
+  background-image: url(../../assets/icons/play-button-o.svg);
+}
+
+.zoos-btn-l {
+  background-image: url(../../assets/icons/arrow-l.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.zoos-btn-l:hover,
+.zoos-btn-l:active {
+  background-color: #20113d;
+  background-image: url(../../assets/icons/arrow-l-w.svg);
+}
+
+.zoos-btn-r {
+  background-image: url(../../assets/icons/arrow-r.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.zoos-btn-r:hover,
+.zoos-btn-r:active {
+  background-color: #20113d;
+  background-image: url(../../assets/icons/arrow-r-w.svg);
+}
+
+.main-video-logo {
+  position: relative;
+  z-index: 3;
+  top: -172px;
+  left: 91%;
+  right: 12%;
+  width: 105px;
+  height: 54.69px;
+  background-color: rgba(0, 0, 0, 0.5);
+  background-image: url(../../assets/icons/logo-w.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  -webkit-box-shadow: -10px 0 0 rgba(0, 0, 0, 0.5), 10px 0 0 rgba(0, 0, 0, 0.5);
+          box-shadow: -10px 0 0 rgba(0, 0, 0, 0.5), 10px 0 0 rgba(0, 0, 0, 0.5);
+}
+
+.zoos-subtitle-line {
+  margin-top: 101px;
+  text-align: center;
+  color: #000;
+}
+
+.zoos-slider {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 29px;
+  margin-right: 2.7%;
+  margin-left: calc( 2.7% + 120px);
+  max-width: 1205px;
+  height: 209px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.zoos-slider-btn {
+  margin-top: -1px;
+  border: none;
+}
+
+.zoos-video-line {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 1040px;
+  height: 100%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.zoos-slider-video {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 320px;
+  height: 100%;
+  border-radius: 5px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.cap {
+  position: absolute;
+  z-index: 7;
+  width: 318px;
+  height: 209px;
+  background: linear-gradient(169.43deg, #000000 2.91%, rgba(0, 0, 0, 0) 31.31%);
+  border-radius: 5px;
+}
+
+.zoos-slider-video.active {
+  border: 3px solid #f58021;
+}
+
+.camera-num {
+  position: absolute;
+  z-index: 9;
+  padding-top: 4px;
+  padding-left: 38px;
+  width: 189px;
+  height: 44px;
+  color: #fff;
+  background-color: transparent;
+  background-image: url(../../assets/icons/camera-w.svg);
+  background-repeat: no-repeat;
+  border-right: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+  border-radius: 5px 0;
+  text-transform: uppercase;
+}
+
+.cam-1 {
+  margin-top: -3px;
+  margin-left: -2px;
+  background-position: 128px center;
+}
+
+.cam-2 {
+  background-position: 131px center;
+}
+
+.slider-v-container {
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 5px;
+}
+
+.slider-v-1 {
+  background-position: center -3px;
+}
+
+.v-1-panda {
+  background-image: url(../../assets/images/panda-cam1-prev.png);
+}
+
+.v-2-panda {
+  background-image: url(../../assets/images/panda-cam2-prev.png);
+}
+
+.v-3-panda {
+  background-image: url(../../assets/images/panda-cam3-prev.png);
+}
+
+.v-1-eagle {
+  background-image: url(../../assets/images/eagle-cam1-prev.png);
+}
+
+.v-2-eagle {
+  background-image: url(../../assets/images/eagle-cam2-prev.png);
+}
+
+.v-3-eagle {
+  background-image: url(../../assets/images/eagle-cam3-prev.png);
+}
+
+.v-1-gorilla {
+  background-image: url(../../assets/images/gorilla-cam1-prev.png);
+}
+
+.v-2-gorilla {
+  background-image: url(../../assets/images/gorilla-cam2-prev.png);
+}
+
+.v-3-gorilla {
+  background-image: url(../../assets/images/gorilla-cam3-prev.png);
+}
+
+.v-1-lemur {
+  background-image: url(../../assets/images/lemur-cam1-prev.png);
+}
+
+.v-2-lemur {
+  background-image: url(../../assets/images/lemur-cam2-prev.png);
+}
+
+.v-3-lemur {
+  background-image: url(../../assets/images/lemur-cam3-prev.png);
+}
+
+.slider-v-button {
+  position: absolute;
+  z-index: 1;
+  width: 46px;
+  height: 32px;
+  background-image: url(../../assets/icons/play-button.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  cursor: pointer;
+}
+
+.sl-btn-1 {
+  margin-top: 86px;
+  margin-left: 133px;
+}
+
+.sl-btn-2 {
+  margin-top: 88px;
+  margin-left: 136px;
+}
+
+.bamboo-bg {
+  position: absolute;
+  z-index: -1;
+  top: 1607px;
+  background-color: #20113d;
+  width: 100%;
+}
+
+.bamboo-bg-all {
+  height: 249px;
+}
+
+.bamboo-bg-gorilla {
+  height: 224px;
+}
+
+.bamboo-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 150px;
+  padding-top: 48px;
+  width: 100%;
+  color: #fff;
+  min-height: 249px;
+}
+
+.bamboo-descr-title {
+  margin-top: 3px;
+}
+
+.bamboo-descr-subtitle {
+  margin-top: 20px;
+}
+
+.b-d-s-panda {
+  max-width: 875px;
+}
+
+.b-d-s-eagle {
+  max-width: 910px;
+}
+
+.bio-content {
+  padding-bottom: 150px;
+  width: 100%;
+}
+
+.you-know {
+  margin-top: 148px;
+  margin-left: 240px;
+  margin-right: 120px;
+  padding: 50px 60px;
+  background: #fff;
+  border-radius: 5px;
+  -webkit-box-shadow: 0px 4px 50px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 4px 50px rgba(0, 0, 0, 0.25);
+  text-align: center;
+}
+
+.you-know-gorilla {
+  padding: 50px 60px 42px;
+}
+
+.you-know-lemur {
+  padding: 54px 60px 42px;
+}
+
+.you-know h3 {
+  color: #00a092;
+}
+
+.you-know h4 {
+  display: inline-block;
+  margin-top: 19px;
+  max-width: 925px;
+  color: #000;
+}
+
+.ykt-eagle {
+  margin-top: 3px;
+}
+
+.ykst-gorilla {
+  margin-left: -10px;
+}
+
+.ykst-lemur {
+  margin-left: -10px;
+}
+
+.animal-bio {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 145px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.bio-card {
+  width: 720px;
+  padding-left: 1px;
+}
+
+.bio-panda {
+  padding-top: 1px;
+}
+
+.bio-eagle {
+  padding-top: 5px;
+}
+
+.bio-lemur {
+  padding-top: 4px;
+}
+
+.bio-card ul li {
+  list-style: none;
+}
+
+.bio-card ul li h4,
+.bio-card ul li p {
+  display: inline-block;
+  color: #000;
+}
+
+.bio-card ul li p {
+  margin-left: 15px;
+}
+
+.bio-card-line-1 {
+  margin-bottom: 25px;
+}
+
+.bio-card-line-2 {
+  margin: 18px 0;
+}
+
+.bio-btn {
+  position: relative;
+  background-position: 168px center;
+}
+
+.btn-panda {
+  top: -51px;
+  left: 238px;
+}
+
+.btn-eagle {
+  top: -49px;
+  left: 359px;
+}
+
+.btn-gorilla {
+  top: -51px;
+  left: 265px;
+}
+
+.bio-photo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 1px;
+  width: 680px;
+}
+
+.bio-img {
+  max-width: 440px;
+  max-height: 440px;
+  border-radius: 5px;
+}
+
+.bio-descr {
+  margin-top: 40px;
+  max-width: 1160px;
+}
+/*# sourceMappingURL=style-zoos.css.map */
