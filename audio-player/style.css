@@ -1,0 +1,512 @@
+@font-face {
+  font-family: "Rosa Marena";
+  src: url("./assets/fonts/rosa-marena/rosa-marena.eot");
+  src: url("./assets/fonts/rosa-marena/rosa-marena.eot") format("embedded-opentype"),
+    url("./assets/fonts/rosa-marena/rosa-marena.otf") format("opentype"),
+    url("./assets/fonts/rosa-marena/rosa-marena.svg") format("svg"),
+    url("./assets/fonts/rosa-marena/rosa-marena.ttf") format("truetype"),
+    url("./assets/fonts/rosa-marena/rosa-marena.woff") format("woff"),
+    url("./assets/fonts/rosa-marena/rosa-marena.woff2") format("woff2");
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "Champagne &amp; Limousines";
+  src: url("./assets/fonts/champagne-limousines/champagne-limousines.eot");
+  src: url("./assets/fonts/champagne-limousines/champagne-limousines.eot") format("embedded-opentype"),
+    url("./assets/fonts/champagne-limousines/champagne-limousines.otf") format("opentype"),
+    url("./assets/fonts/champagne-limousines/champagne-limousines.svg") format("svg"),
+    url("./assets/fonts/champagne-limousines/champagne-limousines.ttf") format("truetype"),
+    url("./assets/fonts/champagne-limousines/champagne-limousines.woff") format("woff"),
+    url("./assets/fonts/champagne-limousines/champagne-limousines.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "TT2020 Style E Regular";
+  src: url("./assets/fonts/tt2020/tt2020-style-e-regular.eot");
+  src: url("./assets/fonts/tt2020/tt2020-style-e-regular.eot?#iefix") format("embedded-opentype"),
+    url("./assets/fonts/tt2020/tt2020-style-e-regular.otf") format("opentype"),
+    url("./assets/fonts/tt2020/tt2020-style-e-regular.svg") format("svg"),
+    url("./assets/fonts/tt2020/tt2020-style-e-regular.ttf") format("truetype"),
+    url("./assets/fonts/tt2020/tt2020-style-e-regular.woff") format("woff"),
+    url("./assets/fonts/tt2020/tt2020-style-e-regular.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Champagne &amp; Limousines", sans-serif;
+}
+
+.wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.background {
+  width: 100vw;
+  height: 100vh;
+  background-image: url("./assets/img/track1.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top center;
+  -webkit-box-shadow: 0px 0px 5px 55px #000000;
+  box-shadow: 0px 0px 5px 55px #000000;
+  -webkit-filter: blur(8px);
+  filter: blur(8px);
+}
+
+.player-wrapper {
+  position: absolute;
+  z-index: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  width: 400px;
+  background-color: #4682b4;
+  border-radius: 5px;
+  -webkit-box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  -webkit-animation: sky-change 15s infinite linear;
+  animation: sky-change 15s infinite linear;
+}
+
+.header,
+.main,
+.footer {
+  position: relative;
+  z-index: 2;
+  padding: 10px 20px;
+}
+
+h1 {
+  color: #ffa500;
+  letter-spacing: 2px;
+  text-align: right;
+  text-transform: uppercase;
+}
+
+.main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: end;
+  -ms-flex-align: end;
+  align-items: end;
+}
+
+.player {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  position: relative;
+  z-index: 3;
+  width: 100%;
+  padding-bottom: 80px;
+}
+
+.cover {
+  width: 200px;
+  height: 200px;
+  margin-left: auto;
+  margin-right: 0;
+  border-radius: 5px;
+  -webkit-box-shadow: 0px 0px 10px 5px rgba(255, 255, 106, 0.5);
+  box-shadow: 0px 0px 10px 5px rgba(255, 255, 106, 0.5);
+}
+
+.info {
+  margin: 20px 0;
+  font-family: "TT2020 Style E Regular";
+  font-size: 15px;
+  line-height: 18px;
+  text-align: right;
+}
+
+.singer {
+  color: #520000;
+  font-family: "Rosa Marena", cursive;
+  font-size: 42px;
+  font-weight: 700;
+  letter-spacing: 3px;
+}
+
+.song {
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+}
+
+.controls,
+.timeline,
+.timer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.controls,
+.timeline {
+  width: 100%;
+  padding: 12px 0;
+}
+
+.controls span,
+#mute-btn,
+.footer a {
+  cursor: pointer;
+  -webkit-transition: 0.3s ease-out;
+  transition: 0.3s ease-out;
+}
+
+.controls {
+  gap: 20px;
+}
+
+.controls span {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 32px;
+  height: 32px;
+  color: #ffffff;
+  font-size: 28px;
+  background-color: #e04f5f;
+  border-radius: 50%;
+}
+
+.controls span:first-child,
+.controls span:last-child {
+  font-size: 20px;
+}
+
+.controls span:hover {
+  -webkit-transform: scale(1.2);
+  transform: scale(1.2);
+  background-color: #520000;
+}
+
+#mute-btn {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  color: #ffffff;
+  font-size: 24px;
+  background-color: #520000;
+}
+
+#mute-btn:hover {
+  background-color: #e04f5f;
+}
+
+.timer {
+  height: 28px;
+  padding: 0 6px;
+  color: #ffffff;
+  letter-spacing: 1.2px;
+  background-color: #520000;
+}
+
+.progress-area {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 160px;
+  height: 28px;
+  background: #ffffff;
+  cursor: pointer;
+}
+
+.progress-bar {
+  position: relative;
+  height: inherit;
+  width: 0;
+  background-color: #ffa500;
+}
+
+.progress-bar::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: -3px;
+  width: 6px;
+  height: inherit;
+}
+
+.footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  color: #ffffff;
+  font-size: 30px;
+  font-weight: 700;
+  background-color: #000000;
+}
+
+.footer a:hover {
+  -webkit-transform: scale(1.2);
+  transform: scale(1.2);
+}
+
+.sun {
+  position: absolute;
+  left: 0;
+  bottom: -30%;
+  width: 160px;
+  height: 160px;
+  margin-top: 0;
+  margin-left: -40px;
+  background-color: #ff4500;
+  border-radius: 50%;
+  -webkit-box-shadow: 0 0 20px #ffa500;
+  box-shadow: 0 0 20px #ffa500;
+  -webkit-animation: 15s infinite linear;
+  animation: 15s infinite linear;
+  -webkit-animation-name: sun-move, sun-color;
+  animation-name: sun-move, sun-color;
+}
+
+.grass {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: -5px;
+  left: 0;
+  background-image: url("./assets/img/grass.png");
+  background-repeat: no-repeat;
+  background-position: center bottom;
+}
+
+@-webkit-keyframes sky-change {
+  0% {
+    background-color: #483d8b;
+  }
+  50% {
+    background-color: #87ceeb;
+  }
+  85% {
+    background-color: #483d8b;
+  }
+  100% {
+    background-color: #483d8b;
+  }
+}
+
+@keyframes sky-change {
+  0% {
+    background-color: #483d8b;
+  }
+  50% {
+    background-color: #87ceeb;
+  }
+  85% {
+    background-color: #483d8b;
+  }
+  100% {
+    background-color: #483d8b;
+  }
+}
+
+@-webkit-keyframes sun-move {
+  0% {
+  }
+  10% {
+    margin-left: -4.5em;
+  }
+  20% {
+    margin-left: -5.5em;
+  }
+  30% {
+    margin-left: -6em;
+  }
+  40% {
+    margin-left: -4.5em;
+  }
+  50% {
+    left: 50%;
+    bottom: 75%;
+    width: 5em;
+    height: 5em;
+    margin-left: -2.5em;
+  }
+  60% {
+    margin-left: 1.5em;
+  }
+  70% {
+    margin-left: 3.5em;
+  }
+  80% {
+    margin-left: 2.5em;
+  }
+  90% {
+    margin-left: 1em;
+  }
+  100% {
+    left: 98%;
+    margin-left: -2.5em;
+  }
+}
+
+@keyframes sun-move {
+  0% {
+  }
+  10% {
+    margin-left: -4.5em;
+  }
+  20% {
+    margin-left: -5.5em;
+  }
+  30% {
+    margin-left: -6em;
+  }
+  40% {
+    margin-left: -4.5em;
+  }
+  50% {
+    left: 50%;
+    bottom: 75%;
+    width: 5em;
+    height: 5em;
+    margin-left: -2.5em;
+  }
+  60% {
+    margin-left: 1.5em;
+  }
+  70% {
+    margin-left: 3.5em;
+  }
+  80% {
+    margin-left: 2.5em;
+  }
+  90% {
+    margin-left: 1em;
+  }
+  100% {
+    left: 98%;
+    margin-left: -2.5em;
+  }
+}
+
+@-webkit-keyframes sun-color {
+  20% {
+    background-color: #ffa500;
+  }
+  40% {
+    background-color: #ffd700;
+    -webkit-box-shadow: 0 0 35px #ffd700;
+    box-shadow: 0 0 35px #ffd700;
+  }
+  60% {
+    background-color: #ffff00;
+    -webkit-box-shadow: 0 0 35px #ffff00;
+    box-shadow: 0 0 35px #ffff00;
+  }
+  80% {
+    background-color: #ffa500;
+  }
+}
+
+@keyframes sun-color {
+  20% {
+    background-color: #ffa500;
+  }
+  40% {
+    background-color: #ffd700;
+    -webkit-box-shadow: 0 0 35px #ffd700;
+    box-shadow: 0 0 35px #ffd700;
+  }
+  60% {
+    background-color: #ffff00;
+    -webkit-box-shadow: 0 0 35px #ffff00;
+    box-shadow: 0 0 35px #ffff00;
+  }
+  80% {
+    background-color: #ffa500;
+  }
+}
+
+@media (max-width: 480px) {
+  .player-wrapper {
+    width: 320px;
+    border-radius: 0;
+  }
+  .header,
+  .main,
+  .footer {
+    padding: 8px;
+  }
+  h1 {
+    font-size: 23px;
+  }
+  .cover {
+    width: 150px;
+    height: 150px;
+  }
+}
